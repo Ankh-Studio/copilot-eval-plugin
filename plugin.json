@@ -29,7 +29,9 @@
     "skills/architecture-debate/",
     "skills/batch-evaluation/",
     "skills/quality-gates/",
-    "skills/performance-optimizer/"
+    "skills/performance-optimizer/",
+    "skills/improve-artifact/",
+    "skills/iterative-improvement/"
   ],
   "hooks": "hooks.json"
 }

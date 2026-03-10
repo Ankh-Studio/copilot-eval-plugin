@@ -50,7 +50,7 @@ This plugin delivers enterprise-grade reliability through systematic quality ass
 
 ## 📊 Plugin Skills Overview
 
-This plugin provides **15 evaluation-focused skills** organized into three categories:
+This plugin provides **17 evaluation-focused skills** organized into four categories:
 
 ### 🔍 Core Evaluation Skills (10)
 - `evaluate-artifact` - Universal evaluation with Chain-of-Verification
@@ -69,7 +69,11 @@ This plugin provides **15 evaluation-focused skills** organized into three categ
 - `quality-gates` - Enforce evaluation standards automatically
 - `performance-optimizer` - Optimize evaluation speed and resources
 
-### 🛡️ Quality Assurance Skills (2)
+### � Improvement & Chaining Skills (2)
+- `improve-artifact` - Apply targeted improvements based on evaluation feedback
+- `iterative-improvement` - Automated evaluation-improvement-verification cycles
+
+### �️ Quality Assurance Skills (2)
 - `validate-rubrics` - Stress-test evaluation criteria
 - `architecture-debate` - Multi-perspective design decisions
 
@@ -116,6 +120,52 @@ copilot plugin install ./copilot-eval-plugin
 
 # Optimize evaluation performance
 /performance-optimizer --cache-clear --stats
+
+# Apply targeted improvements based on evaluation
+/improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
+
+# Automated iterative improvement workflow
+/iterative-improvement .github/skills/deploy/SKILL.md --target=3.5 --cycles=3
+```
+
+### 🔄 Prompt Chaining & Iterative Improvement
+
+The plugin supports powerful prompt chaining workflows for systematic quality enhancement:
+
+#### Evaluation → Improvement → Verification Cycle
+```bash
+# 1. Evaluate current state
+/evaluate-artifact .github/prompts/api-design.prompt.md
+
+# 2. Apply targeted improvements based on rubric feedback
+/improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
+
+# 3. Verify improvements with Chain-of-Verification
+/evaluate-artifact .github/prompts/api-design.prompt.md
+```
+
+#### Automated Iterative Improvement
+```bash
+# Complete automated improvement workflow
+/iterative-improvement .github/skills/deploy/SKILL.md --target=3.5 --cycles=3
+
+# Batch improvement across multiple artifacts
+/iterative-improvement --directory=.github/prompts --target=3.0 --cycles=2
+```
+
+#### Multi-Persona Enhancement Chain
+```bash
+# 1. Baseline evaluation
+/evaluate-artifact .github/workflows/ci-cd/WORKFLOW.md
+
+# 2. Architecture debate for improvement strategies
+/architecture-debate "How to improve workflow efficiency and error handling?"
+
+# 3. Apply recommended improvements
+/improve-artifact .github/workflows/ci-cd/WORKFLOW.md --focus="functionality,error-handling"
+
+# 4. Final verification
+/evaluate-artifact .github/workflows/ci-cd/WORKFLOW.md
 ```
 
 ### Automated Quality Checks

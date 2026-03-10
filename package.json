@@ -1,0 +1,35 @@
+{
+  "name": "@ankh-studio/copilot-eval-plugin",
+  "version": "1.0.0",
+  "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing",
+  "main": "plugin.json",
+  "files": [
+    "plugin.json",
+    "agents/",
+    "skills/",
+    "rubrics/",
+    "hooks.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ankh-Studio/copilot-eval-plugin.git"
+  },
+  "keywords": [
+    "copilot",
+    "evaluation",
+    "rubric",
+    "assessment",
+    "quality",
+    "chain-of-verification",
+    "adversarial-testing",
+    "plugin"
+  ],
+  "author": "Matthew Van Dusen <matt@ankhstudio.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
