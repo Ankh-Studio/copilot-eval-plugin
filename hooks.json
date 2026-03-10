@@ -1,0 +1,22 @@
+{
+  "preCommand": {
+    "copilot generate": {
+      "skill": "evaluate-artifact",
+      "description": "Evaluate generated content before finalizing"
+    },
+    "copilot edit": {
+      "skill": "evaluate-artifact", 
+      "description": "Review edited content for quality"
+    }
+  },
+  "postCommand": {
+    "copilot generate": {
+      "agent": "evaluator",
+      "description": "Provide quality assessment of generated content"
+    },
+    "copilot edit": {
+      "agent": "evaluator",
+      "description": "Review changes for best practices"
+    }
+  }
+}

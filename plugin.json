@@ -1,0 +1,30 @@
+{
+  "name": "copilot-eval",
+  "description": "Evaluate Copilot artifacts against structured rubrics",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matthew Van Dusen",
+    "email": "matt@ankhstudio.com"
+  },
+  "license": "MIT",
+  "keywords": ["copilot", "evaluation", "rubric", "assessment", "quality"],
+  "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ankh-Studio/copilot-eval-plugin.git"
+  },
+  "agents": "agents/",
+  "skills": [
+    "skills/evaluate-artifact/",
+    "skills/evaluate-prompt/",
+    "skills/evaluate-instruction/",
+    "skills/evaluate-skill/",
+    "skills/evaluate-template/",
+    "skills/evaluate-workflow/",
+    "skills/evaluate-agent/",
+    "skills/evaluate-context/",
+    "skills/evaluate-validation/",
+    "skills/evaluate-integration/"
+  ],
+  "hooks": "hooks.json"
+}
