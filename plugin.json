@@ -24,7 +24,12 @@
     "skills/evaluate-agent/",
     "skills/evaluate-context/",
     "skills/evaluate-validation/",
-    "skills/evaluate-integration/"
+    "skills/evaluate-integration/",
+    "skills/validate-rubrics/",
+    "skills/architecture-debate/",
+    "skills/batch-evaluation/",
+    "skills/quality-gates/",
+    "skills/performance-optimizer/"
   ],
   "hooks": "hooks.json"
 }

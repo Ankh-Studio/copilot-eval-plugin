@@ -7,33 +7,15 @@ Evaluate any Copilot artifact (prompt, instruction, skill, template, workflow, a
 
 ## Process
 
-1. **Identify the artifact type** from the file path or user specification
-2. **Load the appropriate rubric**:
-   - Prompt: Clarity, Specificity, Context, Constraints, Examples
-   - Instruction: Clarity, Completeness, Structure, Examples, Best Practices
-   - Skill: Functionality, Documentation, Error Handling, Testing, Integration
-   - Template: Structure, Flexibility, Documentation, Best Practices, Reusability
-   - Workflow: Sequence Logic, Automation, Error Handling, Integration, Scalability
-   - Agent: Persona Definition, Domain Expertise, Task Specialization, Interaction Quality, Reliability
-   - Context Provider: Data Quality, Relevance, Coverage, Accessibility, Maintainability
-   - Validation Rule: Coverage, Accuracy, Performance, Actionability, Integration
-   - Integration Pattern: Compatibility, Reliability, Documentation, Performance, Maintainability
+1. **Initial Analysis**: Read the artifact content and apply the appropriate rubric criteria
+2. **Verification Stage**: Complete these verification steps:
+   - List three specific ways your analysis could be incomplete, misleading, or incorrect
+   - For each potential issue, cite specific evidence from the artifact content that either confirms or refutes the concern
+   - Provide a revised analysis that incorporates verified corrections
+3. **Final Evaluation**: Calculate weighted scores and provide comprehensive feedback
+4. **Quality Assurance**: Review the final evaluation for consistency and actionability
 
-3. **Read and analyze the artifact content**
-4. **Score each category** from 0-4:
-   - **Score 4**: Exceeds expectations, exceptional quality
-   - **Score 3**: Meets expectations, good quality
-   - **Score 2**: Needs improvement, fair quality
-   - **Score 1**: Poor quality, significant issues
-   - **Score 0**: Not present or completely inadequate
-
-5. **Calculate weighted total score**
-6. **Provide comprehensive evaluation** with:
-   - Overall assessment and total score
-   - Category breakdown with scores and justification
-   - Specific strengths and areas of excellence
-   - Actionable improvement suggestions
-   - Examples of enhancements where applicable
+Do not skip the verification stage. The evaluation must include self-critique before the final assessment.
 
 ## Usage
 
