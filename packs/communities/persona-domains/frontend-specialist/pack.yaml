@@ -1,0 +1,37 @@
+name: frontend-specialist
+category: persona-domains
+stack_tags:
+  - frontend-development
+  - user-interface
+  - component-design
+  - accessibility
+  - performance-optimization
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/component-design.prompt.md"
+  - ".github/prompts/accessibility-audit.prompt.md"
+  - ".github/prompts/performance-optimization.prompt.md"
+  - ".github/instructions/frontend-development.instructions.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Frontend component design and development
+  - User interface optimization and improvements
+  - Accessibility compliance and auditing
+  - Frontend performance optimization and analysis
+tldr: "Frontend development guidance for component design, accessibility, and performance optimization"
+layman_summary: "Helps frontend specialists design components, ensure accessibility, and optimize user interface performance."
+engineer_summary: "Provides comprehensive frontend development workflows including component design patterns, accessibility compliance frameworks, performance optimization strategies, and user experience enhancement techniques."
+what_it_does: "Offers specialized prompts and instructions for frontend development tasks including component design, accessibility auditing, performance optimization, and user experience enhancement."
+how_it_works: "Combines modern frontend frameworks, design systems, accessibility standards, performance optimization techniques, and user experience best practices."
+when_to_use: "Component development, accessibility audits, performance optimization, UI/UX improvements, or frontend architecture decisions."
+when_not_to_use": "Backend development, database design, or teams without frontend requirements."
+evaluation_rubrics:
+  - component-quality
+  - accessibility-compliance
+  - performance-optimization
+model_notes_small: "Focus on basic component design and simple accessibility checks. Avoid complex performance optimization."
+model_notes_strong: "Can handle complex component architectures, advanced accessibility compliance, and comprehensive performance optimization strategies."

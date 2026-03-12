@@ -1,0 +1,37 @@
+name: agile-coach
+category: squad-roles
+stack_tags:
+  - agile-coaching
+  - sprint-planning
+  - retrospectives
+  - team-velocity
+  - continuous-improvement
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/sprint-planning.prompt.md"
+  - ".github/prompts/retrospective.prompt.md"
+  - ".github/prompts/team-velocity.prompt.md"
+  - ".github/instructions/agile-coaching.instructions.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Sprint planning and preparation
+  - Retrospective facilitation and improvement
+  - Team velocity analysis and optimization
+  - Agile process improvement initiatives
+tldr: "Agile coaching guidance for sprint planning, retrospectives, and continuous team improvement"
+layman_summary: "Helps agile coaches facilitate effective sprint planning, retrospectives, and team velocity optimization."
+engineer_summary: "Provides comprehensive agile coaching workflows including sprint planning facilitation, retrospective frameworks, velocity analysis, and continuous improvement strategies."
+what_it_does: "Offers specialized prompts and instructions for agile coaching tasks including sprint planning, retrospectives, velocity tracking, and team development."
+how_it_works: "Combines agile methodology frameworks, facilitation techniques, team development tools, and continuous improvement processes."
+when_to_use: "Sprint planning meetings, retrospective sessions, velocity analysis, team coaching, or agile process improvement."
+when_not_to_use": "Technical implementation tasks, code reviews, or teams not using agile methodologies."
+evaluation_rubrics:
+  - agile-process-effectiveness
+  - team-velocity-trends
+  - retrospective-quality
+model_notes_small: "Focus on basic agile ceremonies and simple team metrics. Avoid complex scaling frameworks."
+model_notes_strong: "Can handle advanced agile coaching, scaled agile frameworks, and complex team dynamics analysis."

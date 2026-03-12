@@ -1,0 +1,33 @@
+name: commit-messages
+category: collaboration-core
+stack_tags:
+  - git
+  - conventional-commits
+  - collaboration
+  - workflow
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/instructions/commit-standards.instructions.md"
+  - ".github/prompts/commit-message.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - New repository setup
+  - Team standardization
+  - Commit message quality improvement
+tldr: "Standardized Conventional Commits with ticket integration"
+layman_summary: "Ensures consistent, tool-friendly commit messages that integrate with ticket systems and automated workflows."
+engineer_summary: "Implements Conventional Commits specification with ticket number integration in scope, providing prompts and standards for consistent commit message formatting."
+what_it_does: "Configures Copilot to generate standardized commit messages following Conventional Commits format with integrated ticket references."
+how_it_works: "Combines always-on instruction standards with slash-invoked prompt for detailed commit message generation and validation."
+when_to_use: "New repositories, teams wanting commit standardization, or projects integrating with automated changelog/semantic versioning tools."
+when_not_to_use: "Teams with established non-conventional commit patterns or repositories requiring custom commit formats."
+evaluation_rubrics:
+  - commit-message-quality
+  - conventional-compliance
+  - ticket-integration
+model_notes_small: "Focus on basic conventional commit format and simple ticket integration. Avoid complex commit message analysis."
+model_notes_strong: "Can handle complex commit scenarios, multi-ticket references, and comprehensive commit message validation."

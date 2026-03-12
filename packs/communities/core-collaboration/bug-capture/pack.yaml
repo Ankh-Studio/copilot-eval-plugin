@@ -1,0 +1,33 @@
+name: bug-capture
+category: collaboration-core
+stack_tags:
+  - bug-reporting
+  - quality-assurance
+  - debugging
+  - collaboration
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/ISSUE_TEMPLATE/bug_report.yml"
+  - ".github/prompts/bug-capture.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Bug reports and issue tracking
+  - Quality assurance workflows
+  - Debugging and troubleshooting
+tldr: "Comprehensive bug capture with detailed reproduction and environment tracking"
+layman_summary: "Ensures complete bug reports with reproduction steps, environment details, and impact assessment for faster resolution."
+engineer_summary: "Implements structured bug reporting with severity assessment, regression tracking, and comprehensive evidence collection."
+what_it_does: "Provides enhanced bug report templates and prompts for capturing complete bug information."
+how_it_works: "Combines detailed GitHub issue forms with prompts for thorough bug investigation and documentation."
+when_to_use: "Bug reporting, quality assurance processes, or teams needing comprehensive issue tracking."
+when_not_to_use: "Simple issues, teams with established bug workflows, or minor documentation updates."
+evaluation_rubrics:
+  - bug-report-completeness
+  - reproduction-clarity
+  - environment-detail
+model_notes_small: "Focus on basic bug information capture and simple reproduction steps. Avoid complex debugging workflows."
+model_notes_strong: "Can handle comprehensive bug investigation, complex environment analysis, and detailed impact assessment."

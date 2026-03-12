@@ -1,0 +1,37 @@
+name: product-management
+category: squad-roles
+stack_tags:
+  - product-management
+  - user-stories
+  - backlog-management
+  - prioritization
+  - roadmapping
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/user-story.prompt.md"
+  - ".github/prompts/backlog-refinement.prompt.md"
+  - ".github/prompts/product-roadmap.prompt.md"
+  - ".github/instructions/product-management.instructions.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - User story creation and refinement
+  - Backlog grooming and prioritization
+  - Product roadmap planning
+  - Stakeholder communication
+tldr: "Product management guidance for user stories, backlog refinement, and roadmapping"
+layman_summary: "Helps product managers create effective user stories, manage backlogs, and plan product roadmaps with best practices."
+engineer_summary: "Provides comprehensive product management workflows including user story creation, backlog refinement, prioritization frameworks, and roadmap planning tools."
+what_it_does: "Offers specialized prompts and instructions for product management tasks including user story creation, backlog management, and strategic planning."
+how_it_works: "Combines user story templates, backlog refinement processes, and roadmap planning frameworks with stakeholder communication guidance."
+when_to_use: "Product planning sessions, backlog grooming, user story creation, roadmap development, or stakeholder alignment meetings."
+when_not_to_use": "Technical implementation tasks, code reviews, or teams without dedicated product management functions."
+evaluation_rubrics:
+  - user-story-quality
+  - backlog-completeness
+  - roadmap-clarity
+model_notes_small: "Focus on basic user story structure and simple backlog management. Avoid complex prioritization frameworks."
+model_notes_strong: "Can handle comprehensive product strategy, complex prioritization frameworks, and detailed stakeholder management."

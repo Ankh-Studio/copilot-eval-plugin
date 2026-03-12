@@ -1,0 +1,34 @@
+---
+name: pr-overviews
+category: collaboration-core
+stack_tags:
+  - pull-requests
+  - collaboration
+  - code-review
+  - documentation
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/pr-overview.prompt.md"
+  - "skills/generate-pr-overview/SKILL.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Pull request creation
+  - Code review preparation
+  - Release documentation
+tldr: "High-quality PR overview generation with template awareness"
+layman_summary: "Generates comprehensive PR descriptions that adapt to repository templates and include all essential information."
+engineer_summary: "Detects PR templates and generates structured overviews with change summaries, testing instructions, and impact assessments."
+what_it_does: "Creates detailed PR overviews by analyzing repository templates and generating appropriate content sections."
+how_it_works: "Combines slash-invoked prompt with skill for template detection and structured content generation."
+when_to_use: "New PRs, teams wanting consistent PR documentation, or repositories with complex PR requirements."
+when_not_to_use: "Simple repositories with minimal PR needs or teams with established PR workflows."
+evaluation_rubrics:
+  - pr-completeness
+  - template-adherence
+  - documentation-quality
+model_notes_small: "Focus on basic PR structure and simple template detection. Avoid complex change analysis."
+model_notes_strong: "Can handle complex template parsing, comprehensive change analysis, and detailed impact assessment."

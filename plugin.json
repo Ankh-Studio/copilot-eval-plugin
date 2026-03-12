@@ -35,6 +35,7 @@
     "skills/eval-regression/",
     "skills/eval-tldr/",
     "skills/recommend-workspace-pack/",
-    "skills/eval-starter-pack/"
+    "skills/eval-starter-pack/",
+    "skills/generate-pr-overview/"
   ]
 }

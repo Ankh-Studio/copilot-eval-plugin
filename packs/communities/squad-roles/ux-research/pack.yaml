@@ -1,0 +1,37 @@
+name: ux-research
+category: squad-roles
+stack_tags:
+  - ux-research
+  - usability-testing
+  - user-interviews
+  - persona-development
+  - journey-mapping
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/usability-test.prompt.md"
+  - ".github/prompts/user-interview.prompt.md"
+  - ".github/prompts/persona-development.prompt.md"
+  - ".github/instructions/ux-research.instructions.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - User research planning and execution
+  - Usability testing design and analysis
+  - Persona development and validation
+  - Customer journey mapping
+tldr: "UX research guidance for usability testing, user interviews, and persona development"
+layman_summary: "Helps UX researchers plan and conduct effective user research, usability tests, and create data-driven personas."
+engineer_summary: "Provides comprehensive UX research workflows including usability testing protocols, interview guides, persona development frameworks, and journey mapping tools."
+what_it_does: "Offers specialized prompts and instructions for UX research tasks including usability testing, user interviews, persona creation, and journey mapping."
+how_it_works: "Combines research methodology frameworks, interview protocols, testing templates, and analysis tools for comprehensive user research."
+when_to_use: "User research planning, usability testing, interview preparation, persona development, or journey mapping exercises."
+when_not_to_use": "Technical implementation tasks, code reviews, or teams without dedicated UX research functions."
+evaluation_rubrics:
+  - research-methodology
+  - insight-quality
+  - persona-completeness
+model_notes_small: "Focus on basic research methods and simple interview guides. Avoid complex statistical analysis."
+model_notes_strong: "Can handle comprehensive research design, advanced statistical analysis, and detailed persona development."

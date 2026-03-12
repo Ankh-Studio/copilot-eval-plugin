@@ -1,0 +1,33 @@
+name: feature-requests
+category: collaboration-core
+stack_tags:
+  - product-management
+  - lean-startup
+  - validation
+  - collaboration
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/ISSUE_TEMPLATE/feature_request.yml"
+  - ".github/prompts/feature-request.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - New feature proposals
+  - Product planning sessions
+  - User feedback collection
+tldr: "Lean startup style feature request generation and validation"
+layman_summary: "Helps teams create evidence-based feature proposals that separate problems from solutions and validate assumptions."
+engineer_summary: "Implements lean startup methodology for feature requests with problem validation, evidence gathering, and risk assessment."
+what_it_does: "Provides structured feature request templates and prompts for creating evidence-based feature proposals."
+how_it_works: "Combines GitHub issue forms with detailed prompts for comprehensive feature request generation and validation."
+when_to_use: "New feature proposals, product planning, or when teams need structured feature validation."
+when_not_to_use: "Simple bug fixes, minor improvements, or teams with established feature processes."
+evaluation_rubrics:
+  - feature-completeness
+  - evidence-quality
+  - problem-clarity
+model_notes_small: "Focus on basic problem-solution separation and simple evidence gathering. Avoid complex validation frameworks."
+model_notes_strong: "Can handle comprehensive lean startup validation, complex risk assessment, and detailed outcome definition."

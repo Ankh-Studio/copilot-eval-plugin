@@ -1,0 +1,135 @@
+name: Bug Report
+description: Report a bug with comprehensive capture details
+title: "[BUG]: "
+labels: ["bug"]
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: Bug Description
+    description: Clear and concise description of the bug
+    placeholder: Describe the bug in detail...
+  validations:
+    required: true
+
+- type: textarea
+  id: steps
+  attributes:
+    label: Reproduction Steps
+    description: Detailed steps to reproduce the behavior
+    placeholder: "1.\n2.\n3.\n4."
+  validations:
+    required: true
+
+- type: textarea
+  id: expected
+  attributes:
+    label: Expected Behavior
+    description: What you expected to happen
+    placeholder: Describe what should have happened...
+  validations:
+    required: true
+
+- type: textarea
+  id: actual
+  attributes:
+    label: Actual Behavior
+    description: What actually happened
+    placeholder: Describe what actually happened...
+  validations:
+    required: true
+
+- type: textarea
+  id: evidence
+  attributes:
+    label: Evidence
+    description: Screenshots, logs, or other evidence
+    placeholder: Add screenshots, logs, or other evidence here...
+
+- type: dropdown
+  id: severity
+  attributes:
+    label: Severity
+    description: How severe is this bug?
+    options:
+      - Critical - Blocks core functionality
+      - High - Major feature broken
+      - Medium - Feature partially broken
+      - Low - Minor inconvenience
+  validations:
+    required: true
+
+- type: dropdown
+  id: impact
+  attributes:
+    label: Impact
+    description: How many users are affected?
+    options:
+      - All Users - Affects everyone
+      - Many Users - Affects significant portion
+      - Some Users - Affects specific group
+      - Single User - Isolated case
+  validations:
+    required: true
+
+- type: dropdown
+  id: frequency
+  attributes:
+    label: Frequency
+    description: How often does this happen?
+    options:
+      - Always - Happens every time
+      - Often - Happens frequently
+      - Sometimes - Happens occasionally
+      - Rarely - Happens sporadically
+      - Once - Only occurred once
+  validations:
+    required: true
+
+- type: dropdown
+  id: regression
+  attributes:
+    label: Is this a regression?
+    description: Did this work in a previous version?
+    options:
+      - Yes - Worked in previous version
+      - No - New issue
+      - Unknown - Not sure
+  validations:
+    required: true
+
+- type: textarea
+  id: environment
+  attributes:
+    label: Environment Details
+    description: Application version, OS, browser, etc.
+    placeholder: "Application Version: \nOS: Windows/macOS/Linux\nBrowser: Chrome/Firefox/Safari/Edge\nNode Version (if applicable):\nPackage Manager: npm/yarn/pnpm"
+
+- type: textarea
+  id: workarounds
+  attributes:
+    label: Workarounds
+    description: Any temporary workarounds you've discovered
+    placeholder: Describe any workarounds...
+
+- type: textarea
+  id: additional
+  attributes:
+    label: Additional Context
+    description: Related issues, PRs, or other context
+    placeholder: Add any related context...
+
+- type: checkboxes
+  id: checklist
+  attributes:
+    label: Pre-Submission Checklist
+    description: Please confirm the following before submitting
+    options:
+      - label: I have searched for existing issues
+        required: true
+      - label: I have provided clear reproduction steps
+        required: true
+      - label: I have included environment details
+        required: true
+      - label: I have assessed severity and impact
+        required: true

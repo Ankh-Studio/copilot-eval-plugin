@@ -1,0 +1,119 @@
+name: Feature Request
+description: Propose a new feature with lean startup validation
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+- type: dropdown
+  id: feature-type
+  attributes:
+    label: Feature Type
+    description: What type of feature is this?
+    options:
+      - Enhancement - Improving existing functionality
+      - Experiment - New capability to test
+      - UX Improvement - User experience enhancement
+      - Technical Investment - Infrastructure or performance
+      - Community Request - User-suggested feature
+  validations:
+    required: true
+
+- type: textarea
+  id: problem
+  attributes:
+    label: Problem Statement
+    description: What problem does this solve?
+    placeholder: Clearly describe the problem or opportunity...
+  validations:
+    required: true
+
+- type: textarea
+  id: background
+  attributes:
+    label: Background Context
+    description: What led to this feature request?
+    placeholder: Provide context about why this is needed now...
+
+- type: textarea
+  id: evidence
+  attributes:
+    label: Evidence
+    description: What evidence supports this feature?
+    placeholder: User feedback, metrics, research findings, market analysis...
+
+- type: textarea
+  id: proposed-solution
+  attributes:
+    label: Proposed Solution
+    description: How do you propose to solve this?
+    placeholder: Describe the proposed solution and approach...
+
+- type: textarea
+  id: expected-outcome
+  attributes:
+    label: Expected Outcome
+    description: What success looks like?
+    placeholder: Describe the expected impact and success metrics...
+
+- type: textarea
+  id: risks
+  attributes:
+    label: Risks and Assumptions
+    description: What are the risks and assumptions?
+    placeholder: List potential risks, dependencies, and assumptions...
+
+- type: textarea
+  id: open-questions
+  attributes:
+    label: Open Questions
+    description: What questions need to be answered?
+    placeholder: List questions that need investigation or clarification...
+
+- type: dropdown
+  id: priority
+  attributes:
+    label: Priority
+    description: How important is this feature?
+    options:
+      - Critical - Essential for next release
+      - High - Important but can wait
+      - Medium - Nice to have
+      - Low - Future consideration
+  validations:
+    required: true
+
+- type: textarea
+  id: alternatives
+  attributes:
+    label: Alternative Solutions
+    description: What other approaches were considered?
+    placeholder: Describe alternative solutions and why they were rejected...
+
+- type: checkboxes
+  id: validation
+  attributes:
+    label: Lean Startup Validation
+    description: Has this been validated?
+    options:
+      - label: User research or interviews conducted
+        required: false
+      - label: Data or metrics support the need
+        required: false
+      - label: Prototype or proof of concept created
+        required: false
+      - label: Stakeholder approval obtained
+        required: false
+
+- type: checkboxes
+  id: checklist
+  attributes:
+    label: Pre-Submission Checklist
+    description: Please confirm the following before submitting
+    options:
+      - label: I have described the problem clearly
+        required: true
+      - label: I have provided supporting evidence
+        required: true
+      - label: I have considered alternative solutions
+        required: true
+      - label: I have assessed risks and assumptions
+        required: true

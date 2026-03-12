@@ -1,0 +1,37 @@
+name: technical-lead
+category: persona-domains
+stack_tags:
+  - technical-leadership
+  - architecture
+  - code-review
+  - mentorship
+  - technical-strategy
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies: []
+target_paths:
+  - ".github/prompts/technical-review.prompt.md"
+  - ".github/prompts/architecture-decision.prompt.md"
+  - ".github/prompts/mentorship-session.prompt.md"
+  - ".github/instructions/technical-leadership.instructions.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Technical architecture decisions
+  - Code reviews and quality assurance
+  - Team mentorship and skill development
+  - Technical strategy and roadmap planning
+tldr: "Technical leadership guidance for architecture, code review, and team mentorship"
+layman_summary: "Helps technical leads make architecture decisions, conduct effective code reviews, and mentor team members."
+engineer_summary: "Provides comprehensive technical leadership workflows including architecture decision frameworks, code review methodologies, mentorship programs, and technical strategy development."
+what_it_does: "Offers specialized prompts and instructions for technical leadership tasks including architecture decisions, code reviews, team mentorship, and technical planning."
+how_it_works: "Combines architectural frameworks, code review methodologies, mentorship techniques, and strategic planning tools for effective technical leadership."
+when_to_use: "Architecture planning, code reviews, team mentoring, technical strategy sessions, or skill development programs."
+when_not_to_use": "Non-technical tasks, business strategy, or teams without technical leadership needs."
+evaluation_rubrics:
+  - technical-decision-quality
+  - code-review-effectiveness
+  - mentorship-impact
+model_notes_small: "Focus on basic code review and simple architectural decisions. Avoid complex enterprise architecture."
+model_notes_strong: "Can handle complex architectural decisions, team development strategies, and comprehensive technical planning."
