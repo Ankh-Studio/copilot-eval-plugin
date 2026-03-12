@@ -1,0 +1,43 @@
+name: frontend-ui-radix-tailwind
+category: frontend-ui
+stack_tags:
+  - radix-ui
+  - tailwindcss
+  - design-system
+  - accessibility
+intended_repo_types:
+  - react-app
+  - component-library
+  - design-system
+required_dependencies:
+  - "@radix-ui/react-*"
+  - tailwindcss
+optional_dependencies:
+  - "@tailwindcss/forms"
+  - "@tailwindcss/typography"
+  - class-variance-authority
+  - clsx
+target_paths:
+  - ".github/instructions/radix-ui.instructions.md"
+  - ".github/instructions/tailwind.instructions.md"
+  - ".github/prompts/ui-component.prompt.md"
+  - ".github/prompts/styling.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - package.json contains "@radix-ui"
+  - tailwind.config.js exists
+  - CSS contains Tailwind classes
+tldr: "Accessible UI components with Radix UI and utility-first styling with Tailwind CSS"
+layman_summary: "Adds guidance for building accessible, professional UI components using Radix UI primitives and Tailwind CSS styling."
+engineer_summary: "Provides Radix UI component patterns, Tailwind CSS utility usage, accessibility best practices, and design system integration for modern React applications."
+what_it_does: "Configures Copilot to use Radix UI for accessible component primitives and Tailwind CSS for consistent, maintainable styling."
+how_it_works: "Adds instructions for Radix UI component composition, Tailwind class organization, and accessibility patterns that work together seamlessly."
+when_to_use: "Projects needing accessible UI components, design systems, or teams wanting consistent styling without custom CSS."
+when_not_to_use: "Projects using other UI libraries, custom CSS frameworks, or teams preferring CSS-in-JS solutions."
+evaluation_rubrics:
+  - accessibility-compliance
+  - component-composition
+  - styling-consistency
+model_notes_small: "Focus on basic Radix primitives and simple Tailwind utilities. Avoid complex component variants."
+model_notes_strong: "Can handle complex component compositions, design system patterns, and advanced Tailwind configurations."

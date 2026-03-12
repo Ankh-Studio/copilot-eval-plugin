@@ -1,0 +1,42 @@
+name: frontend-data-tanstack-axios
+category: frontend-data
+stack_tags:
+  - tanstack
+  - axios
+  - data-fetching
+  - api-integration
+intended_repo_types:
+  - react-app
+  - web-app
+  - fullstack-frontend
+required_dependencies:
+  - "@tanstack/react-query"
+  - axios
+optional_dependencies:
+  - "@tanstack/react-query-devtools"
+  - axios-mock-adapter
+  - msw
+target_paths:
+  - ".github/instructions/tanstack-query.instructions.md"
+  - ".github/instructions/axios.instructions.md"
+  - ".github/prompts/api-hook.prompt.md"
+  - ".github/prompts/data-fetching.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - package.json contains "@tanstack/react-query"
+  - package.json contains "axios"
+  - API service files present
+tldr: "Modern data fetching with TanStack Query and HTTP client setup with Axios"
+layman_summary: "Adds smart patterns for loading, caching, and managing server data with automatic updates and error handling."
+engineer_summary: "Provides TanStack Query patterns for server state management, Axios configuration, error handling, and data synchronization strategies."
+what_it_does: "Configures Copilot to use TanStack Query for server state management and Axios for HTTP requests with proper error handling and caching."
+how_it_works: "Adds instructions for query keys, mutation patterns, Axios interceptors, and data synchronization that work together for robust data handling."
+when_to_use: "Applications with API integration, server state management needs, or teams wanting standardized data fetching patterns."
+when_not_to_use: "Simple apps without server data, projects using other data libraries, or teams with custom data solutions."
+evaluation_rubrics:
+  - data-fetching-patterns
+  - error-handling
+  - caching-strategies
+model_notes_small: "Focus on basic useQuery and useMutation patterns. Avoid complex query configurations and caching strategies."
+model_notes_strong: "Can handle complex query patterns, optimistic updates, infinite queries, and advanced caching configurations."

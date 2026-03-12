@@ -1,0 +1,64 @@
+name: frontend-product-stack
+category: frontend-complete
+stack_tags:
+  - react
+  - typescript
+  - radix-ui
+  - tailwindcss
+  - tanstack
+  - axios
+  - accessibility
+intended_repo_types:
+  - react-app
+  - product-application
+  - fullstack-frontend
+required_dependencies:
+  - react
+  - react-dom
+  - typescript
+  - "@radix-ui/react-*"
+  - tailwindcss
+  - "@tanstack/react-query"
+  - axios
+optional_dependencies:
+  - "@types/react"
+  - "@types/react-dom"
+  - "@tailwindcss/forms"
+  - class-variance-authority
+  - "@axe-core/react"
+  - "eslint-plugin-jsx-a11y"
+target_paths:
+  - ".github/copilot-instructions.md"
+  - ".github/instructions/react.instructions.md"
+  - ".github/instructions/typescript.instructions.md"
+  - ".github/instructions/radix-ui.instructions.md"
+  - ".github/instructions/tailwind.instructions.md"
+  - ".github/instructions/tanstack-query.instructions.md"
+  - ".github/instructions/axios.instructions.md"
+  - ".github/instructions/accessibility.instructions.md"
+  - ".github/instructions/ux-patterns.instructions.md"
+  - ".github/prompts/react-component.prompt.md"
+  - ".github/prompts/ui-component.prompt.md"
+  - ".github/prompts/styling.prompt.md"
+  - ".github/prompts/api-hook.prompt.md"
+  - ".github/prompts/data-fetching.prompt.md"
+  - ".github/prompts/accessible-component.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - New React project setup
+  - Full-stack application frontend
+  - Product team onboarding
+tldr: "Complete modern React stack with TypeScript, accessible UI, data fetching, and best practices"
+layman_summary: "Adds comprehensive guidance for building modern React applications with all the best practices, accessible components, and data handling."
+engineer_summary: "Provides complete React ecosystem guidance including TypeScript patterns, Radix UI components, Tailwind styling, TanStack Query data management, Axios HTTP client, and accessibility compliance."
+what_it_does: "Configures Copilot with a complete modern React stack covering components, styling, data, accessibility, and project structure."
+how_it_works: "Combines all individual pack guidance into a cohesive set of instructions and prompts for full-stack React development."
+when_to_use: "New React projects, team standardization, or organizations wanting comprehensive React development guidance."
+when_not_to_use: "Projects requiring different stack choices, teams with established patterns, or simple applications needing minimal guidance."
+evaluation_rubrics:
+  - stack-integration
+  - pattern-consistency
+  - completeness
+model_notes_small: "Focus on fundamental patterns from each stack component. Avoid advanced integrations and complex configurations."
+model_notes_strong: "Can handle advanced stack integrations, complex patterns, and comprehensive architectural guidance across all technologies."

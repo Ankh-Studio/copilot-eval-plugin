@@ -1,0 +1,41 @@
+name: frontend-react-ts-core
+category: frontend-core
+stack_tags:
+  - react
+  - typescript
+  - frontend
+intended_repo_types:
+  - react-app
+  - component-library
+  - web-app
+required_dependencies:
+  - react
+  - react-dom
+  - typescript
+optional_dependencies:
+  - "@types/react"
+  - "@types/react-dom"
+target_paths:
+  - ".github/copilot-instructions.md"
+  - ".github/instructions/react.instructions.md"
+  - ".github/instructions/typescript.instructions.md"
+  - ".github/prompts/react-component.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - package.json contains "react"
+  - tsconfig.json exists
+  - .tsx or .jsx files present
+tldr: "Core React + TypeScript setup with component patterns and type safety"
+layman_summary: "Adds smart React and TypeScript guidance to help build better web components with proper types and best practices."
+engineer_summary: "Provides React 18+ and TypeScript 5+ patterns including functional components, hooks usage, props typing, and project structure guidelines optimized for modern development."
+what_it_does: "Configures Copilot to use modern React patterns with TypeScript, including functional components, hooks, proper typing, and project structure."
+how_it_works: "Adds repository instructions and prompt files that guide Copilot toward React best practices, TypeScript conventions, and component architecture."
+when_to_use: "New React projects, TypeScript migrations, or teams wanting consistent React patterns across the codebase."
+when_not_to_use: "Class-based React projects, JavaScript-only projects, or teams with established custom patterns."
+evaluation_rubrics:
+  - instruction-clarity
+  - react-pattern-compliance
+  - typescript-usage
+model_notes_small: "Focus on basic functional components and simple hooks. Avoid complex generics and advanced patterns."
+model_notes_strong: "Can handle advanced patterns, complex typing, and architectural guidance for large React applications."

@@ -1,0 +1,41 @@
+name: frontend-a11y-ux
+category: frontend-accessibility
+stack_tags:
+  - accessibility
+  - ux
+  - a11y
+  - inclusive-design
+intended_repo_types:
+  - react-app
+  - component-library
+  - web-app
+  - public-site
+required_dependencies: []
+optional_dependencies:
+  - "@axe-core/react"
+  - "eslint-plugin-jsx-a11y"
+  - "storybook"
+target_paths:
+  - ".github/instructions/accessibility.instructions.md"
+  - ".github/instructions/ux-patterns.instructions.md"
+  - ".github/prompts/accessible-component.prompt.md"
+  - ".github/prompts/ux-review.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - Accessibility testing tools present
+  - WCAG compliance requirements
+  - Public-facing application
+tldr: "Accessibility and UX patterns for inclusive, user-friendly interfaces"
+layman_summary: "Adds guidance for building interfaces that work for everyone, including users with disabilities and different needs."
+engineer_summary: "Provides WCAG 2.1 AA compliance patterns, semantic HTML usage, keyboard navigation, screen reader support, and UX best practices."
+what_it_does: "Configures Copilot to follow accessibility guidelines and UX principles when creating components and interfaces."
+how_it_works: "Adds instructions for semantic HTML, ARIA usage, keyboard navigation, color contrast, and user experience patterns."
+when_to_use: "Public applications, enterprise software, or teams committed to inclusive design and accessibility compliance."
+when_not_to_use: "Internal tools with limited accessibility requirements, or projects with specialized accessibility solutions."
+evaluation_rubrics:
+  - wcag-compliance
+  - semantic-html
+  - keyboard-navigation
+model_notes_small: "Focus on basic accessibility: semantic HTML, alt text, basic ARIA. Avoid complex accessibility patterns."
+model_notes_strong: "Can handle advanced accessibility patterns, complex ARIA implementations, and comprehensive UX guidelines."
