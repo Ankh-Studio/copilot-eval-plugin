@@ -1,6 +1,6 @@
 {
   "name": "@ankh-studio/copilot-eval-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing",
   "main": "plugin.json",
   "files": [
@@ -8,7 +8,9 @@
     "agents/",
     "skills/",
     "rubrics/",
-    "hooks.json",
+    "packs/",
+    "scripts/",
+    "evals/",
     "README.md",
     "LICENSE"
   ],
