@@ -36,6 +36,8 @@
     "skills/eval-tldr/",
     "skills/recommend-workspace-pack/",
     "skills/eval-starter-pack/",
-    "skills/generate-pr-overview/"
+    "skills/generate-pr-overview/",
+    "skills/repo-workflow-planner/",
+    "skills/add-api-service/"
   ]
 }
