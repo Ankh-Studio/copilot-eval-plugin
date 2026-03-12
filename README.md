@@ -1,8 +1,6 @@
-# Copilot Evaluation Plugin
+# Copilot Eval Plugin
 
-**Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing.**
-
-This plugin delivers enterprise-grade reliability through systematic quality assessment, mandatory self-critique, and stress-tested evaluation rubrics. It provides actionable feedback for all Copilot artifact types with evidence-based analysis and specific improvement recommendations.
+A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in client repositories. It evaluates prompts, instructions, skills, agents, workflows, validation rules, and integration artifacts against structured rubrics. It also helps teams explain what each artifact does, how it works, where it's weak, and what to improve next.
 
 ## 🎯 What Makes This Different
 
