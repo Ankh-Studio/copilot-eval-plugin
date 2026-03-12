@@ -14,6 +14,8 @@ It also helps teams explain what each artifact does, how it works, where it's we
 
 **Persona-Driven Evaluation**: Bounded operating modes with role-specific missions, evidence requirements, and output contracts to reduce hallucination and improve consistency.
 
+**Advanced Memory-Enhanced Routing**: Intelligent persona selection with historical pattern recognition, confidence scoring, and context-aware decision making.
+
 **Automated Quality Hooks**: Pre/post-command evaluation that integrates quality assurance directly into your Copilot workflow.
 
 ## 🚀 Why Choose Copilot Eval?
@@ -21,6 +23,7 @@ It also helps teams explain what each artifact does, how it works, where it's we
 - **🔍 Higher Accuracy**: Chain-of-Verification reduces evaluation errors by 40%+
 - **🛡️ Reliable Rubrics**: Adversarial stress-testing eliminates scoring vulnerabilities
 - **🏛️ Better Decisions**: Multi-perspective debate resolves complex architecture tradeoffs
+- **🧠 Intelligent Routing**: Advanced persona selection with memory-enhanced decision making
 - **⚡ Production Ready**: Systematic quality assurance for enterprise deployments
 - **🎯 Actionable Insights**: Evidence-based feedback with specific improvement examples
 
