@@ -21,7 +21,7 @@ export const Component: React.FC<Props> = ({ title, onAction }) => {
     </div>
   );
 };
-```
+```bash
 
 ## TypeScript Guidelines
 
@@ -52,7 +52,7 @@ import { SomeLibrary } from 'third-party-lib';
 import { InternalComponent } from './InternalComponent';
 import { ComponentProps } from './types';
 import { utilityFunction } from '../utils';
-```
+```bash
 
 ## Error Handling
 
@@ -70,4 +70,4 @@ export class ErrorBoundary extends React.Component<
 > {
   // Implementation
 }
-```
+```bash

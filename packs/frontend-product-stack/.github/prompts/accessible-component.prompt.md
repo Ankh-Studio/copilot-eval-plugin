@@ -79,7 +79,7 @@ export const AccessibleComponent: React.FC<AccessibleComponentProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ## Common Accessible Patterns
 
@@ -132,7 +132,7 @@ export const AccessibleButton: React.FC<ButtonProps> = ({
     </button>
   );
 };
-```
+```bash
 
 ### Accessible Form Field
 
@@ -201,7 +201,7 @@ export const FormField: React.FC<FormFieldProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ### Accessible Modal/Dialog
 
@@ -313,7 +313,7 @@ export const AccessibleModal: React.FC<ModalProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ### Accessible Navigation
 
@@ -358,7 +358,7 @@ export const AccessibleNavigation: React.FC<NavigationProps> = ({
     </nav>
   );
 };
-```
+```bash
 
 ## Accessibility Testing Checklist
 

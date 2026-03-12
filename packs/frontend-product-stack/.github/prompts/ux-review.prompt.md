@@ -35,7 +35,7 @@ interface UXIssue {
   impact: string;
   solution: string;
 }
-```
+```bash
 
 ## Accessibility Review Patterns
 
@@ -69,7 +69,7 @@ export const reviewFocusManagement = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ### Color Contrast Analysis
 
@@ -96,7 +96,7 @@ export const analyzeColorContrast = (styles: CSSProperties) => {
   
   return issues;
 };
-```
+```bash
 
 ## Usability Review Patterns
 
@@ -130,7 +130,7 @@ export const reviewInteractions = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ### Form Usability Analysis
 
@@ -162,7 +162,7 @@ export const analyzeFormUsability = (formComponent: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Visual Design Review
 
@@ -197,7 +197,7 @@ export const reviewTypography = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ### Spacing and Layout Review
 
@@ -229,7 +229,7 @@ export const analyzeLayout = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Performance Review
 
@@ -263,7 +263,7 @@ export const analyzePerceivedPerformance = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Mobile UX Review
 
@@ -291,7 +291,7 @@ export const reviewTouchTargets = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ### Responsive Design Review
 
@@ -323,7 +323,7 @@ export const analyzeResponsiveDesign = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Content Review
 
@@ -358,7 +358,7 @@ export const reviewContentClarity = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## UX Improvement Recommendations
 
@@ -379,7 +379,7 @@ export const prioritizeImprovements = (issues: UXIssue[]): UXRecommendation[] =>
       implementation: generateImplementationPlan(issue)
     }));
 };
-```
+```bash
 
 ### Implementation Templates
 
@@ -408,6 +408,6 @@ const focusTrapRef = useFocusTrap();
       return '// Review specific implementation requirements';
   }
 };
-```
+```bash
 
 Generate comprehensive UX reviews that identify accessibility issues, usability problems, and provide actionable improvement recommendations for better user experiences.

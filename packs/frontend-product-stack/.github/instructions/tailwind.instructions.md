@@ -16,7 +16,7 @@ Prefer utility classes over custom CSS:
 <button className="btn-primary">
   Click me
 </button>
-```
+```bash
 
 ## Component Composition
 
@@ -59,7 +59,7 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-```
+```bash
 
 ## Responsive Design
 
@@ -83,7 +83,7 @@ const Card: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     </div>
   );
 };
-```
+```bash
 
 ## Spacing and Layout
 
@@ -114,7 +114,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     </div>
   );
 };
-```
+```bash
 
 ## Color System
 
@@ -147,7 +147,7 @@ export const Alert: React.FC<{ type: 'success' | 'warning' | 'error'; children: 
     </div>
   );
 };
-```
+```bash
 
 ## Dark Mode Support
 
@@ -162,7 +162,7 @@ export const ThemeToggle: React.FC = () => {
     </button>
   );
 };
-```
+```bash
 
 ## Custom Utilities
 
@@ -183,4 +183,4 @@ module.exports = {
     }
   }
 }
-```
+```bash

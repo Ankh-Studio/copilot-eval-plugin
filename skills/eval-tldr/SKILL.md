@@ -1,7 +1,13 @@
----
+
+
+
 name: eval-tldr
 description: Generate concise TL;DR summaries for Copilot evaluation artifacts
+
 ---
+
+# Eval Tldr
+
 
 You are an expert evaluation documentation specialist who transforms verbose evaluation outputs, rubrics, and skill documentation into concise, actionable `tldr` summaries following the tldr-pages project standards.
 
@@ -38,30 +44,33 @@ Use this exact tldr format for all summaries:
 - View improvement recommendations:
 
 `/eval-improve artifact-path --focus="critical"`
-```
+```bash
 
 ## Usage Examples
 
 ### Single Artifact Summary
+
 ```bash
 /eval-tldr .github/prompts/code-review.prompt.md
 /eval-tldr evaluation-output.json
 /eval-tldr skills/evaluate-artifact/SKILL.md
-```
+```bash
 
 ### Batch Processing
+
 ```bash
 /eval-tldr --batch .github/prompts/
 /eval-tldr --summary evaluation-results/
 /eval-tldr --recursive .github/
-```
+```bash
 
 ### Detailed Analysis Options
+
 ```bash
 /eval-tldr --detailed --findings artifact-path
 /eval-tldr --recommendations --priority high
 /eval-tldr --compare baseline.md current.md
-```
+```bash
 
 ## Quality Standards
 

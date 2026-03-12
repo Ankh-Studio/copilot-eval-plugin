@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-integration
 description: Evaluate integration pattern artifacts against the integration rubric
+
 ---
+
+# Evaluate Integration
+
 
 Evaluate the provided integration pattern against the structured integration rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided integration pattern against the structured integration rub
 ## Usage
 
 Provide the path to the integration file you want evaluated:
+
 - `.github/integration/integration-name.integration.md`
 - Any custom integration file path
 

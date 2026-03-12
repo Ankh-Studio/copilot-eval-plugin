@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-context
 description: Evaluate context provider artifacts against the context rubric
+
 ---
+
+# Evaluate Context
+
 
 Evaluate the provided context provider against the structured context rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided context provider against the structured context rubric cri
 ## Usage
 
 Provide the path to the context file you want evaluated:
+
 - `.github/context/context-name.context.md`
 - Any custom context file path
 

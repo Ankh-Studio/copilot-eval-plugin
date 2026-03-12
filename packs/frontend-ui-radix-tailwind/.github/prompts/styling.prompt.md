@@ -64,7 +64,7 @@ const sizeStyles = {
   md: 'px-4 py-2 text-base min-h-[44px]',
   lg: 'px-6 py-3 text-lg min-h-[48px]'
 };
-```
+```bash
 
 ## Radix UI Component Patterns
 
@@ -98,7 +98,7 @@ export const StyledDialog: React.FC<{
     </Dialog.Root>
   );
 };
-```
+```bash
 
 ### Styled Dropdown Menu
 
@@ -150,7 +150,7 @@ export const StyledDropdown: React.FC<{
     </DropdownMenu.Root>
   );
 };
-```
+```bash
 
 ### Styled Form Controls
 
@@ -262,7 +262,7 @@ export const StyledCheckbox: React.FC<{
     </div>
   );
 };
-```
+```bash
 
 ## State-Based Styling with Data Attributes
 
@@ -291,7 +291,7 @@ const stateStyles = `
   data-[state=active]:bg-blue-700
   data-[state=inactive]:bg-gray-600
 `;
-```
+```bash
 
 ### Animation with Data Attributes
 
@@ -310,7 +310,7 @@ const animationStyles = `
   data-[state=open]:animate-in data-[state=open]:slide-in-from-top-2
   data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top-2
 `;
-```
+```bash
 
 ## Dark Mode Support
 
@@ -337,7 +337,7 @@ export const DarkModeComponent = () => {
     </div>
   );
 };
-```
+```bash
 
 ## Responsive Design with Radix UI
 
@@ -362,7 +362,7 @@ export const ResponsiveDialog = ({ children, ...props }) => {
     </Dialog.Root>
   );
 };
-```
+```bash
 
 ## Accessibility Enhancements
 
@@ -385,6 +385,6 @@ const highContrastStyles = `
   contrast-more:border-current
   contrast-more:text-current
 `;
-```
+```bash
 
 Generate Radix UI components with Tailwind CSS that are fully accessible, responsive, and follow modern design system principles.

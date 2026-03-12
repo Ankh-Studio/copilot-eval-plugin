@@ -62,7 +62,7 @@ export const useCreateEntity = () => {
     },
   });
 };
-```
+```bash
 
 ## Advanced Patterns
 
@@ -84,7 +84,7 @@ export const usePaginatedEntities = (page: number, pageSize: number) => {
     keepPreviousData: true, // Keep previous data while fetching
   });
 };
-```
+```bash
 
 ### Optimistic Update Hook
 
@@ -116,7 +116,7 @@ export const useUpdateEntity = () => {
     },
   });
 };
-```
+```bash
 
 ## Error Handling Template
 
@@ -155,7 +155,7 @@ export const useEntity = (id: string) => {
     },
   });
 };
-```
+```bash
 
 ## Best Practices
 

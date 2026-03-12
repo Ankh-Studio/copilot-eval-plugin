@@ -33,5 +33,15 @@
   "homepage": "https://github.com/Ankh-Studio/copilot-eval-plugin#readme",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "scripts": {
+    "lint:check": "markdownlint 'README.md' 'CODE_OF_CONDUCT.md' 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/*.md' 'agents/**/*.md' 'evals/**/*.md' 'skills/**/*.md' 'rubrics/**/*.md' 'personas/**/*.md' 'frameworks/**/*.md' && yamllint '.github/**/*.yml' '.github/**/*.yaml' --config-file .yamllint.yml",
+    "lint:fix": "markdownlint 'README.md' 'CODE_OF_CONDUCT.md' 'CONTRIBUTING.md' 'SECURITY.md' 'ROADMAP.md' '.github/**/*.md' 'agents/**/*.md' 'evals/**/*.md' 'skills/**/*.md' 'rubrics/**/*.md' 'personas/**/*.md' 'frameworks/**/*.md' --fix",
+    "lint": "npm run lint:check",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.48.0",
+    "yaml-lint": "^1.2.0"
   }
 }

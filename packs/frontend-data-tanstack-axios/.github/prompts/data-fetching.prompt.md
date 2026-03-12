@@ -37,7 +37,7 @@ export const useUser = (userId: string) => {
     retry: 2,
   });
 };
-```
+```bash
 
 ## Basic Mutation Hook
 
@@ -86,7 +86,7 @@ export const useUser = (userId: string) => {
     },
   });
 };
-```
+```bash
 
 ## Advanced Patterns
 
@@ -109,7 +109,7 @@ export const usePaginatedUsers = (page: number, pageSize: number) => {
     staleTime: 2 * 60 * 1000,
   });
 };
-```
+```bash
 
 ### Optimistic Updates
 
@@ -141,11 +141,11 @@ export const useUpdateUser = () => {
     },
   });
 };
-```
+```bash
     },
   });
 };
-```
+```bash
 
 ## Error Handling Patterns
 
@@ -181,7 +181,7 @@ const handleApiError = (error: unknown): string => {
   
   return 'An unexpected error occurred.';
 };
-```
+```bash
 
 ### Error Boundary Hook
 
@@ -207,7 +207,7 @@ export const useQueryWithError = <T>(
     ...options,
   });
 };
-```
+```bash
 
 ## Cache Management
 
@@ -237,7 +237,7 @@ export const useUsers = (filters?: string) => {
     queryFn: () => fetchUsers(filters),
   });
 };
-```
+```bash
 
 ### Cache Invalidation Strategies
 
@@ -265,7 +265,7 @@ export const useDataManagement = () => {
 
   return { invalidateRelatedQueries, prefetchData };
 };
-```
+```bash
 
 ## Real-time Updates
 
@@ -300,7 +300,7 @@ export const useRealtimeData = <T>(
     staleTime: 30 * 1000, // 30 seconds for real-time data
   });
 };
-```
+```bash
 
 ## Performance Optimization
 
@@ -319,7 +319,7 @@ export const useUserPermissions = (userId: string) => {
     staleTime: 10 * 60 * 1000, // 10 minutes for permissions
   });
 };
-```
+```bash
 
 ### Background Refetching
 
@@ -333,7 +333,7 @@ export const useActiveData = () => {
     staleTime: 15 * 1000, // Consider data stale after 15 seconds
   });
 };
-```
+```bash
 
 ## Testing Patterns
 
@@ -350,6 +350,6 @@ export const useMockData = <T>(data: T, isLoading = false, error?: Error) => {
     retry: false,
   });
 };
-```
+```bash
 
 Generate data fetching hooks that are robust, type-safe, and provide excellent user experience with proper loading states, error handling, and performance optimization.

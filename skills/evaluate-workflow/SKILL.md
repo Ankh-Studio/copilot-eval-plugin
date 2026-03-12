@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-workflow
 description: Evaluate workflow artifacts against the workflow rubric
+
 ---
+
+# Evaluate Workflow
+
 
 Evaluate the provided workflow against the structured workflow rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided workflow against the structured workflow rubric criteria.
 ## Usage
 
 Provide the path to the workflow directory you want evaluated:
+
 - `.github/workflows/workflow-name/WORKFLOW.md`
 - Any custom workflow directory path
 

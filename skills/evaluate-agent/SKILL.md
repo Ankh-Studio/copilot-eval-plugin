@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-agent
 description: Evaluate agent artifacts against the agent rubric
+
 ---
+
+# Evaluate Agent
+
 
 Evaluate the provided agent against the structured agent rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided agent against the structured agent rubric criteria.
 ## Usage
 
 Provide the path to the agent directory you want evaluated:
+
 - `.github/agents/agent-name/AGENT.md`
 - Any custom agent directory path
 

@@ -1,7 +1,13 @@
----
+
+
+
 name: eval-validate-rubrics
 description: Validate and test evaluation rubrics for completeness and accuracy
+
 ---
+
+# Eval Validate Rubrics
+
 
 Apply adversarial stress-testing to identify and fix vulnerabilities in evaluation rubrics.
 
@@ -20,20 +26,21 @@ Be aggressive - this is stress-testing, not validation.
 
 ## Usage
 
-```
+```bash
 /eval-validate-rubrics rubrics/prompt.md
 /eval-validate-rubrics rubrics/skill.md --thorough
-```
+```bash
 
 Focus on scenarios where rubric might fail under adversarial conditions.
+
 - `rubrics/validation.md` - Validation rule evaluation rubric
 - `rubrics/integration.md` - Integration pattern evaluation rubric
 
 ## Example Commands
 
-```
+```bash
 /validate-rubrics rubrics/prompt.md
 /validate-rubrics rubrics/agent.md
-```
+```bash
 
 This skill ensures rubric robustness by systematically identifying and addressing scoring vulnerabilities before they impact production evaluations.

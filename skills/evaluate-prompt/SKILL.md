@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-prompt
 description: Evaluate a prompt against the prompt rubric
+
 ---
+
+# Evaluate Prompt
+
 
 Evaluate the provided prompt against the structured rubric criteria.
 
@@ -10,7 +16,7 @@ Evaluate the provided prompt against the structured rubric criteria.
 1. **Read the prompt content** from the specified file
 2. **Apply the prompt evaluation rubric** with these criteria:
    - Clarity (Weight: 0.25)
-   - Specificity (Weight: 0.25) 
+   - Specificity (Weight: 0.25)
    - Context (Weight: 0.20)
    - Constraints (Weight: 0.15)
    - Examples (Weight: 0.15)
@@ -32,6 +38,7 @@ Evaluate the provided prompt against the structured rubric criteria.
 ## Usage
 
 Provide the path to the prompt file you want evaluated:
+
 - `.github/prompts/prompt-name.prompt.md`
 - Any custom prompt file path
 

@@ -49,7 +49,7 @@ export const ComponentName: React.FC<ComponentNameProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ## Best Practices to Include
 

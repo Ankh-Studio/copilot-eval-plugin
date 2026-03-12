@@ -70,7 +70,7 @@ Follow these UX patterns to create intuitive, user-friendly interfaces that prov
     placeholder="you@example.com"
   />
 </FormField>
-```
+```bash
 
 ### Content Patterns
 
