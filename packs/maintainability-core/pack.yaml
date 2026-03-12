@@ -1,0 +1,41 @@
+name: maintainability-core
+category: maintainability
+stack_tags:
+  - maintainability
+  - architecture
+  - documentation
+  - onboarding
+intended_repo_types:
+  - any
+required_dependencies: []
+optional_dependencies:
+  - typescript
+  - javascript
+target_paths:
+  - ".github/instructions/maintainability.instructions.md"
+  - ".github/prompts/architecture-review.prompt.md"
+  - ".github/prompts/explain-folder.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - ".github/workflows/** exists"
+  - "package.json exists with multiple contributors"
+  - "README.md exists and length > 1000 characters"
+  - "docs/** directory exists"
+  - "src/** directory has more than 10 subdirectories"
+  - "CONTRIBUTING.md exists"
+  - "multiple developers mentioned in commit messages"
+  - "architecture mentioned in documentation files"
+tldr: "Core maintainability guidance for repository structure and architectural continuity"
+layman_summary: "Adds guidance for keeping code organized, documented, and maintainable as teams grow and projects evolve."
+engineer_summary: "Provides repository structure analysis, architecture mapping, common task inventory, and maintainability guidance to ensure long-term code health and team productivity."
+what_it_does: "Configures Copilot to provide maintainability-focused guidance including architecture reviews, folder purpose explanations, and change safety recommendations."
+how_it_works: "Adds instructions and prompts that guide Copilot toward maintainable practices, proper documentation, and architectural consistency."
+when_to_use: "Growing teams, complex codebases, projects requiring long-term maintenance, or teams wanting to improve code organization."
+when_not_to_use: "Small personal projects, prototypes, or repositories with established maintainability practices."
+evaluation_rubrics:
+  - maintainability-guidance
+  - architecture-clarity
+  - documentation-quality
+model_notes_small: "Focus on basic folder organization and simple documentation patterns."
+model_notes_strong: "Can handle complex architecture analysis, maintainability planning, and comprehensive documentation strategies."

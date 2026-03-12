@@ -1,0 +1,49 @@
+name: api-service-patterns
+category: backend-patterns
+stack_tags:
+  - api
+  - backend
+  - services
+  - typescript
+intended_repo_types:
+  - fullstack-app
+  - backend-service
+  - microservices
+  - nodejs-app
+required_dependencies:
+  - typescript
+optional_dependencies:
+  - axios
+  - fetch
+  - zod
+  - yup
+  - "@tanstack/react-query"
+  - react-query
+target_paths:
+  - ".github/instructions/api-patterns.instructions.md"
+  - ".github/prompts/create-endpoint.prompt.md"
+  - ".github/prompts/api-service-template.prompt.md"
+install_mode: copy
+overwrite_policy: if-unmodified
+triggers:
+  - "package.json contains axios or fetch"
+  - "src/api/** directory exists"
+  - "services/** directory exists"
+  - "lib/api/** directory exists"
+  - "client.ts or http-client.ts exists"
+  - "schemas.ts or types.ts in api directory"
+  - "API or service files present"
+  - "REST or GraphQL endpoints detected"
+tldr: "Consistent API service and endpoint creation patterns"
+layman_summary: "Adds guidance for creating API endpoints and services that follow consistent patterns and best practices."
+engineer_summary: "Provides standardized API service patterns including file organization, naming conventions, validation, error handling, and testing approaches for backend services."
+what_it_does: "Configures Copilot to use consistent API service patterns with proper file structure, validation, error handling, and TypeScript integration."
+how_it_works: "Adds instructions for API service organization and prompts for creating endpoints that follow established repository patterns."
+when_to_use: "Projects with API services, teams adding new endpoints, or repositories wanting consistent backend patterns."
+when_not_to_use: "Projects without API services, simple frontend-only apps, or teams with established API patterns."
+evaluation_rubrics:
+  - api-pattern-consistency
+  - typescript-integration
+  - error-handling
+model_notes_small: "Focus on basic service file structure and simple endpoint creation."
+model_notes_strong: "Can handle complex API patterns, advanced TypeScript usage, validation schemas, and comprehensive error handling."
