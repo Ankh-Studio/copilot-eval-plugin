@@ -1,0 +1,306 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence Types Schema",
+  "description": "Classification of evidence types for persona reasoning",
+  "type": "object",
+  "properties": {
+    "evidence_categories": {
+      "type": "object",
+      "properties": {
+        "direct_observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "quality", "reliability"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "meeting-notes",
+                  "recorded-conversation", 
+                  "documented-behavior",
+                  "performance-metrics",
+                  "code-changes",
+                  "survey-responses",
+                  "direct-quotes"
+                ]
+              },
+              "quality": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak"],
+                "description": "Intrinsic quality of evidence type"
+              },
+              "reliability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Base reliability score for this evidence type"
+              },
+              "verification_required": {
+                "type": "boolean",
+                "description": "Whether this evidence needs verification"
+              }
+            }
+          }
+        },
+        "documented_sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "quality", "reliability"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "official-documentation",
+                  "policy-documents",
+                  "technical-specs",
+                  "project-plans",
+                  "requirements-docs",
+                  "research-papers",
+                  "industry-reports",
+                  "compliance-standards"
+                ]
+              },
+              "quality": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak"]
+              },
+              "reliability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "currency_factor": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Factor based on document age"
+              }
+            }
+          }
+        },
+        "behavioral_patterns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "quality", "reliability"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "git-history",
+                  "communication-patterns",
+                  "decision-patterns",
+                  "work-habits",
+                  "collaboration-style",
+                  "problem-solving-approach"
+                ]
+              },
+              "quality": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak"]
+              },
+              "reliability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "sample_size": {
+                "type": "string",
+                "enum": ["large", "medium", "small"],
+                "description": "Amount of data supporting pattern"
+              }
+            }
+          }
+        },
+        "expert_opinions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "quality", "reliability"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "peer-review",
+                  "expert-testimony",
+                  "mentor-feedback",
+                  "stakeholder-input",
+                  "user-feedback",
+                  "customer-interviews"
+                ]
+              },
+              "quality": {
+                "type": "string",
+                "enum": ["strong", "moderate", "weak"]
+              },
+              "reliability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              },
+              "expertise_level": {
+                "type": "string",
+                "enum": ["expert", "experienced", "novice"]
+              },
+              "bias_risk": {
+                "type": "string",
+                "enum": ["high", "medium", "low"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "quality_factors": {
+      "type": "object",
+      "properties": {
+        "recency": {
+          "type": "object",
+          "properties": {
+            "very_recent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Evidence from last 7 days"
+            },
+            "recent": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Evidence from last 30 days"
+            },
+            "moderate": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Evidence from last 90 days"
+            },
+            "stale": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Evidence older than 90 days"
+            }
+          }
+        },
+        "source_credibility": {
+          "type": "object",
+          "properties": {
+            "official": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Official organizational sources"
+            },
+            "verified": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Verified but unofficial sources"
+            },
+            "peer_reviewed": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Peer-reviewed content"
+            },
+            "anecdotal": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Anecdotal or unverified sources"
+            }
+          }
+        },
+        "relevance": {
+          "type": "object",
+          "properties": {
+            "direct": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Directly related to current context"
+            },
+            "contextual": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Related through context"
+            },
+            "analogous": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Analogous or similar situations"
+            },
+            "general": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "General principles or patterns"
+            }
+          }
+        }
+      }
+    },
+    "confidence_calculation": {
+      "type": "object",
+      "properties": {
+        "base_weights": {
+          "type": "object",
+          "properties": {
+            "evidence_quality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for evidence quality"
+            },
+            "source_reliability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for source reliability"
+            },
+            "recency_factor": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for recency"
+            },
+            "relevance_factor": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for relevance"
+            }
+          }
+        },
+        "minimum_thresholds": {
+          "type": "object",
+          "properties": {
+            "fact_claims": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Minimum confidence for factual claims"
+            },
+            "inference_claims": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Minimum confidence for inferences"
+            },
+            "decision_recommendations": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Minimum confidence for decisions"
+            }
+          }
+        }
+      }
+    }
+  }
+}

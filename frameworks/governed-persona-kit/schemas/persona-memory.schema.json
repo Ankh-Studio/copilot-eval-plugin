@@ -1,0 +1,393 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Persona Memory Schema",
+  "description": "Evidence-backed persona memory system with fact/inference separation",
+  "type": "object",
+  "required": [
+    "persona_id",
+    "role",
+    "mission",
+    "scope",
+    "evidence_rules",
+    "empathy_map",
+    "freshness"
+  ],
+  "properties": {
+    "persona_id": {
+      "type": "string",
+      "description": "Unique identifier matching persona definition"
+    },
+    "role": {
+      "type": "string",
+      "description": "Human-readable role name"
+    },
+    "mission": {
+      "type": "string",
+      "description": "Single primary responsibility"
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Evaluation boundaries"
+    },
+    "anti_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What this persona actively avoids"
+    },
+    "evidence_rules": {
+      "type": "object",
+      "required": ["required_for_facts", "allow_inference"],
+      "properties": {
+        "required_for_facts": {
+          "type": "boolean",
+          "description": "Whether facts must have evidence citations"
+        },
+        "allow_inference": {
+          "type": "boolean",
+          "description": "Whether inferences are allowed"
+        },
+        "inference_must_include_confidence": {
+          "type": "boolean",
+          "description": "Whether inferences require confidence scores"
+        }
+      }
+    },
+    "empathy_map": {
+      "type": "object",
+      "required": ["says", "does", "thinks", "feels", "pov"],
+      "properties": {
+        "says": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text", "source", "confidence"],
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Direct quote or paraphrase"
+              },
+              "source": {
+                "type": "string",
+                "description": "Evidence source (e.g., meeting-notes, documentation)"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Confidence in accuracy"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "When this was observed"
+              }
+            }
+          },
+          "description": "Evidence-backed observations of what was said"
+        },
+        "does": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["action", "source", "confidence"],
+            "properties": {
+              "action": {
+                "type": "string",
+                "description": "Observed behavior or action"
+              },
+              "source": {
+                "type": "string",
+                "description": "Evidence source (e.g., git-history, metrics)"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Confidence in accuracy"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "When this was observed"
+              }
+            }
+          },
+          "description": "Evidence-backed observations of what was done"
+        },
+        "thinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["belief", "confidence", "inference"],
+            "properties": {
+              "belief": {
+                "type": "string",
+                "description": "Inferred belief or thought"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Confidence in inference"
+              },
+              "inference": {
+                "type": "boolean",
+                "description": "Marked as inference (always true for thinks/feels/pov)"
+              },
+              "evidence_basis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence supporting this inference"
+              }
+            }
+          },
+          "description": "Inferred beliefs and thoughts"
+        },
+        "feels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["emotion", "confidence", "inference"],
+            "properties": {
+              "emotion": {
+                "type": "string",
+                "description": "Inferred emotional state"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Confidence in inference"
+              },
+              "inference": {
+                "type": "boolean",
+                "description": "Marked as inference (always true for thinks/feels/pov)"
+              },
+              "evidence_basis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence supporting this inference"
+              }
+            }
+          },
+          "description": "Inferred emotional states"
+        },
+        "pov": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["perspective", "confidence", "inference"],
+            "properties": {
+              "perspective": {
+                "type": "string",
+                "description": "Inferred point of view or perspective"
+              },
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100,
+                "description": "Confidence in inference"
+              },
+              "inference": {
+                "type": "boolean",
+                "description": "Marked as inference (always true for thinks/feels/pov)"
+              },
+              "evidence_basis": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Evidence supporting this inference"
+              }
+            }
+          },
+          "description": "Inferred points of view"
+        }
+      }
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["goal", "priority"],
+        "properties": {
+          "goal": {
+            "type": "string",
+            "description": "Stated objective or goal"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Goal priority level"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Evidence source for this goal"
+          },
+          "progress": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Progress toward goal (if measurable)"
+          }
+        }
+      },
+      "description": "Stated goals and objectives"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["constraint", "source", "impact"],
+        "properties": {
+          "constraint": {
+            "type": "string",
+            "description": "Limitation or constraint"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source of constraint"
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Impact level"
+          }
+        }
+      },
+      "description": "Known constraints and limitations"
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["decision", "rationale", "confidence"],
+        "properties": {
+          "decision": {
+            "type": "string",
+            "description": "Decision that was made"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Reasoning behind decision"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Confidence in decision quality"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When decision was made"
+          }
+        }
+      },
+      "description": "Historical decisions and outcomes"
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "priority"],
+        "properties": {
+          "question": {
+            "type": "string",
+            "description": "Unresolved question"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["high", "medium", "low"],
+            "description": "Question priority"
+          },
+          "blocking": {
+            "type": "boolean",
+            "description": "Whether this question blocks progress"
+          }
+        }
+      },
+      "description": "Unresolved questions and uncertainties"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "source", "quality"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Evidence type (e.g., metric, document, interview)"
+          },
+          "source": {
+            "type": "string",
+            "description": "Where evidence came from"
+          },
+          "quality": {
+            "type": "string",
+            "enum": ["strong", "moderate", "weak"],
+            "description": "Evidence quality assessment"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When evidence was collected"
+          }
+        }
+      },
+      "description": "Evidence references and quality ratings"
+    },
+    "freshness": {
+      "type": "object",
+      "required": ["last_updated", "expires_after_days"],
+      "properties": {
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When memory was last updated"
+        },
+        "expires_after_days": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 365,
+          "description": "Days before memory considered stale"
+        },
+        "stale_indicators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Indicators that memory is stale"
+        }
+      }
+    },
+    "invalidation_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["trigger", "action"],
+        "properties": {
+          "trigger": {
+            "type": "string",
+            "description": "What triggers invalidation"
+          },
+          "action": {
+            "type": "string",
+            "enum": ["refresh", "replace", "archive"],
+            "description": "Action to take when triggered"
+          }
+        }
+      },
+      "description": "Rules for when to refresh or replace memory"
+    }
+  }
+}

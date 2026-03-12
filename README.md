@@ -4,6 +4,16 @@ A GitHub Copilot CLI plugin for auditing and improving Copilot customizations in
 It evaluates prompts, instructions, skills, agents, workflows, validation rules, and integration artifacts against structured rubrics.
 It also helps teams explain what each artifact does, how it works, where it's weak, and what to improve next.
 
+## 🎯 Dual-Track Product Approach
+
+This repository serves two complementary purposes:
+
+**Proof Layer**: Demonstrates evidence-based persona systems and advanced evaluation techniques in a real governed engineering environment. The plugin itself uses multi-persona architecture analysis and memory-enhanced routing to show how these approaches work in practice.
+
+**Consumer Layer**: Provides the **Governed Persona Adoption Kit** - a reusable framework that other teams can adopt without inheriting this repo's specific rules, paths, or politics. The kit abstracts the core methods into transferable patterns for enterprise AI deployment.
+
+> **📦 Governed Persona Adoption Kit**: Find the reusable framework in `frameworks/governed-persona-kit/` - a complete system for creating evidence-based personas with pseudo-memory systems that work across GitHub Copilot, Claude, OpenAI, and other AI platforms.
+
 ## 🎯 What Makes This Different
 
 **Chain-of-Verification Evaluation**: Every evaluation includes mandatory self-critique that reduces errors by 40%+ through systematic error identification and correction.
@@ -91,6 +101,13 @@ This plugin provides **23 evaluation-focused skills** organized into five catego
 
 - `add-api-service` - API service integration and setup
 - `eval-starter-pack` - Starter pack evaluation and recommendations
+
+## 📚 Documentation
+
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Development contribution guidelines
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** - Community standards
+- **[SECURITY.md](SECURITY.md)** - Security policy and vulnerability reporting
+- **[Governed Persona Kit](frameworks/governed-persona-kit/)** - Reusable persona framework
 
 ## Installation
 

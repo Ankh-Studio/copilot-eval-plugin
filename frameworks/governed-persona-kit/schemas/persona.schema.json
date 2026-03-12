@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Persona Schema",
+  "description": "Structured persona definition for bounded operating modes in enterprise AI environments",
+  "type": "object",
+  "required": [
+    "persona_id",
+    "layer", 
+    "role",
+    "mission",
+    "scope",
+    "profile",
+    "evidence_requirements",
+    "output_contract"
+  ],
+  "properties": {
+    "persona_id": {
+      "type": "string",
+      "pattern": "^[a-z]+-[a-z-]+$",
+      "description": "Unique identifier in layer-role format (e.g., business-repo-maintainer)"
+    },
+    "layer": {
+      "type": "string",
+      "enum": ["business", "team", "execution"],
+      "description": "Persona layer: business-user, team-member, or execution"
+    },
+    "role": {
+      "type": "string",
+      "description": "Human-readable role name (e.g., Repository Maintainer)"
+    },
+    "mission": {
+      "type": "string",
+      "description": "Single primary responsibility and goal"
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "description": "Clear boundaries of what this persona evaluates"
+    },
+    "anti_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What this persona actively avoids doing"
+    },
+    "profile": {
+      "type": "object",
+      "required": ["expertise_domains", "decision_criteria", "anti_patterns"],
+      "properties": {
+        "expertise_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "description": "Areas of specialized knowledge"
+        },
+        "decision_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "description": "Primary factors for decision making"
+        },
+        "anti_patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "description": "Patterns this persona actively avoids"
+        }
+      }
+    },
+    "evidence_requirements": {
+      "type": "object",
+      "required": ["required_sources", "acceptable_confidence"],
+      "properties": {
+        "required_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "description": "Evidence types this persona can reference"
+        },
+        "acceptable_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Minimum confidence threshold for evidence"
+        },
+        "prohibited_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Evidence types this persona cannot use"
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "required": ["format", "required_fields", "evidence_citation"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": ["structured_analysis", "recommendation", "evaluation", "debate_contribution"],
+          "description": "Expected output format type"
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "description": "Fields that must be included in output"
+        },
+        "evidence_citation": {
+          "type": "boolean",
+          "description": "Whether this persona must cite evidence"
+        },
+        "confidence_required": {
+          "type": "boolean",
+          "description": "Whether confidence scores must be included"
+        }
+      }
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pattern", "context"],
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "description": "Trigger pattern for this persona"
+          },
+          "context": {
+            "type": "string",
+            "description": "Context requirements for trigger"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Trigger confidence level"
+          }
+        }
+      },
+      "description": "Auto-routing patterns for persona selection"
+    },
+    "small_model_optimization": {
+      "type": "object",
+      "properties": {
+        "max_context_tokens": {
+          "type": "number",
+          "minimum": 500,
+          "maximum": 4000,
+          "description": "Maximum context tokens for small models"
+        },
+        "structured_output": {
+          "type": "boolean",
+          "description": "Whether to use structured JSON output"
+        },
+        "evidence_limit": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Maximum evidence items to include"
+        }
+      }
+    }
+  }
+}
