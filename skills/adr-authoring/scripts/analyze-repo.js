@@ -188,7 +188,7 @@ class RepoAnalyzer {
           }
         });
       } catch (error) {
-        // Skip files that can't be read
+        console.warn(`Cannot read file ${file.path}:`, error.message);
       }
     }
   }
@@ -293,7 +293,7 @@ class RepoAnalyzer {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
+      console.warn(`Cannot read directory ${dir}:`, error.message);
     }
   }
 
@@ -332,6 +332,10 @@ class RepoAnalyzer {
         content.toLowerCase().includes(keyword.toLowerCase())
       );
     } catch (error) {
+      console.warn(
+        `Cannot read file ${file.path} for pattern matching:`,
+        error.message
+      );
       return false;
     }
   }

@@ -132,6 +132,7 @@ class PerformanceOptimizer {
         index[key] = {
           path: entry.path,
           hash: entry.hash,
+          result: entry.result,
           timestamp: entry.timestamp,
         };
       });

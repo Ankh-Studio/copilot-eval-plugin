@@ -597,10 +597,13 @@ class ADRValidator {
    */
   async validateADRFile(filePath) {
     try {
+      if (!fs.existsSync(filePath)) {
+        throw new Error(`File not found: ${filePath}`);
+      }
       const content = fs.readFileSync(filePath, 'utf8');
       return this.validateADR(content);
     } catch (error) {
-      throw new Error(`Could not read ADR file: ${error.message}`);
+      throw new Error(`Could not read ADR file ${filePath}: ${error.message}`);
     }
   }
 }
@@ -666,21 +669,25 @@ if (require.main === module) {
     console.log('🔍 Checking for existing ADRs...');
 
     const adrPath = path.join(process.cwd(), 'docs', 'adr');
-    if (fs.existsSync(adrPath)) {
-      const adrFiles = fs
-        .readdirSync(adrPath)
-        .filter(f => f.endsWith('.md') && f !== '000-template.md');
-      if (adrFiles.length === 0) {
-        console.log(
-          'ℹ️  No ADRs found in repository. Consider documenting architectural decisions.'
-        );
+    try {
+      if (fs.existsSync(adrPath)) {
+        const adrFiles = fs
+          .readdirSync(adrPath)
+          .filter(f => f.endsWith('.md') && f !== '000-template.md');
+        if (adrFiles.length === 0) {
+          console.log(
+            'ℹ️  No ADRs found in repository. Consider documenting architectural decisions.'
+          );
+        } else {
+          console.log(`✅ Found ${adrFiles.length} ADR(s) in repository.`);
+        }
       } else {
-        console.log(`✅ Found ${adrFiles.length} ADR(s) in repository.`);
+        console.log(
+          'ℹ️  No ADR directory found. Consider creating docs/adr/ for architectural decisions.'
+        );
       }
-    } else {
-      console.log(
-        'ℹ️  No ADR directory found. Consider creating docs/adr/ for architectural decisions.'
-      );
+    } catch (error) {
+      console.warn(`Error checking ADR directory ${adrPath}:`, error.message);
     }
   } else {
     // Default: test with sample ADR content
