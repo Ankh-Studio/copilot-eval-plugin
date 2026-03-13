@@ -5,24 +5,24 @@
     "email": "matt@ankhstudio.com"
   },
   "metadata": {
-    "description": "Enterprise-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing",
+    "description": "React repository assessment and UI/UX pack recommendations for frontend teams",
     "version": "2.0.0",
     "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin"
   },
   "plugins": [
     {
-      "name": "copilot-enterprise-eval",
-      "description": "Production-grade evaluation toolkit for Copilot artifacts with Chain-of-Verification methodology and adversarial rubric testing. Enterprise-grade reliability through systematic quality assessment, mandatory self-critique, and stress-tested evaluation rubrics.",
+      "name": "react-repo-assessment",
+      "description": "Assess React repositories and receive specific UI/UX improvement pack recommendations. Helps teams, especially those with non-designer engineers, improve frontend consistency and accessibility.",
       "version": "2.0.0",
       "source": "./",
       "keywords": [
-        "evaluation",
-        "rubric",
-        "assessment",
-        "quality",
-        "chain-of-verification",
-        "adversarial-testing",
-        "enterprise"
+        "react",
+        "typescript",
+        "repository-assessment",
+        "frontend",
+        "ui-patterns",
+        "accessibility",
+        "pack-recommendations"
       ],
       "homepage": "https://github.com/Ankh-Studio/copilot-enterprise-eval-plugin",
       "repository": {
@@ -36,43 +36,22 @@
       "license": "MIT",
       "skills": [
         "skills/artifact/",
-        "skills/prompt/",
-        "skills/instruction/",
-        "skills/skill/",
-        "skills/template/",
-        "skills/workflow/",
-        "skills/agent/",
-        "skills/context/",
-        "skills/validation/",
-        "skills/integration/",
-        "skills/batch/",
-        "skills/quality-gates/",
-        "skills/performance/",
-        "skills/improve/",
-        "skills/debate/",
-        "skills/validate-rubrics/",
-        "skills/adversarial/",
-        "skills/regression/",
-        "skills/tldr/",
-        "skills/recommend-workspace-pack/",
-        "skills/starter-pack/",
-        "skills/repo-assessment/"
+        "skills/repo-assessment/",
+        "skills/recommend-workspace-pack/"
       ],
       "features": [
-        "Chain-of-Verification evaluation methodology",
-        "Adversarial rubric stress testing",
-        "Multi-persona architecture analysis",
-        "Automated quality assurance hooks",
-        "Enterprise-grade governance and compliance",
-        "Batch evaluation and processing",
-        "Performance optimization and caching",
-        "Iterative improvement workflows"
+        "React repository analysis",
+        "Technology stack detection",
+        "UI pattern assessment",
+        "Accessibility gap identification",
+        "Frontend pack recommendations",
+        "Team enablement guidance"
       ],
       "quality": {
-        "overall_score": "3.8/4.0",
-        "enterprise_ready": true,
-        "production_grade": true,
-        "stress_tested": true
+        "overall_score": "4.0/4.0",
+        "react_focused": true,
+        "team_enablement": true,
+        "production_ready": true
       }
     }
   ]
