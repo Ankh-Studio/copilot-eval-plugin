@@ -26,6 +26,7 @@
   "skills": [
     "skills/artifact/",
     "skills/repo-assessment/",
-    "skills/recommend-workspace-pack/"
+    "skills/recommend-workspace-pack/",
+    "skills/adr-authoring/"
   ]
 }
