@@ -1,0 +1,64 @@
+{
+  "hooks": {
+    "pre-commit": {
+      "rubric-validation": {
+        "command": "node scripts/apply-pack.js validate-rubrics --all",
+        "description": "Validate all rubrics for quality standards",
+        "files": ["rubrics/**/*.md"],
+        "runOn": "save"
+      },
+      "skill-validation": {
+        "command": "node scripts/apply-pack.js validate-skills --all",
+        "description": "Validate all skills for completeness and usability",
+        "files": ["skills/**/*.md"],
+        "runOn": "save"
+      },
+      "workflow-validation": {
+        "command": "node scripts/apply-pack.js validate-workflows --all",
+        "description": "Validate all workflows for proper structure",
+        "files": ["workflows/**/*.md"],
+        "runOn": "save"
+      },
+      "evaluation-quality-check": {
+        "command": "node scripts/apply-pack.js check-evaluation-quality --all",
+        "description": "Ensure evaluation reports meet quality standards",
+        "files": ["evals/**/*.md"],
+        "runOn": "save"
+      }
+    },
+    "pre-push": {
+      "comprehensive-quality-gate": {
+        "command": "node scripts/apply-pack.js quality-gate --strict",
+        "description": "Run comprehensive quality gate before push",
+        "runOn": "push"
+      },
+      "integration-tests": {
+        "command": "npm test",
+        "description": "Run all tests before pushing",
+        "runOn": "push"
+      }
+    },
+    "post-merge": {
+      "update-quality-metrics": {
+        "command": "node scripts/apply-pack.js update-metrics",
+        "description": "Update quality metrics after merge",
+        "runOn": "merge"
+      },
+      "sync-community-data": {
+        "command": "node scripts/apply-pack.js sync-community",
+        "description": "Synchronize community contributions",
+        "runOn": "merge"
+      }
+    }
+  },
+  "settings": {
+    "failOnErrors": true,
+    "parallelExecution": true,
+    "timeoutMs": 30000,
+    "notifications": {
+      "onSuccess": false,
+      "onFailure": true,
+      "onWarning": true
+    }
+  }
+}
