@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "description": "GitHub Copilot hooks for ADR quality enforcement",
+  "hooks": {
+    "pre-file-write": {
+      "adr-quality-gate": {
+        "pattern": "**/docs/adr/*.md",
+        "script": "node skills/adr-authoring/scripts/validate-adr.js --file",
+        "failOn": "low-quality",
+        "description": "Validate ADR quality before writing file"
+      }
+    },
+    "post-session": {
+      "adr-quality-summary": {
+        "pattern": "**/docs/adr/*.md",
+        "script": "node skills/adr-authoring/scripts/validate-adr.js --summary",
+        "failOn": "none",
+        "description": "Generate ADR quality summary after session"
+      }
+    },
+    "session-start": {
+      "adr-context-check": {
+        "pattern": "**/*.md",
+        "script": "node skills/adr-authoring/scripts/analyze-repo.js --check-adrs",
+        "failOn": "none",
+        "description": "Check for existing ADRs in architecture-heavy repos"
+      }
+    }
+  },
+  "qualityGates": {
+    "adr": {
+      "minScore": 3.0,
+      "criticalSections": [
+        "problemClarity",
+        "optionsAnalysis",
+        "decisionRationale",
+        "tradeoffHonesty"
+      ],
+      "requiredSections": [
+        "Context",
+        "Options Considered",
+        "Decision",
+        "Tradeoffs & Consequences"
+      ],
+      "maxWordCount": 2000,
+      "minOptions": 2
+    }
+  },
+  "failModes": {
+    "low-quality": {
+      "description": "ADR fails quality thresholds",
+      "action": "block",
+      "message": "ADR does not meet quality standards. Please address validation feedback."
+    },
+    "missing-sections": {
+      "description": "ADR missing required sections",
+      "action": "block",
+      "message": "ADR is missing required sections. Please complete all required sections."
+    },
+    "none": {
+      "description": "Informational only",
+      "action": "log",
+      "message": ""
+    }
+  }
+}

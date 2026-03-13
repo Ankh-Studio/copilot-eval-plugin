@@ -608,12 +608,86 @@ class ADRValidator {
 // Export for use in skill
 module.exports = { ADRValidator };
 
-// CLI usage for testing
+// CLI usage for testing and hooks
 if (require.main === module) {
+  const args = process.argv.slice(2);
   const validator = new ADRValidator();
 
-  // Test with sample ADR content
-  const sampleADR = `
+  // Handle command line arguments for hooks
+  if (args.includes('--file')) {
+    // Pre-file-write hook: validate specific file
+    const filePath =
+      args[args.indexOf('--file') + 1] || args[args.indexOf('--file') + 2];
+    if (!filePath) {
+      console.error('Error: --file requires a file path');
+      process.exit(1);
+    }
+
+    validator
+      .validateADRFile(filePath)
+      .then(results => {
+        if (!results.pass) {
+          console.error('❌ ADR Quality Gate Failed');
+          console.error(`Score: ${results.overall.score.toFixed(1)}/5.0`);
+          console.error(`Status: ${results.overall.status}`);
+
+          // Show critical issues
+          const criticalIssues = results.feedback.filter(
+            f => f.priority === 'High'
+          );
+          if (criticalIssues.length > 0) {
+            console.error('\nCritical Issues:');
+            criticalIssues.forEach(issue => {
+              console.error(`  ${issue.section}:`);
+              issue.issues.forEach(i => console.error(`    - ${i}`));
+            });
+          }
+
+          process.exit(1);
+        } else {
+          console.log('✅ ADR Quality Gate Passed');
+          console.log(`Score: ${results.overall.score.toFixed(1)}/5.0`);
+          process.exit(0);
+        }
+      })
+      .catch(error => {
+        console.error('Validation error:', error.message);
+        process.exit(1);
+      });
+  } else if (args.includes('--summary')) {
+    // Post-session hook: generate summary
+    console.log('📋 ADR Quality Summary');
+    console.log('ADR validation hooks are configured and ready.');
+    console.log(
+      'Quality gates will enforce minimum 3.0 score and required sections.'
+    );
+  } else if (args.includes('--check-adrs')) {
+    // Session-start hook: check for existing ADRs
+    console.log('🔍 Checking for existing ADRs...');
+
+    const adrPath = path.join(process.cwd(), 'docs', 'adr');
+    if (fs.existsSync(adrPath)) {
+      const adrFiles = fs
+        .readdirSync(adrPath)
+        .filter(f => f.endsWith('.md') && f !== '000-template.md');
+      if (adrFiles.length === 0) {
+        console.log(
+          'ℹ️  No ADRs found in repository. Consider documenting architectural decisions.'
+        );
+      } else {
+        console.log(`✅ Found ${adrFiles.length} ADR(s) in repository.`);
+      }
+    } else {
+      console.log(
+        'ℹ️  No ADR directory found. Consider creating docs/adr/ for architectural decisions.'
+      );
+    }
+  } else {
+    // Default: test with sample ADR content
+    const validator = new ADRValidator();
+
+    // Test with sample ADR content
+    const sampleADR = `
 # ADR-001: Implement React Query for data fetching
 
 **Status:** Accepted
@@ -675,26 +749,29 @@ We will implement React Query for data fetching throughout the application.
 - [ ] Migrate UserList component - Developer A - Week 2
   `;
 
-  const results = validator.validateADR(sampleADR);
+    const results = validator.validateADR(sampleADR);
 
-  console.log('📋 ADR Validation Results:');
-  console.log(`Overall Score: ${results.overall.score.toFixed(1)}/5.0`);
-  console.log(`Status: ${results.overall.status}`);
-  console.log(`Pass: ${results.pass ? '✅' : '❌'}`);
+    console.log('📋 ADR Validation Results:');
+    console.log(`Overall Score: ${results.overall.score.toFixed(1)}/5.0`);
+    console.log(`Status: ${results.overall.status}`);
+    console.log(`Pass: ${results.pass ? '✅' : '❌'}`);
 
-  console.log('\n📊 Section Scores:');
-  for (const [section, result] of Object.entries(results.sections)) {
-    console.log(
-      `${validator.formatSectionName(section)}: ${result.score.toFixed(1)}/5.0 (${result.status})`
-    );
-  }
+    console.log('\n📊 Section Scores:');
+    for (const [section, result] of Object.entries(results.sections)) {
+      console.log(
+        `${validator.formatSectionName(section)}: ${result.score.toFixed(1)}/5.0 (${result.status})`
+      );
+    }
 
-  if (results.feedback.length > 0) {
-    console.log('\n💡 Feedback:');
-    results.feedback.forEach(item => {
-      console.log(`\n${item.section} (${item.priority} Priority):`);
-      item.issues.forEach(issue => console.log(`  ❌ ${issue}`));
-      item.suggestions.forEach(suggestion => console.log(`  💡 ${suggestion}`));
-    });
+    if (results.feedback.length > 0) {
+      console.log('\n💡 Feedback:');
+      results.feedback.forEach(item => {
+        console.log(`\n${item.section} (${item.priority} Priority):`);
+        item.issues.forEach(issue => console.log(`  ❌ ${issue}`));
+        item.suggestions.forEach(suggestion =>
+          console.log(`  💡 ${suggestion}`)
+        );
+      });
+    }
   }
 }

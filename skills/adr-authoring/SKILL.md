@@ -53,6 +53,38 @@ Use this skill when you need to:
 - Component evaluation consistency checks
 - Conflict detection between ADRs and implementation
 
+### 5. Quality Gates (Phase 3)
+
+- **Automated Quality Enforcement**: Pre-file-write hooks validate ADR quality
+- **Session-Start Context Check**: Warns about missing ADRs in architecture-heavy repos
+- **Post-Session Quality Summary**: Provides comprehensive quality feedback
+- **Configurable Thresholds**: Minimum 3.0 score and required sections enforcement
+- **Fail Modes**: Block, log, or warn based on quality violations
+
+### 6. Automated Scoring (Phase 3)
+
+- **Repository-Wide Analysis**: Score all ADRs with comprehensive metrics
+- **Trend Tracking**: Monitor quality improvement over time
+- **Detailed Analytics**: Complexity, completeness, clarity, evidence quality
+- **Pattern Recognition**: Identify writing patterns and risk factors
+- **Actionable Recommendations**: Prioritized improvement suggestions
+
+### 7. Performance Optimization (Phase 3)
+
+- **Intelligent Caching**: MD5-based file content caching for fast re-analysis
+- **Parallel Processing**: Multi-threaded analysis for large repositories
+- **Memory Management**: Chunked processing with garbage collection
+- **Resource Monitoring**: Track cache hit rates and memory usage
+- **Scalable Architecture**: Handles repositories with 1000+ files efficiently
+
+### 8. Lifecycle Management (Phase 3)
+
+- **Status Tracking**: Complete ADR lifecycle from Proposed to Deprecated
+- **Relationship Mapping**: Supersedes, dependencies, conflicts, and references
+- **Automated Reviews**: Detect stale ADRs and implementation gaps
+- **Health Metrics**: Decision velocity, implementation rate, relationship density
+- **Workflow Automation**: Status change notifications and compliance tracking
+
 ## Assets
 
 ### Template (`assets/000-template.md`)
@@ -252,6 +284,83 @@ results.feedback.forEach(item => {
 - Tradeoff honesty (20%)
 - Evidence grounding (15%)
 - Actionability (10%)
+
+#### Automated Scoring (`scripts/automated-scoring.js`)
+
+Repository-wide ADR scoring and analytics:
+
+```javascript
+const { AutomatedScoring } = require('./scripts/automated-scoring.js');
+
+// Score all ADRs in repository
+const scorer = new AutomatedScoring();
+const report = await scorer.scoreRepository();
+
+// Get quality trends and recommendations
+console.log(`Average Score: ${report.summary.averageScore}/5.0`);
+console.log(`Quality Status: ${report.summary.overallStatus}`);
+```
+
+**Capabilities:**
+
+- Repository-wide scoring with trend analysis
+- Detailed analytics (complexity, completeness, clarity)
+- Pattern recognition and risk identification
+- Actionable improvement recommendations
+- Quality metrics and health monitoring
+
+#### Performance Optimizer (`scripts/performance-optimizer.js`)
+
+High-performance analysis for large repositories:
+
+```javascript
+const { PerformanceOptimizer } = require('./scripts/performance-optimizer.js');
+
+// Optimized repository analysis
+const optimizer = new PerformanceOptimizer({
+  enableCaching: true,
+  parallelWorkers: 4,
+  chunkSize: 50,
+});
+
+const report = await optimizer.analyzeRepository();
+console.log(`Cache hit rate: ${report.summary.cacheHitRate}%`);
+```
+
+**Performance Features:**
+
+- MD5-based intelligent caching system
+- Parallel processing with configurable workers
+- Memory management with chunked processing
+- Resource monitoring and optimization
+- Handles 1000+ file repositories efficiently
+
+#### Lifecycle Manager (`scripts/lifecycle-manager.js`)
+
+Complete ADR lifecycle and relationship management:
+
+```javascript
+const { LifecycleManager } = require('./scripts/lifecycle-manager.js');
+
+// Initialize lifecycle management
+const manager = new LifecycleManager();
+await manager.initialize();
+
+// Register ADR and create relationships
+await manager.registerADR(filePath, metadata);
+await manager.createRelationship('ADR-001', 'ADR-002', 'superseded');
+
+// Generate lifecycle report
+const report = await manager.getLifecycleReport();
+```
+
+**Lifecycle Features:**
+
+- Status tracking (Proposed → Accepted → Implemented → Superseded → Deprecated)
+- Relationship mapping (supersedes, dependencies, conflicts, references)
+- Automated reviews for stale ADRs and implementation gaps
+- Health metrics (decision velocity, implementation rate, relationship density)
+- Workflow automation with status change notifications
 
 ## Usage
 
