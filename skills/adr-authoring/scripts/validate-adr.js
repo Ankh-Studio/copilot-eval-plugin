@@ -128,7 +128,18 @@ class ADRValidator {
    * Evaluate individual section
    */
   evaluateSection(sectionName, sections) {
-    const content = sections[sectionName] || '';
+    // Map rubric dimensions to actual parsed sections
+    const sectionMapping = {
+      problemClarity: 'context',
+      optionsAnalysis: 'options',
+      decisionRationale: 'decision',
+      tradeoffHonesty: 'tradeoffs',
+      evidenceGrounding: 'evidence',
+      actionability: 'followup',
+    };
+
+    const actualSectionKey = sectionMapping[sectionName];
+    const content = actualSectionKey ? sections[actualSectionKey] || '' : '';
     const evaluation = {
       score: 0,
       status: 'Fail',
