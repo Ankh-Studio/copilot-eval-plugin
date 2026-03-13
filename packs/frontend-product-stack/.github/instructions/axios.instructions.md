@@ -6,7 +6,7 @@ Use Axios for HTTP requests with proper configuration, error handling, and TypeS
 
 ### Base Instance Setup
 
-```typescript
+````typescript
 // src/api/axios.ts
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
@@ -42,10 +42,10 @@ axiosInstance.interceptors.request.use(
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-    
+
     // Add request timestamp for debugging
     config.metadata = { startTime: new Date() };
-    
+
     return config;
   },
   (error) => {
@@ -60,7 +60,7 @@ axiosInstance.interceptors.response.use(
     const endTime = new Date();
     const duration = endTime.getTime() - response.config.metadata?.startTime?.getTime();
     console.log(`Request to ${response.config.url} took ${duration}ms`);
-    
+
     return response;
   },
   (error) => {
@@ -70,16 +70,16 @@ axiosInstance.interceptors.response.use(
       localStorage.removeItem('authToken');
       window.location.href = '/login';
     }
-    
+
     if (error.response?.status === 403) {
       // Forbidden - show permission error
       throw new ApiError(error.response, 'Insufficient permissions');
     }
-    
+
     if (error.code === 'ECONNABORTED') {
       throw new ApiError({ status: 408 } as AxiosResponse, 'Request timeout');
     }
-    
+
     return Promise.reject(error);
   }
 );
@@ -177,11 +177,11 @@ export const handleApiError = (error: unknown): string => {
         return `Error: ${error.message}`;
     }
   }
-  
+
   if (error instanceof Error) {
     return error.message;
   }
-  
+
   return 'An unexpected error occurred';
 };
 ```bash
@@ -211,7 +211,7 @@ export const useApi = <T>(
 
   const fetchData = async () => {
     setState(prev => ({ ...prev, loading: true, error: null }));
-    
+
     try {
       const result = await apiCall();
       setState({ data: result, loading: false, error: null });
@@ -338,22 +338,23 @@ export const retryRequest = async <T>(
       return await requestFn();
     } catch (error) {
       lastError = error;
-      
+
       // Don't retry on client errors (4xx)
       if (axios.isAxiosError(error) && error.response?.status && error.response.status < 500) {
         throw error;
       }
-      
+
       // If this is the last attempt, throw the error
       if (attempt === maxRetries) {
         throw error;
       }
-      
+
       // Wait before retrying (exponential backoff)
       await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt - 1)));
     }
   }
-  
+
   throw lastError;
 };
 ```bash
+````

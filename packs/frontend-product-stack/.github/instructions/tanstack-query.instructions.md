@@ -1,12 +1,13 @@
 # TanStack Query (React Query) Patterns
 
-Use TanStack Query for server state management with proper caching, synchronization, and error handling.
+Use TanStack Query for server state management with proper caching, synchronization, and error
+handling.
 
 ## Query Patterns
 
 ### Basic Query Hook
 
-```typescript
+````typescript
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { axiosInstance } from './axios';
 
@@ -99,22 +100,22 @@ export const useUpdatePost = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ id, ...data }: Partial<Post> & { id: string }) => 
+    mutationFn: ({ id, ...data }: Partial<Post> & { id: string }) =>
       axiosInstance.patch(`/posts/${id}`, data),
     onMutate: async (updatedPost) => {
       // Cancel any outgoing refetches
       await queryClient.cancelQueries({ queryKey: ['posts'] });
-      
+
       // Snapshot the previous value
       const previousPosts = queryClient.getQueryData(['posts']);
-      
+
       // Optimistically update to the new value
       queryClient.setQueryData(['posts'], (old: Post[]) =>
-        old?.map(post => 
+        old?.map(post =>
           post.id === updatedPost.id ? { ...post, ...updatedPost } : post
         )
       );
-      
+
       return { previousPosts };
     },
     onError: (err, updatedPost, context) => {
@@ -228,3 +229,4 @@ export const useInfinitePosts = () => {
   });
 };
 ```bash
+````

@@ -2,7 +2,7 @@
 
 /**
  * Workspace Pack Application Script
- * 
+ *
  * Applies frontend starter packs to workspaces with safety checks,
  * dry-run mode, and proper file handling.
  */
@@ -22,26 +22,28 @@ class PackApplier {
 
   async applyPack(packName) {
     console.log(`🚀 Applying pack: ${packName}`);
-    
+
     // Load pack metadata
     const packPath = path.join(this.pluginRoot, 'packs', packName);
     const packMetadata = await this.loadPackMetadata(packPath, packName);
-    
+
     if (!packMetadata) {
       throw new Error(`Pack not found: ${packName}`);
     }
 
     // Validate dependencies
     await this.validateDependencies(packMetadata);
-    
+
     // Check for conflicts
     const conflicts = await this.detectConflicts(packMetadata);
     if (conflicts.length > 0) {
       console.log('⚠️  Conflicts detected:');
       conflicts.forEach(conflict => console.log(`   - ${conflict}`));
-      
+
       if (this.overwritePolicy === 'never') {
-        throw new Error('Conflicts detected with overwrite policy set to "never"');
+        throw new Error(
+          'Conflicts detected with overwrite policy set to "never"'
+        );
       }
     }
 
@@ -65,7 +67,7 @@ class PackApplier {
       if (!fs.existsSync(yamlPath)) {
         return null;
       }
-      
+
       const content = fs.readFileSync(yamlPath, 'utf8');
       const metadata = yaml.load(content);
       metadata.name = packName;
@@ -78,21 +80,29 @@ class PackApplier {
   }
 
   async validateDependencies(metadata) {
-    if (!metadata.required_dependencies || metadata.required_dependencies.length === 0) {
+    if (
+      !metadata.required_dependencies ||
+      metadata.required_dependencies.length === 0
+    ) {
       return;
     }
 
     const packageJsonPath = path.join(this.workspaceRoot, 'package.json');
     if (!fs.existsSync(packageJsonPath)) {
       if (metadata.required_dependencies.length > 0) {
-        throw new Error('package.json not found but pack requires dependencies');
+        throw new Error(
+          'package.json not found but pack requires dependencies'
+        );
       }
       return;
     }
 
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const allDeps = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
+    const allDeps = {
+      ...packageJson.dependencies,
+      ...packageJson.devDependencies,
+    };
+
     const missing = metadata.required_dependencies.filter(dep => !allDeps[dep]);
     if (missing.length > 0) {
       console.log(`⚠️  Missing required dependencies: ${missing.join(', ')}`);
@@ -102,17 +112,17 @@ class PackApplier {
 
   async detectConflicts(metadata) {
     const conflicts = [];
-    
+
     for (const targetPath of metadata.target_paths || []) {
       const fullPath = path.join(this.workspaceRoot, targetPath);
-      
+
       if (fs.existsSync(fullPath)) {
         const existingContent = fs.readFileSync(fullPath, 'utf8');
         const sourcePath = path.join(metadata.path, targetPath);
-        
+
         if (fs.existsSync(sourcePath)) {
           const sourceContent = fs.readFileSync(sourcePath, 'utf8');
-          
+
           if (existingContent !== sourceContent) {
             conflicts.push(`${targetPath} (different content)`);
           }
@@ -121,7 +131,7 @@ class PackApplier {
         }
       }
     }
-    
+
     return conflicts;
   }
 
@@ -129,35 +139,47 @@ class PackApplier {
     const changes = {
       toCreate: [],
       toUpdate: [],
-      toSkip: []
+      toSkip: [],
     };
 
     for (const targetPath of metadata.target_paths || []) {
       const fullPath = path.join(this.workspaceRoot, targetPath);
       const sourcePath = path.join(metadata.path, targetPath);
-      
+
       if (!fs.existsSync(sourcePath)) {
-        changes.toSkip.push({ path: targetPath, reason: 'Source file not found in pack' });
+        changes.toSkip.push({
+          path: targetPath,
+          reason: 'Source file not found in pack',
+        });
         continue;
       }
 
       if (fs.existsSync(fullPath)) {
         const existingContent = fs.readFileSync(fullPath, 'utf8');
         const sourceContent = fs.readFileSync(sourcePath, 'utf8');
-        
+
         if (existingContent === sourceContent) {
-          changes.toSkip.push({ path: targetPath, reason: 'Content identical' });
+          changes.toSkip.push({
+            path: targetPath,
+            reason: 'Content identical',
+          });
         } else {
           switch (this.overwritePolicy) {
             case 'never':
-              changes.toSkip.push({ path: targetPath, reason: 'Overwrite policy: never' });
+              changes.toSkip.push({
+                path: targetPath,
+                reason: 'Overwrite policy: never',
+              });
               break;
             case 'force':
               changes.toUpdate.push({ path: targetPath });
               break;
             case 'if-unmodified':
               // Simple check - could be enhanced with git status
-              changes.toSkip.push({ path: targetPath, reason: 'File exists (if-unmodified policy)' });
+              changes.toSkip.push({
+                path: targetPath,
+                reason: 'File exists (if-unmodified policy)',
+              });
               break;
             default:
               changes.toUpdate.push({ path: targetPath });
@@ -173,22 +195,24 @@ class PackApplier {
 
   displayPreview(changes) {
     console.log('\n📋 Preview of changes:');
-    
+
     if (changes.toCreate.length > 0) {
       console.log('\n📁 Files to create:');
       changes.toCreate.forEach(change => console.log(`   + ${change.path}`));
     }
-    
+
     if (changes.toUpdate.length > 0) {
       console.log('\n📝 Files to update:');
       changes.toUpdate.forEach(change => console.log(`   ~ ${change.path}`));
     }
-    
+
     if (changes.toSkip.length > 0) {
       console.log('\n⏭️  Files to skip:');
-      changes.toSkip.forEach(change => console.log(`   - ${change.path} (${change.reason})`));
+      changes.toSkip.forEach(change =>
+        console.log(`   - ${change.path} (${change.reason})`)
+      );
     }
-    
+
     console.log();
   }
 
@@ -197,7 +221,7 @@ class PackApplier {
     for (const change of [...changes.toCreate, ...changes.toUpdate]) {
       const fullPath = path.join(this.workspaceRoot, change.path);
       const dir = path.dirname(fullPath);
-      
+
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -207,10 +231,10 @@ class PackApplier {
     for (const change of changes.toCreate) {
       const sourcePath = path.join(metadata.path, change.path);
       const targetPath = path.join(this.workspaceRoot, change.path);
-      
+
       const content = fs.readFileSync(sourcePath, 'utf8');
       fs.writeFileSync(targetPath, content);
-      
+
       if (this.verbose) {
         console.log(`✅ Created: ${change.path}`);
       }
@@ -220,24 +244,30 @@ class PackApplier {
     for (const change of changes.toUpdate) {
       const sourcePath = path.join(metadata.path, change.path);
       const targetPath = path.join(this.workspaceRoot, change.path);
-      
+
       // Backup existing file
       const backupPath = `${targetPath}.backup.${Date.now()}`;
       fs.copyFileSync(targetPath, backupPath);
-      
+
       const content = fs.readFileSync(sourcePath, 'utf8');
       fs.writeFileSync(targetPath, content);
-      
+
       if (this.verbose) {
-        console.log(`🔄 Updated: ${change.path} (backup: ${path.basename(backupPath)})`);
+        console.log(
+          `🔄 Updated: ${change.path} (backup: ${path.basename(backupPath)})`
+        );
       }
     }
   }
 
   async writeManifest(packName, metadata) {
-    const manifestPath = path.join(this.workspaceRoot, '.github', 'copilot-packs.json');
+    const manifestPath = path.join(
+      this.workspaceRoot,
+      '.github',
+      'copilot-packs.json'
+    );
     const manifestDir = path.dirname(manifestPath);
-    
+
     if (!fs.existsSync(manifestDir)) {
       fs.mkdirSync(manifestDir, { recursive: true });
     }
@@ -250,11 +280,11 @@ class PackApplier {
     manifest[packName] = {
       applied_at: new Date().toISOString(),
       version: metadata.version || '1.0.0',
-      files_applied: metadata.target_paths || []
+      files_applied: metadata.target_paths || [],
     };
 
     fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    
+
     if (this.verbose) {
       console.log(`📄 Updated manifest: ${manifestPath}`);
     }
@@ -263,21 +293,25 @@ class PackApplier {
   async listPacks() {
     const packsDir = path.join(this.pluginRoot, 'packs');
     const packs = [];
-    
+
     if (!fs.existsSync(packsDir)) {
       return packs;
     }
 
     const entries = fs.readdirSync(packsDir, { withFileTypes: true });
-    
+
     for (const entry of entries) {
       if (entry.isDirectory()) {
-        const metadata = await this.loadPackMetadata(path.join(packsDir, entry.name), entry.name);
+        const metadata = await this.loadPackMetadata(
+          path.join(packsDir, entry.name),
+          entry.name
+        );
         if (metadata) {
           packs.push({
             name: entry.name,
-            description: metadata.description || metadata.tldr || 'No description',
-            category: metadata.category || 'unknown'
+            description:
+              metadata.description || metadata.tldr || 'No description',
+            category: metadata.category || 'unknown',
           });
         }
       }
@@ -293,7 +327,7 @@ async function main() {
   const options = {
     dryRun: args.includes('--dry-run'),
     verbose: args.includes('--verbose'),
-    overwritePolicy: 'if-unmodified'
+    overwritePolicy: 'if-unmodified',
   };
 
   // Parse overwrite policy

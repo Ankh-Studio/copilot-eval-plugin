@@ -1,6 +1,7 @@
 # API Hook Generator
 
-Create React hooks for API data management using TanStack Query and Axios with proper error handling and TypeScript typing.
+Create React hooks for API data management using TanStack Query and Axios with proper error handling
+and TypeScript typing.
 
 ## Hook Requirements
 
@@ -15,7 +16,7 @@ When generating API hooks, include:
 
 ## Basic Query Hook Template
 
-```typescript
+````typescript
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { axiosInstance } from '../api/axios';
 
@@ -52,7 +53,7 @@ export const useCreateEntity = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (data: CreateEntityData) => 
+    mutationFn: (data: CreateEntityData) =>
       axiosInstance.post<EntityType>('/entities', data).then(res => res.data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['entities'] });
@@ -93,19 +94,19 @@ export const useUpdateEntity = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ id, ...data }: Partial<EntityType> & { id: string }) => 
+    mutationFn: ({ id, ...data }: Partial<EntityType> & { id: string }) =>
       axiosInstance.patch<EntityType>(`/entities/${id}`, data),
     onMutate: async (updatedEntity) => {
       await queryClient.cancelQueries({ queryKey: ['entities'] });
-      
+
       const previousEntities = queryClient.getQueryData<EntityType[]>(['entities']);
-      
+
       queryClient.setQueryData<EntityType[]>(['entities'], (old) =>
-        old?.map(entity => 
+        old?.map(entity =>
           entity.id === updatedEntity.id ? { ...entity, ...updatedEntity } : entity
         )
       );
-      
+
       return { previousEntities };
     },
     onError: (err, updatedEntity, context) => {
@@ -168,3 +169,4 @@ export const useEntity = (id: string) => {
 7. **Retry logic** - Handle temporary failures
 
 Generate hooks that are reusable, type-safe, and follow these patterns for consistent API data management.
+````

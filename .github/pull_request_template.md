@@ -10,9 +10,11 @@
 - [ ] ⚡ Workflow improvement
 
 ## 📝 Description
+
 <!-- Brief description of changes -->
 
 ## 🔄 Changes
+
 <!-- List of specific changes made -->
 
 ## 🧪 Testing
@@ -30,9 +32,11 @@
 - [ ] Documentation updated
 
 ## 🔗 Related Issues
+
 <!-- Closes #123, Fixes #456 -->
 
 ## 📸 Screenshots
+
 <!-- If applicable -->
 
 ## 📋 Checklist
@@ -44,9 +48,11 @@
 - [ ] Ready for review
 
 ## 🚀 Release Notes
+
 <!-- Brief description for release notes -->
 
 ---
 
 ## 💡 Additional Notes
+
 <!-- Any additional context for reviewers -->

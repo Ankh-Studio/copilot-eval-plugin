@@ -1,6 +1,7 @@
 # UX Review and Improvement Generator
 
-Analyze and improve user experience design patterns, accessibility, and usability of React components and interfaces.
+Analyze and improve user experience design patterns, accessibility, and usability of React
+components and interfaces.
 
 ## UX Review Requirements
 
@@ -17,7 +18,7 @@ When conducting UX reviews, include:
 
 ## UX Review Template
 
-```typescript
+````typescript
 interface UXReview {
   component: string;
   accessibility: AccessibilityScore;
@@ -44,7 +45,7 @@ interface UXIssue {
 ```typescript
 export const reviewFocusManagement = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check for visible focus indicators
   if (!hasVisibleFocusStyles(component)) {
     issues.push({
@@ -55,7 +56,7 @@ export const reviewFocusManagement = (component: React.ComponentType) => {
       solution: 'Add focus-visible styles with :focus-visible or data-focus attributes'
     });
   }
-  
+
   // Check focus trap in modals
   if (isModalComponent(component) && !hasFocusTrap(component)) {
     issues.push({
@@ -66,7 +67,7 @@ export const reviewFocusManagement = (component: React.ComponentType) => {
       solution: 'Implement focus trap using focus management library or custom logic'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -76,13 +77,13 @@ export const reviewFocusManagement = (component: React.ComponentType) => {
 ```typescript
 export const analyzeColorContrast = (styles: CSSProperties) => {
   const issues: UXIssue[] = [];
-  
+
   const foregroundColor = styles.color;
   const backgroundColor = styles.backgroundColor;
-  
+
   if (foregroundColor && backgroundColor) {
     const contrastRatio = calculateContrastRatio(foregroundColorColor, backgroundColorColor);
-    
+
     if (contrastRatio < 4.5) {
       issues.push({
         severity: 'high',
@@ -93,7 +94,7 @@ export const analyzeColorContrast = (styles: CSSProperties) => {
       });
     }
   }
-  
+
   return issues;
 };
 ```bash
@@ -105,7 +106,7 @@ export const analyzeColorContrast = (styles: CSSProperties) => {
 ```typescript
 export const reviewInteractions = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check for hover states
   if (isInteractiveComponent(component) && !hasHoverStates(component)) {
     issues.push({
@@ -116,7 +117,7 @@ export const reviewInteractions = (component: React.ComponentType) => {
       solution: 'Add hover styles to indicate interactivity'
     });
   }
-  
+
   // Check for loading states
   if (hasAsyncOperations(component) && !hasLoadingStates(component)) {
     issues.push({
@@ -127,7 +128,7 @@ export const reviewInteractions = (component: React.ComponentType) => {
       solution: 'Add loading spinner or skeleton screen during async operations'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -137,7 +138,7 @@ export const reviewInteractions = (component: React.ComponentType) => {
 ```typescript
 export const analyzeFormUsability = (formComponent: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check for clear labels
   if (!hasProperLabels(formComponent)) {
     issues.push({
@@ -148,7 +149,7 @@ export const analyzeFormUsability = (formComponent: React.ComponentType) => {
       solution: 'Add associated labels using htmlFor or aria-label attributes'
     });
   }
-  
+
   // Check for inline validation
   if (!hasInlineValidation(formComponent)) {
     issues.push({
@@ -159,7 +160,7 @@ export const analyzeFormUsability = (formComponent: React.ComponentType) => {
       solution: 'Add real-time validation with clear error messages'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -171,7 +172,7 @@ export const analyzeFormUsability = (formComponent: React.ComponentType) => {
 ```typescript
 export const reviewTypography = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check text hierarchy
   if (!hasClearHierarchy(component)) {
     issues.push({
@@ -182,7 +183,7 @@ export const reviewTypography = (component: React.ComponentType) => {
       solution: 'Establish consistent heading sizes and font weights'
     });
   }
-  
+
   // Check line height
   const lineHeight = getLineHeight(component);
   if (lineHeight < 1.4) {
@@ -194,7 +195,7 @@ export const reviewTypography = (component: React.ComponentType) => {
       solution: 'Increase line height to 1.4-1.6 for body text'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -204,7 +205,7 @@ export const reviewTypography = (component: React.ComponentType) => {
 ```typescript
 export const analyzeLayout = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check for adequate spacing
   if (!hasAdequateSpacing(component)) {
     issues.push({
@@ -215,7 +216,7 @@ export const analyzeLayout = (component: React.ComponentType) => {
       solution: 'Increase spacing to meet 44px minimum touch target requirements'
     });
   }
-  
+
   // Check visual alignment
   if (!hasProperAlignment(component)) {
     issues.push({
@@ -226,7 +227,7 @@ export const analyzeLayout = (component: React.ComponentType) => {
       solution: 'Use consistent grid system and alignment utilities'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -238,7 +239,7 @@ export const analyzeLayout = (component: React.ComponentType) => {
 ```typescript
 export const analyzePerceivedPerformance = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check for loading skeletons
   if (hasAsyncContent(component) && !hasLoadingSkeletons(component)) {
     issues.push({
@@ -249,7 +250,7 @@ export const analyzePerceivedPerformance = (component: React.ComponentType) => {
       solution: 'Add skeleton screens to maintain layout stability'
     });
   }
-  
+
   // Check for unnecessary re-renders
   if (hasUnnecessaryRerenders(component)) {
     issues.push({
@@ -260,7 +261,7 @@ export const analyzePerceivedPerformance = (component: React.ComponentType) => {
       solution: 'Optimize with React.memo, useMemo, or useCallback'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -272,12 +273,12 @@ export const analyzePerceivedPerformance = (component: React.ComponentType) => {
 ```typescript
 export const reviewTouchTargets = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   const touchTargets = getTouchTargets(component);
-  
+
   touchTargets.forEach(target => {
     const size = getTouchTargetSize(target);
-    
+
     if (size < 44) {
       issues.push({
         severity: 'high',
@@ -288,7 +289,7 @@ export const reviewTouchTargets = (component: React.ComponentType) => {
       });
     }
   });
-  
+
   return issues;
 };
 ```bash
@@ -298,7 +299,7 @@ export const reviewTouchTargets = (component: React.ComponentType) => {
 ```typescript
 export const analyzeResponsiveDesign = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check mobile-first approach
   if (!isMobileFirst(component)) {
     issues.push({
@@ -309,7 +310,7 @@ export const analyzeResponsiveDesign = (component: React.ComponentType) => {
       solution: 'Restructure with mobile-first responsive design'
     });
   }
-  
+
   // Check breakpoint usage
   if (!hasProperBreakpoints(component)) {
     issues.push({
@@ -320,7 +321,7 @@ export const analyzeResponsiveDesign = (component: React.ComponentType) => {
       solution: 'Standardize breakpoint usage across components'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -332,7 +333,7 @@ export const analyzeResponsiveDesign = (component: React.ComponentType) => {
 ```typescript
 export const reviewContentClarity = (component: React.ComponentType) => {
   const issues: UXIssue[] = [];
-  
+
   // Check reading level
   const readingLevel = calculateReadingLevel(component);
   if (readingLevel > 8) {
@@ -344,7 +345,7 @@ export const reviewContentClarity = (component: React.ComponentType) => {
       solution: 'Simplify language to 8th grade reading level or lower'
     });
   }
-  
+
   // Check for jargon
   if (containsExcessiveJargon(component)) {
     issues.push({
@@ -355,7 +356,7 @@ export const reviewContentClarity = (component: React.ComponentType) => {
       solution: 'Replace jargon with plain language or provide explanations'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -394,7 +395,7 @@ const buttonStyles = `
   focus-visible:ring-2 focus-visible:ring-blue-500
 `;
       `;
-    
+
     case 'Modal does not trap focus within dialog':
       return `
 // Implement focus trap
@@ -403,7 +404,7 @@ import { useFocusTrap } from '@radix-ui/react-dialog';
 // In modal component:
 const focusTrapRef = useFocusTrap();
       `;
-    
+
     default:
       return '// Review specific implementation requirements';
   }
@@ -411,3 +412,4 @@ const focusTrapRef = useFocusTrap();
 ```bash
 
 Generate comprehensive UX reviews that identify accessibility issues, usability problems, and provide actionable improvement recommendations for better user experiences.
+````

@@ -1,6 +1,7 @@
 # Tailwind CSS Styling Generator
 
-Create React components with Tailwind CSS utility classes following modern design patterns and accessibility guidelines.
+Create React components with Tailwind CSS utility classes following modern design patterns and
+accessibility guidelines.
 
 ## Styling Requirements
 
@@ -17,7 +18,7 @@ When generating component styles, include:
 
 ## Styling Template Structure
 
-```typescript
+````typescript
 import React from 'react';
 
 interface ComponentProps {
@@ -34,13 +35,13 @@ export const Component: React.FC<ComponentProps> = ({
   className
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
+
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 disabled:bg-blue-300',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 disabled:bg-gray-100',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500 disabled:border-gray-200'
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm min-h-[44px]',
     md: 'px-4 py-2 text-base min-h-[44px]',
@@ -230,7 +231,7 @@ export const ResponsiveComponent = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Content */}
       </div>
-      
+
       {/* Responsive typography */}
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
         Heading
@@ -292,3 +293,4 @@ const motionReduce = 'motion-reduce:transform-none';
 ```bash
 
 Generate styles that are maintainable, accessible, and follow modern design system principles using Tailwind CSS utilities.
+````

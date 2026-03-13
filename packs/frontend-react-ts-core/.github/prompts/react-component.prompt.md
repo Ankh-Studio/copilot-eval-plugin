@@ -16,7 +16,7 @@ When generating a React component, include:
 
 ## Template Structure
 
-```typescript
+````typescript
 import React from 'react';
 
 interface ComponentNameProps {
@@ -70,3 +70,4 @@ export const ComponentName: React.FC<ComponentNameProps> = ({
 - Screen reader compatibility
 
 Generate components that are reusable, accessible, and follow modern React patterns.
+````

@@ -1,6 +1,7 @@
 # Accessible Component Generator
 
-Create React components that meet WCAG 2.1 AA standards with semantic HTML, ARIA attributes, and keyboard navigation.
+Create React components that meet WCAG 2.1 AA standards with semantic HTML, ARIA attributes, and
+keyboard navigation.
 
 ## Core Requirements
 
@@ -17,7 +18,7 @@ Generate components with:
 
 ## Accessible Button Template
 
-```typescript
+````typescript
 import React from 'react';
 
 interface ButtonProps {
@@ -167,12 +168,12 @@ export const AccessibleButton: React.FC<ButtonProps> = ({
   ariaDescribedBy
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
+
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500'
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm min-h-[44px]', // 44px minimum touch target
     md: 'px-4 py-2 text-base min-h-[44px]',
@@ -235,24 +236,24 @@ export const FormField: React.FC<FormFieldProps> = ({
           </span>
         )}
       </label>
-      
+
       {React.cloneElement(children as React.ReactElement, {
         id,
         'aria-describedby': describedBy || undefined,
         'aria-invalid': !!error,
         'aria-required': required
       })}
-      
+
       {hint && (
         <p id={`${id}-hint`} className="text-sm text-gray-500">
           {hint}
         </p>
       )}
-      
+
       {error && (
-        <p 
-          id={`${id}-error`} 
-          className="text-sm text-red-600" 
+        <p
+          id={`${id}-error`}
+          className="text-sm text-red-600"
           role="alert"
           aria-live="polite"
         >
@@ -287,25 +288,25 @@ export const AccessibleModal: React.FC<ModalProps> = ({
     if (isOpen) {
       // Store current focus
       previousFocusRef.current = document.activeElement as HTMLElement;
-      
+
       // Focus modal
       modalRef.current?.focus();
-      
+
       // Trap focus within modal
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Escape') {
           onClose();
         }
-        
+
         if (event.key === 'Tab') {
           const focusableElements = modalRef.current?.querySelectorAll(
             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
           );
-          
+
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-            
+
             if (event.shiftKey) {
               if (document.activeElement === firstElement) {
                 lastElement.focus();
@@ -322,10 +323,10 @@ export const AccessibleModal: React.FC<ModalProps> = ({
       };
 
       document.addEventListener('keydown', handleKeyDown);
-      
+
       // Prevent body scroll
       document.body.style.overflow = 'hidden';
-      
+
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
         document.body.style.overflow = '';
@@ -340,12 +341,12 @@ export const AccessibleModal: React.FC<ModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-black bg-opacity-50"
         onClick={onClose}
         aria-hidden="true"
       />
-      
+
       {/* Modal */}
       <div
         ref={modalRef}
@@ -362,11 +363,11 @@ export const AccessibleModal: React.FC<ModalProps> = ({
         >
           ×
         </button>
-        
+
         <h2 id="modal-title" className="text-lg font-semibold mb-4">
           {title}
         </h2>
-        
+
         <div className="mb-6">
           {children}
         </div>
@@ -453,3 +454,4 @@ export const AccessibleNavigation: React.FC<NavigationProps> = ({
 - [ ] Sufficient time limits (if any)
 
 Generate components that are fully accessible and provide an inclusive experience for all users.
+````

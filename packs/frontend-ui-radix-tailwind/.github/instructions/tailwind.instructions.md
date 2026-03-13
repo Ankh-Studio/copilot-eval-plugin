@@ -1,12 +1,13 @@
 # Tailwind CSS Guidelines
 
-Use Tailwind CSS for consistent, utility-first styling. Follow these patterns for maintainable and scalable styles.
+Use Tailwind CSS for consistent, utility-first styling. Follow these patterns for maintainable and
+scalable styles.
 
 ## Utility-First Approach
 
 Prefer utility classes over custom CSS:
 
-```typescript
+````typescript
 // ✅ Preferred - utility classes
 <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
   Click me
@@ -37,13 +38,13 @@ export const Button: React.FC<ButtonProps> = ({
   onClick
 }) => {
   const baseClasses = 'font-medium rounded-lg transition-colors focus:outline-none focus:ring-2';
-  
+
   const variantClasses = {
     primary: 'bg-blue-500 hover:bg-blue-600 text-white focus:ring-blue-500',
     secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-900 focus:ring-gray-500',
     danger: 'bg-red-500 hover:bg-red-600 text-white focus:ring-red-500'
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
@@ -184,3 +185,4 @@ module.exports = {
   }
 }
 ```bash
+````

@@ -112,7 +112,7 @@
 ## Anti-Goals (What We're NOT Building)
 
 - ❌ Persona management systems
-- ❌ Memory and pattern recognition engines  
+- ❌ Memory and pattern recognition engines
 - ❌ Performance optimization subsystems
 - ❌ Community pack marketplaces
 - ❌ Generic code generation skills
@@ -122,12 +122,12 @@
 
 ## Timeline Summary
 
-| Week | Focus | Deliverables |
-|------|-------|--------------|
-| 1 | Foundation | Clean repository, working infrastructure |
-| 2 | Assessment | Repository assessment skill and rubric |
-| 3 | Planning | Improvement planning and plugin integration |
-| 4 | Validation | Testing, documentation, and polish |
+| Week | Focus      | Deliverables                                |
+| ---- | ---------- | ------------------------------------------- |
+| 1    | Foundation | Clean repository, working infrastructure    |
+| 2    | Assessment | Repository assessment skill and rubric      |
+| 3    | Planning   | Improvement planning and plugin integration |
+| 4    | Validation | Testing, documentation, and polish          |
 
 **Total Estimated Effort**: 30-40 hours across 4 weeks
 
@@ -140,4 +140,6 @@
 3. **Advanced Features**: Consider additional assessment capabilities
 4. **Integration**: Explore integration with other development tools
 
-This roadmap transforms the copilot-eval-plugin from a general evaluation toolkit into a focused repository assessment and planning tool that helps engineers quickly understand and improve unfamiliar codebases.
+This roadmap transforms the copilot-eval-plugin from a general evaluation toolkit into a focused
+repository assessment and planning tool that helps engineers quickly understand and improve
+unfamiliar codebases.

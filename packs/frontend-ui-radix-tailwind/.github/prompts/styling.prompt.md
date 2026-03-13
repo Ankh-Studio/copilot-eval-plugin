@@ -1,6 +1,7 @@
 # Tailwind CSS Styling Generator for Radix UI Components
 
-Create React components using Radix UI primitives with Tailwind CSS styling, ensuring accessibility and modern design patterns.
+Create React components using Radix UI primitives with Tailwind CSS styling, ensuring accessibility
+and modern design patterns.
 
 ## Radix UI + Tailwind Requirements
 
@@ -16,7 +17,7 @@ When generating styled Radix UI components, include:
 
 ## Radix UI + Tailwind Template
 
-```typescript
+````typescript
 import React from 'react';
 import * as RadixComponent from '@radix-ui/react-component-name';
 
@@ -130,8 +131,8 @@ export const StyledDropdown: React.FC<{
               className={`
                 px-3 py-2 rounded-md text-sm cursor-pointer transition-colors
                 flex items-center gap-2
-                ${item.destructive 
-                  ? 'text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20' 
+                ${item.destructive
+                  ? 'text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20'
                   : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700'
                 }
                 ${item.disabled ? 'opacity-50 cursor-not-allowed' : ''}
@@ -168,7 +169,7 @@ export const StyledFormField: React.FC<{
 }> = ({ label, id, required = false, error, children }) => {
   return (
     <div className="space-y-2">
-      <Label.Root 
+      <Label.Root
         htmlFor={id}
         className={`
           block text-sm font-medium
@@ -206,8 +207,8 @@ export const StyledSwitch: React.FC<{
         disabled={disabled}
         className={`
           h-5 w-9 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-          ${checked 
-            ? 'bg-blue-600' 
+          ${checked
+            ? 'bg-blue-600'
             : 'bg-gray-200 dark:bg-gray-700'
           }
           ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -274,19 +275,19 @@ const stateStyles = `
   // Open/closed states
   data-[state=open]:bg-blue-700
   data-[state=closed]:bg-blue-600
-  
+
   // Disabled states
   data-[disabled]:opacity-50
   data-[disabled]:cursor-not-allowed
-  
+
   // Highlighted/focused states (in dropdowns, menus)
   data-[highlighted]:bg-gray-100
   data-[highlighted]:dark:bg-gray-700
-  
+
   // Checked/unchecked states
   data-[state=checked]:bg-blue-600
   data-[state=unchecked]:bg-gray-200
-  
+
   // Active/inactive states
   data-[state=active]:bg-blue-700
   data-[state=inactive]:bg-gray-600
@@ -301,11 +302,11 @@ const animationStyles = `
   // Fade animations
   data-[state=open]:animate-in data-[state=open]:fade-in-0
   data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-  
+
   // Scale animations
   data-[state=open]:animate-in data-[state=open]:zoom-in-95
   data-[state=closed]:animate-out data-[state=closed]:zoom-out-95
-  
+
   // Slide animations
   data-[state=open]:animate-in data-[state=open]:slide-in-from-top-2
   data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top-2
@@ -323,7 +324,7 @@ export const DarkModeComponent = () => {
       <button className="bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 focus:ring-blue-500 dark:focus:ring-blue-400">
         Dark Mode Button
       </button>
-      
+
       <Dialog.Root>
         <Dialog.Portal>
           <Dialog.Overlay className="bg-black/50 dark:bg-black/70" />
@@ -388,3 +389,4 @@ const highContrastStyles = `
 ```bash
 
 Generate Radix UI components with Tailwind CSS that are fully accessible, responsive, and follow modern design system principles.
+````

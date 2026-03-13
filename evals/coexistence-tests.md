@@ -1,6 +1,7 @@
 # Coexistence Tests for Overlapping Skills
 
-This file defines tests to verify that overlapping skills can coexist without conflicts and provide complementary value.
+This file defines tests to verify that overlapping skills can coexist without conflicts and provide
+complementary value.
 
 ## Overlap Categories
 
@@ -13,18 +14,18 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 **Test Cases:**
 
-```bash
+````bash
 # Test that both can evaluate the same file with different perspectives
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/evaluate-prompt .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
+/prompt .github/prompts/code-review.prompt.md
 
 # Verify complementary insights
-/evaluate-artifact skills/evaluate-artifact/SKILL.md
-/evaluate-skill skills/evaluate-artifact/SKILL.md
+/artifact skills/artifact/SKILL.md
+/skill skills/artifact/SKILL.md
 
 # Cross-type evaluation
-/evaluate-artifact .github/instructions/coding-standards.instructions.md
-/evaluate-instruction .github/instructions/coding-standards.instructions.md
+/artifact .github/instructions/coding-standards.instructions.md
+/instruction .github/instructions/coding-standards.instructions.md
 ```bash
 
 **Expected Results:**
@@ -45,16 +46,16 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Batch vs individual consistency
-/eval-batch .github/prompts/
-/evaluate-prompt .github/prompts/code-review.prompt.md
-/evaluate-prompt .github/prompts/feature-generation.prompt.md
+/batch .github/prompts/
+/prompt .github/prompts/code-review.prompt.md
+/prompt .github/prompts/feature-generation.prompt.md
 
 # Performance comparison
-/eval-batch --parallel .github/prompts/
+/batch --parallel .github/prompts/
 # Time individual evaluations for comparison
 
 # Report consistency
-/eval-batch --comparative .github/prompts/ --baseline v1.0
+/batch --comparative .github/prompts/ --baseline v1.0
 # Compare with individual evaluation trends
 ```bash
 
@@ -76,15 +77,15 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Quality gates after evaluation
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/eval-quality-gates --pre-deploy .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
+/quality-gates --pre-deploy .github/prompts/code-review.prompt.md
 
 # Batch quality gates
-/eval-batch .github/prompts/
-/eval-quality-gates --compliance --report detailed
+/batch .github/prompts/
+/quality-gates --compliance --report detailed
 
 # Threshold enforcement
-/eval-quality-gates --threshold strict .github/prompts/
+/quality-gates --threshold strict .github/prompts/
 # Verify low-scoring items are blocked
 ```bash
 
@@ -106,16 +107,16 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Performance impact on other skills
-/eval-performance --benchmark .github/prompts/
-/evaluate-prompt .github/prompts/code-review.prompt.md
+/performance --benchmark .github/prompts/
+/prompt .github/prompts/code-review.prompt.md
 
 # Caching effects
-/eval-performance --optimize --cache-results
+/performance --optimize --cache-results
 # Re-run evaluations to verify caching works
 
 # Concurrent operations
-/eval-performance --stress-test --concurrent 5
-/eval-quality-gates --pre-deploy .github/prompts/ &
+/performance --stress-test --concurrent 5
+/quality-gates --pre-deploy .github/prompts/ &
 ```bash
 
 **Expected Results:**
@@ -136,18 +137,18 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Evaluation before and after improvement
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/eval-improve .github/prompts/code-review.prompt.md --focus=clarity
-/evaluate-artifact .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
+/improve .github/prompts/code-review.prompt.md --focus=clarity
+/artifact .github/prompts/code-review.prompt.md
 
 # Batch improvement cycles
-/eval-batch .github/prompts/
-/eval-improve --batch .github/prompts/ --priority high
-/eval-batch .github/prompts/ --comparative
+/batch .github/prompts/
+/improve --batch .github/prompts/ --priority high
+/batch .github/prompts/ --comparative
 
 # Improvement validation
-/eval-improve skills/evaluate-artifact/SKILL.md
-/evaluate-skill skills/evaluate-artifact/SKILL.md
+/improve skills/artifact/SKILL.md
+/skill skills/artifact/SKILL.md
 ```bash
 
 **Expected Results:**
@@ -168,16 +169,16 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Debate vs individual evaluations
-/eval-debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
-/evaluate-prompt .github/prompts/code-review.prompt.md
-/evaluate-prompt .github/prompts/feature-generation.prompt.md
+/debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
+/prompt .github/prompts/code-review.prompt.md
+/prompt .github/prompts/feature-generation.prompt.md
 
 # Multi-evaluator consensus
-/eval-debate --consensus --multiple-evaluators .github/prompts/
+/debate --consensus --multiple-evaluators .github/prompts/
 # Compare with individual evaluation results
 
 # Criteria-specific debate
-/eval-debate --criteria effectiveness,clarity .github/prompts/
+/debate --criteria effectiveness,clarity .github/prompts/
 # Verify criteria alignment with individual evaluations
 ```bash
 
@@ -199,15 +200,15 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Rubric validation before use
-/eval-validate-rubrics rubrics/prompt-evaluation.md
-/evaluate-prompt .github/prompts/code-review.prompt.md --rubric rubrics/prompt-evaluation.md
+/validate-rubrics rubrics/prompt-evaluation.md
+/prompt .github/prompts/code-review.prompt.md --rubric rubrics/prompt-evaluation.md
 
 # Validation feedback integration
-/eval-validate-rubrics --thorough rubrics/skill-evaluation.md
+/validate-rubrics --thorough rubrics/skill-evaluation.md
 # Apply improved rubric to evaluations
 
 # Stress testing validation
-/eval-validate-rubrics --stress-test rubrics/
+/validate-rubrics --stress-test rubrics/
 # Verify robustness under edge cases
 ```bash
 
@@ -229,15 +230,15 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Adversarial testing of evaluations
-/eval-adversarial --attack-pattern scoring --rubric prompt.md
-/evaluate-prompt .github/prompts/code-review.prompt.md
+/adversarial --attack-pattern scoring --rubric prompt.md
+/prompt .github/prompts/code-review.prompt.md
 
 # Stress testing core skills
-/eval-adversarial --stress-test performance --skill eval-batch
-/eval-batch .github/prompts/
+/adversarial --stress-test performance --skill eval-batch
+/batch .github/prompts/
 
 # Security validation
-/eval-adversarial --smoke-test --critical-only
+/adversarial --smoke-test --critical-only
 # Verify all skills still function after security tests
 ```bash
 
@@ -259,15 +260,15 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Baseline establishment
-/eval-regression --full --baseline v1.0
-/evaluate-artifact .github/prompts/code-review.prompt.md
+/regression --full --baseline v1.0
+/artifact .github/prompts/code-review.prompt.md
 
 # Regression detection
-/eval-regression --scoring-consistency --artifact-type prompt
+/regression --scoring-consistency --artifact-type prompt
 # Verify score consistency across runs
 
 # Performance regression
-/eval-regression --performance --skill eval-batch
+/regression --performance --skill eval-batch
 # Monitor performance over time
 ```bash
 
@@ -289,15 +290,15 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # TL;DR vs full evaluation
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/eval-tldr .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
+/tldr .github/prompts/code-review.prompt.md
 
 # Batch summaries
-/eval-batch .github/prompts/
-/eval-tldr --batch .github/prompts/
+/batch .github/prompts/
+/tldr --batch .github/prompts/
 
 # Detailed summaries
-/eval-tldr --detailed --findings evaluation-results.json
+/tldr --detailed --findings evaluation-results.json
 # Verify summary captures key insights
 ```bash
 
@@ -314,13 +315,13 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Test that quality gates can override other skills
-/eval-quality-gates --threshold strict .github/prompts/
-/eval-improve .github/prompts/code-review.prompt.md
+/quality-gates --threshold strict .github/prompts/
+/improve .github/prompts/code-review.prompt.md
 # Verify gates still enforce standards
 
 # Test that security tests take precedence
-/eval-adversarial --critical-only
-/eval-performance --optimize
+/adversarial --critical-only
+/performance --optimize
 # Verify security isn't compromised for performance
 ```bash
 
@@ -328,14 +329,14 @@ This file defines tests to verify that overlapping skills can coexist without co
 
 ```bash
 # Concurrent skill execution
-/eval-batch --parallel .github/prompts/ &
-/eval-quality-gates --compliance &
-/eval-performance --benchmark &
+/batch --parallel .github/prompts/ &
+/quality-gates --compliance &
+/performance --benchmark &
 # Verify no resource conflicts
 
 # Memory stress testing
-/eval-adversarial --stress-test performance
-/eval-regression --full-suite
+/adversarial --stress-test performance
+/regression --full-suite
 # Verify graceful handling of resource constraints
 ```bash
 
@@ -360,3 +361,4 @@ This file defines tests to verify that overlapping skills can coexist without co
 - Regression tests should block releases with quality issues
 
 These tests ensure that the copilot-eval-plugin skills can work together harmoniously while maintaining their individual effectiveness and contributing to overall evaluation quality.
+````

@@ -1,6 +1,7 @@
 # Iterative Improvement Results
 
-This document demonstrates the "eating our own dog food" methodology by applying our iterative improvement loop to the copilot-eval-plugin skills.
+This document demonstrates the "eating our own dog food" methodology by applying our iterative
+improvement loop to the copilot-eval-plugin skills.
 
 ## Improvement Process Applied
 
@@ -83,48 +84,48 @@ This document demonstrates the "eating our own dog food" methodology by applying
 
 # eval-tldr
 
-> Transforms verbose evaluation outputs into concise, actionable tldr summaries following tldr-pages project standards.
-> Improved score: 3.6/4.0 with enhanced clarity and specific examples.
-> More information: skills/eval-tldr/SKILL.md | iterative improvement.
+> Transforms verbose evaluation outputs into concise, actionable tldr summaries following tldr-pages
+> project standards. Improved score: 3.6/4.0 with enhanced clarity and specific examples. More
+> information: skills/tldr/SKILL.md | iterative improvement.
 
 - View improved template structure and usage examples:
 
-`/eval-tldr skills/eval-tldr/SKILL.md --detailed`
+`/tldr skills/tldr/SKILL.md --detailed`
 
 - Apply similar improvements to other skills:
 
-`/eval-improve skills/{skill-name}/SKILL.md --focus="clarity,specificity"`
+`/improve skills/{skill-name}/SKILL.md --focus="clarity,specificity"`
 
 - View batch processing improvements:
 
-`/eval-tldr skills/eval-batch/SKILL.md --compare`
+`/tldr skills/batch/SKILL.md --compare`
 
 # eval-batch
 
-> Evaluates multiple artifacts efficiently with parallel processing, comparative analysis, and executive reporting.
-> Improved score: 3.8/4.0 with enhanced performance features and export options.
-> More information: skills/eval-batch/SKILL.md | iterative improvement.
+> Evaluates multiple artifacts efficiently with parallel processing, comparative analysis, and
+> executive reporting. Improved score: 3.8/4.0 with enhanced performance features and export
+> options. More information: skills/batch/SKILL.md | iterative improvement.
 
 - View enhanced parallel processing capabilities:
 
-`/eval-batch .github/ --parallel --workers 8`
+`/batch .github/ --parallel --workers 8`
 
 - Export results in multiple formats:
 
-`/eval-batch .github/ --export json --file results.json`
+`/batch .github/ --export json --file results.json`
 
 - Compare with baseline performance:
 
-`/eval-batch .github/ --baseline v1.0 --target v2.0 --delta`
+`/batch .github/ --baseline v1.0 --target v2.0 --delta`
 
 ## Methodology Validation
 
 ### Success Criteria Met
 
-✅ **Tools work effectively on own code**: eval-improve successfully enhanced eval-tldr and eval-batch
-✅ **Consistent evaluation results**: Clear score improvements demonstrated
-✅ **Meaningful improvements generated**: 40% verbosity reduction, 35% clarity improvement
-✅ **Smooth end-to-end workflow**: Complete improvement loop demonstrated
+✅ **Tools work effectively on own code**: eval-improve successfully enhanced eval-tldr and
+eval-batch ✅ **Consistent evaluation results**: Clear score improvements demonstrated ✅
+**Meaningful improvements generated**: 40% verbosity reduction, 35% clarity improvement ✅ **Smooth
+end-to-end workflow**: Complete improvement loop demonstrated
 
 ### Key Insights
 
@@ -149,6 +150,8 @@ The iterative improvement loop successfully demonstrated "eating our own dog foo
 3. **Validating our methodology**: Clear before/after comparison validates approach
 4. **Demonstrating practical value**: Improved clarity, specificity, and actionability
 
-The copilot-eval-plugin is now not only more capable but also serves as a validated example of its own improvement methodology.
+The copilot-eval-plugin is now not only more capable but also serves as a validated example of its
+own improvement methodology.
 
-**Overall Assessment**: Iterative improvement loop successfully validated with measurable quality enhancements.
+**Overall Assessment**: Iterative improvement loop successfully validated with measurable quality
+enhancements.

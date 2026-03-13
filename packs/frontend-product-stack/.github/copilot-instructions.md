@@ -1,6 +1,8 @@
 # Complete Modern React Stack Guidelines
 
-This repository uses a comprehensive modern React stack with TypeScript, accessible UI components, data management, and best practices. Follow these patterns for consistent, scalable, and maintainable code.
+This repository uses a comprehensive modern React stack with TypeScript, accessible UI components,
+data management, and best practices. Follow these patterns for consistent, scalable, and
+maintainable code.
 
 ## Technology Stack
 
@@ -18,7 +20,7 @@ This repository uses a comprehensive modern React stack with TypeScript, accessi
 
 Use functional components with proper TypeScript interfaces:
 
-```typescript
+````typescript
 import React from 'react';
 
 interface ComponentProps {
@@ -137,3 +139,4 @@ Implement comprehensive error handling:
 6. Test with screen readers and keyboard navigation
 
 This stack provides a solid foundation for building modern, accessible, and maintainable React applications at scale.
+````

@@ -1,28 +1,33 @@
 # UX Design Patterns and Guidelines
 
-Follow these UX patterns to create intuitive, user-friendly interfaces that provide excellent user experiences.
+Follow these UX patterns to create intuitive, user-friendly interfaces that provide excellent user
+experiences.
 
 ## Design Principles
 
 ### Clarity and Simplicity
+
 - Use clear, concise language
 - Avoid unnecessary complexity
 - Prioritize essential information
 - Use visual hierarchy to guide attention
 
 ### Consistency
+
 - Maintain consistent patterns across the application
 - Use familiar UI conventions
 - Keep interactions predictable
 - Standardize colors, typography, and spacing
 
 ### Accessibility
+
 - Design for all users and abilities
 - Ensure keyboard navigation
 - Provide sufficient color contrast
 - Include screen reader support
 
 ### Feedback and Response
+
 - Provide immediate feedback for user actions
 - Use loading states for async operations
 - Show clear error messages and recovery options
@@ -33,12 +38,14 @@ Follow these UX patterns to create intuitive, user-friendly interfaces that prov
 ### Navigation Patterns
 
 #### Primary Navigation
+
 - Keep navigation simple and organized
 - Use clear labels for navigation items
 - Highlight current page/section
 - Provide breadcrumbs for deep hierarchies
 
 #### Progressive Disclosure
+
 - Show essential information first
 - Reveal details on demand
 - Use accordions and tabs for organization
@@ -47,13 +54,15 @@ Follow these UX patterns to create intuitive, user-friendly interfaces that prov
 ### Form Patterns
 
 #### Form Layout
+
 - Group related fields together
 - Use single-column layouts for mobile
 - Provide clear labels and placeholders
 - Show validation errors inline
 
 #### Input Patterns
-```typescript
+
+````typescript
 // Good form field pattern
 <FormField
   label="Email Address"
@@ -195,3 +204,4 @@ Follow these UX patterns to create intuitive, user-friendly interfaces that prov
 - Include contextual help when needed
 
 Follow these patterns to create experiences that are intuitive, accessible, and delightful for all users.
+````

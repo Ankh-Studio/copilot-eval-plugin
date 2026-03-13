@@ -1,6 +1,7 @@
 # Data Fetching Hook Generator
 
-Create React hooks for data fetching using TanStack Query and Axios with comprehensive error handling, caching, and TypeScript support.
+Create React hooks for data fetching using TanStack Query and Axios with comprehensive error
+handling, caching, and TypeScript support.
 
 ## Core Requirements
 
@@ -15,7 +16,7 @@ Generate hooks that include:
 
 ## Basic Query Hook
 
-```typescript
+````typescript
 import { useQuery } from '@tanstack/react-query';
 import { axiosInstance } from '../api/axios';
 
@@ -51,7 +52,7 @@ interface CreateUser {
 
 export const useCreateUser = () => {
   const queryClient = useQueryClient();
-  
+
   return useMutation({
     mutationFn: async (userData: CreateUser) => {
       const { data } = await axiosInstance.post<User>('/users', userData);
@@ -118,19 +119,19 @@ export const useUpdateUser = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ id, ...data }: Partial<User> & { id: string }) => 
+    mutationFn: ({ id, ...data }: Partial<User> & { id: string }) =>
       axiosInstance.patch<User>(`/users/${id}`, data),
     onMutate: async (updatedData) => {
       await queryClient.cancelQueries({ queryKey: ['users'] });
-      
+
       const previousData = queryClient.getQueryData<User[]>(['users']);
-      
+
       queryClient.setQueryData<User[]>(['users'], (old) =>
-        old?.map(user => 
+        old?.map(user =>
           user.id === updatedData.id ? { ...user, ...updatedData } : user
         )
       );
-      
+
       return { previousData };
     },
     onError: (err, updatedData, context) => {
@@ -156,7 +157,7 @@ const handleApiError = (error: unknown): string => {
   if (axios.isAxiosError(error)) {
     const status = error.response?.status;
     const message = error.response?.data?.message || error.message;
-    
+
     switch (status) {
       case 400:
         return 'Invalid data provided. Please check your input and try again.';
@@ -174,11 +175,11 @@ const handleApiError = (error: unknown): string => {
         return message || 'An unexpected error occurred.';
     }
   }
-  
+
   if (error instanceof Error) {
     return error.message;
   }
-  
+
   return 'An unexpected error occurred.';
 };
 ```bash
@@ -248,7 +249,7 @@ export const useDataManagement = () => {
   const invalidateRelatedQueries = (resourceType: string) => {
     // Invalidate all queries for this resource type
     queryClient.invalidateQueries({ queryKey: [resourceType] });
-    
+
     // Also invalidate dependent queries
     if (resourceType === 'users') {
       queryClient.invalidateQueries({ queryKey: ['posts'] }); // Posts depend on users
@@ -280,10 +281,10 @@ export const useRealtimeData = <T>(
 
   useEffect(() => {
     const ws = new WebSocket('ws://localhost:8080/realtime');
-    
+
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      
+
       // Update cache with real-time data
       queryClient.setQueryData(initialQueryKey, (old: T) => ({
         ...old,
@@ -353,3 +354,4 @@ export const useMockData = <T>(data: T, isLoading = false, error?: Error) => {
 ```bash
 
 Generate data fetching hooks that are robust, type-safe, and provide excellent user experience with proper loading states, error handling, and performance optimization.
+````

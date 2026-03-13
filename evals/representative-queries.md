@@ -1,46 +1,47 @@
 # Representative Evaluation Queries
 
-This file contains representative queries for testing the copilot-eval-plugin functionality across different skill categories and use cases.
+This file contains representative queries for testing the copilot-eval-plugin functionality across
+different skill categories and use cases.
 
 ## Core Evaluation Skills
 
 ### Single Artifact Evaluation
 
-```bash
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/evaluate-prompt .github/prompts/feature-generation.prompt.md
-/evaluate-skill skills/evaluate-artifact/SKILL.md
-/evaluate-instruction .github/instructions/coding-standards.instructions.md
-/evaluate-template .github/templates/issue-response.template.md
-/evaluate-workflow .github/workflows/evaluation.workflow.md
-/evaluate-agent .github/agents/code-reviewer.agent.md
-/evaluate-context .github/contexts/project-context.context.md
-/evaluate-validation .github/validation-rules/code-quality.validation.md
-/evaluate-integration .github/integrations/github-integration.integration.md
+````bash
+/artifact .github/prompts/code-review.prompt.md
+/prompt .github/prompts/feature-generation.prompt.md
+/skill skills/artifact/SKILL.md
+/instruction .github/instructions/coding-standards.instructions.md
+/template .github/templates/issue-response.template.md
+/workflow .github/workflows/evaluation.workflow.md
+/agent .github/agents/code-reviewer.agent.md
+/context .github/contexts/project-context.context.md
+/validation .github/validation-rules/code-quality.validation.md
+/integration .github/integrations/github-integration.integration.md
 ```bash
 
 ### Batch Evaluation
 
 ```bash
-/eval-batch .github/prompts/
-/eval-batch --parallel skills/
-/eval-batch --comparative .github/prompts/ --baseline v1.0
+/batch .github/prompts/
+/batch --parallel skills/
+/batch --comparative .github/prompts/ --baseline v1.0
 ```bash
 
 ### Quality Gates
 
 ```bash
-/eval-quality-gates --pre-deploy .github/prompts/
-/eval-quality-gates --compliance --report detailed
-/eval-quality-gates --threshold strict skills/
+/quality-gates --pre-deploy .github/prompts/
+/quality-gates --compliance --report detailed
+/quality-gates --threshold strict skills/
 ```bash
 
 ### Performance Testing
 
 ```bash
-/eval-performance --benchmark .github/prompts/
-/eval-performance --optimize --cache-results
-/eval-performance --stress-test --concurrent 10
+/performance --benchmark .github/prompts/
+/performance --optimize --cache-results
+/performance --stress-test --concurrent 10
 ```bash
 
 ## Advanced Evaluation Skills
@@ -48,25 +49,25 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ### Improvement Recommendations
 
 ```bash
-/eval-improve .github/prompts/code-review.prompt.md --focus=clarity
-/eval-improve skills/evaluate-artifact/SKILL.md --comprehensive
-/eval-improve --batch .github/prompts/ --priority high
+/improve .github/prompts/code-review.prompt.md --focus=clarity
+/improve skills/artifact/SKILL.md --comprehensive
+/improve --batch .github/prompts/ --priority high
 ```bash
 
 ### Debate and Analysis
 
 ```bash
-/eval-debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
-/eval-debate --criteria effectiveness,clarity .github/prompts/
-/eval-debate --consensus --multiple-evaluators skills/
+/debate .github/prompts/code-review.prompt.md vs .github/prompts/feature-generation.prompt.md
+/debate --criteria effectiveness,clarity .github/prompts/
+/debate --consensus --multiple-evaluators skills/
 ```bash
 
 ### Rubric Validation
 
 ```bash
-/eval-validate-rubrics rubrics/prompt-evaluation.md
-/eval-validate-rubrics --thorough rubrics/skill-evaluation.md
-/eval-validate-rubrics --stress-test rubrics/
+/validate-rubrics rubrics/prompt-evaluation.md
+/validate-rubrics --thorough rubrics/skill-evaluation.md
+/validate-rubrics --stress-test rubrics/
 ```bash
 
 ## Security and Quality Assurance
@@ -74,27 +75,27 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ### Adversarial Testing
 
 ```bash
-/eval-adversarial --full-suite --target rubrics/
-/eval-adversarial --attack-pattern scoring --rubric prompt.md
-/eval-adversarial --stress-test performance --skill eval-batch
-/eval-adversarial --smoke-test --critical-only
+/adversarial --full-suite --target rubrics/
+/adversarial --attack-pattern scoring --rubric prompt.md
+/adversarial --stress-test performance --skill eval-batch
+/adversarial --smoke-test --critical-only
 ```bash
 
 ### Regression Testing
 
 ```bash
-/eval-regression --full --baseline v1.0
-/eval-regression --scoring-consistency --artifact-type prompt
-/eval-regression --performance --skill eval-batch
-/eval-regression --pre-release --threshold strict
+/regression --full --baseline v1.0
+/regression --scoring-consistency --artifact-type prompt
+/regression --performance --skill eval-batch
+/regression --pre-release --threshold strict
 ```bash
 
 ### TL;DR Summaries
 
 ```bash
-/eval-tldr .github/prompts/code-review.prompt.md
-/eval-tldr --batch .github/prompts/
-/eval-tldr --detailed --findings evaluation-results.json
+/tldr .github/prompts/code-review.prompt.md
+/tldr --batch .github/prompts/
+/tldr --detailed --findings evaluation-results.json
 ```bash
 
 ## Edge Cases and Stress Testing
@@ -102,26 +103,26 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ### Empty/Invalid Inputs
 
 ```bash
-/evaluate-artifact non-existent-file.md
-/eval-batch empty-directory/
-/eval-quality-gates --threshold invalid
-/eval-performance --stress-test --concurrent 1000
+/artifact non-existent-file.md
+/batch empty-directory/
+/quality-gates --threshold invalid
+/performance --stress-test --concurrent 1000
 ```bash
 
 ### Large Scale Testing
 
 ```bash
-/eval-batch --parallel --recursive .github/
-/eval-adversarial --comprehensive --report detailed
-/eval-regression --full-suite --all-artifacts
+/batch --parallel --recursive .github/
+/adversarial --comprehensive --report detailed
+/regression --full-suite --all-artifacts
 ```bash
 
 ### Concurrent Operations
 
 ```bash
-/eval-performance --benchmark --concurrent 5 &
-/eval-quality-gates --pre-deploy .github/prompts/ &
-/eval-adversarial --smoke-test &
+/performance --benchmark --concurrent 5 &
+/quality-gates --pre-deploy .github/prompts/ &
+/adversarial --smoke-test &
 ```bash
 
 ## Integration Testing
@@ -129,19 +130,19 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 ### Cross-Skill Workflows
 
 ```bash
-/evaluate-artifact .github/prompts/code-review.prompt.md
-/eval-improve .github/prompts/code-review.prompt.md --focus=clarity
-/eval-quality-gates --pre-deploy .github/prompts/code-review.prompt.md
-/eval-tldr .github/prompts/code-review.prompt.md
+/artifact .github/prompts/code-review.prompt.md
+/improve .github/prompts/code-review.prompt.md --focus=clarity
+/quality-gates --pre-deploy .github/prompts/code-review.prompt.md
+/tldr .github/prompts/code-review.prompt.md
 ```bash
 
 ### End-to-End Pipelines
 
 ```bash
-/eval-batch .github/prompts/ --comparative
-/eval-quality-gates --compliance --report detailed
-/eval-regression --pre-release --threshold strict
-/eval-adversarial --smoke-test --critical-only
+/batch .github/prompts/ --comparative
+/quality-gates --compliance --report detailed
+/regression --pre-release --threshold strict
+/adversarial --smoke-test --critical-only
 ```bash
 
 ## Expected Outcomes
@@ -176,3 +177,4 @@ This file contains representative queries for testing the copilot-eval-plugin fu
 - Ensure consistent behavior under adversarial conditions
 
 These queries serve as the foundation for comprehensive testing and validation of the copilot-eval-plugin functionality.
+````

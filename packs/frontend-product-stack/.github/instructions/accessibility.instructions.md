@@ -1,12 +1,13 @@
 # Accessibility (WCAG) Guidelines
 
-Follow WCAG 2.1 AA standards for inclusive design. These patterns ensure your components work for all users.
+Follow WCAG 2.1 AA standards for inclusive design. These patterns ensure your components work for
+all users.
 
 ## Semantic HTML
 
 Use proper semantic HTML5 elements:
 
-```typescript
+````typescript
 // ✅ Semantic HTML
 export const ArticleLayout: React.FC<{ title: string; content: string }> = ({ title, content }) => {
   return (
@@ -62,7 +63,7 @@ export const AccordionItem: React.FC<{
   onToggle: () => void;
 }> = ({ title, content, isOpen, onToggle }) => {
   const itemId = `accordion-${Math.random().toString(36).substr(2, 9)}`;
-  
+
   return (
     <div className="border rounded-lg">
       <h3>
@@ -119,8 +120,8 @@ export const CustomButton: React.FC<{
       onClick={disabled ? undefined : onClick}
       aria-disabled={disabled}
       className={`px-4 py-2 rounded ${
-        disabled 
-          ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+        disabled
+          ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
           : 'bg-blue-500 text-white cursor-pointer hover:bg-blue-600'
       }`}
     >
@@ -147,21 +148,21 @@ export const Modal: React.FC<{
     if (isOpen) {
       // Store current focus
       previousFocusRef.current = document.activeElement as HTMLElement;
-      
+
       // Focus modal
       modalRef.current?.focus();
-      
+
       // Trap focus within modal
       const handleTabKey = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           const focusableElements = modalRef.current?.querySelectorAll(
             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
           );
-          
+
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-            
+
             if (e.shiftKey) {
               if (document.activeElement === firstElement) {
                 lastElement.focus();
@@ -178,7 +179,7 @@ export const Modal: React.FC<{
       };
 
       document.addEventListener('keydown', handleTabKey);
-      
+
       return () => {
         document.removeEventListener('keydown', handleTabKey);
         // Restore focus
@@ -226,7 +227,7 @@ export const FormField: React.FC<{
 }> = ({ label, id, required = false, error, children }) => {
   return (
     <div className="mb-4">
-      <label 
+      <label
         htmlFor={id}
         className={`block text-sm font-medium mb-1 ${
           error ? 'text-red-600' : 'text-gray-700'
@@ -264,8 +265,8 @@ export const TextInput: React.FC<{
       aria-invalid={!!error}
       aria-describedby={error ? `${id}-error` : undefined}
       className={`w-full px-3 py-2 border rounded-md ${
-        error 
-          ? 'border-red-300 focus:ring-red-500 focus:border-red-500' 
+        error
+          ? 'border-red-300 focus:ring-red-500 focus:border-red-500'
           : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
       }`}
     />
@@ -298,9 +299,9 @@ const badColors = {
 Use ARIA live regions for dynamic content:
 
 ```typescript
-export const StatusMessage: React.FC<{ message: string; type: 'success' | 'error' | 'info' }> = ({ 
-  message, 
-  type 
+export const StatusMessage: React.FC<{ message: string; type: 'success' | 'error' | 'info' }> = ({
+  message,
+  type
 }) => {
   return (
     <div
@@ -330,3 +331,4 @@ export const AlertMessage: React.FC<{ message: string }> = ({ message }) => {
   );
 };
 ```bash
+````

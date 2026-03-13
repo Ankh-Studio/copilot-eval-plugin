@@ -1,12 +1,13 @@
 # Radix UI Component Patterns
 
-Use Radix UI primitives for accessible, unstyled component foundations. These patterns ensure proper accessibility and behavior while allowing complete styling control.
+Use Radix UI primitives for accessible, unstyled component foundations. These patterns ensure proper
+accessibility and behavior while allowing complete styling control.
 
 ## Core Radix UI Patterns
 
 ### Dialog/Modal Pattern
 
-```typescript
+````typescript
 import * as Dialog from '@radix-ui/react-dialog';
 
 interface ModalProps {
@@ -151,3 +152,4 @@ Use Tailwind classes for styling, but reference Radix data attributes for state:
   /* Disabled state styles */
 }
 ```bash
+````

@@ -1,6 +1,7 @@
 # Accessibility and UX Review Generator
 
-Analyze React components and interfaces for accessibility compliance, usability issues, and UX best practices following WCAG 2.1 AA standards.
+Analyze React components and interfaces for accessibility compliance, usability issues, and UX best
+practices following WCAG 2.1 AA standards.
 
 ## Accessibility Review Requirements
 
@@ -17,7 +18,7 @@ When conducting accessibility and UX reviews, include:
 
 ## Accessibility Review Template
 
-```typescript
+````typescript
 interface AccessibilityReview {
   component: string;
   wcagCompliance: WCAGScore;
@@ -48,14 +49,14 @@ interface AccessibilityIssue {
 ```typescript
 export const analyzeColorContrast = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check text contrast ratios
   const textElements = getTextElements(component);
   textElements.forEach(element => {
     const foreground = getForegroundColor(element);
     const background = getBackgroundColor(element);
     const ratio = calculateContrastRatio(foreground, background);
-    
+
     if (ratio < 4.5) {
       issues.push({
         severity: 'high',
@@ -74,7 +75,7 @@ className="text-gray-600 bg-white"
       });
     }
   });
-  
+
   // Check large text contrast (3:1 minimum)
   const largeTextElements = getLargeTextElements(component);
   largeTextElements.forEach(element => {
@@ -82,7 +83,7 @@ className="text-gray-600 bg-white"
       getForegroundColor(element),
       getBackgroundColor(element)
     );
-    
+
     if (ratio < 3.0) {
       issues.push({
         severity: 'medium',
@@ -94,7 +95,7 @@ className="text-gray-600 bg-white"
       });
     }
   });
-  
+
   return issues;
 };
 ```bash
@@ -104,7 +105,7 @@ className="text-gray-600 bg-white"
 ```typescript
 export const analyzeFocusManagement = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check for visible focus indicators
   const interactiveElements = getInteractiveElements(component);
   interactiveElements.forEach(element => {
@@ -126,7 +127,7 @@ data-focus-visible="ring-2 ring-blue-500"
       });
     }
   });
-  
+
   // Check focus trap in modals
   if (isModalComponent(component) && !hasFocusTrap(component)) {
     issues.push({
@@ -145,7 +146,7 @@ return <div ref={focusTrapRef}>Modal content</div>;
       `
     });
   }
-  
+
   // Check logical tab order
   const tabOrder = getTabOrder(component);
   if (!isLogicalTabOrder(tabOrder)) {
@@ -158,7 +159,7 @@ return <div ref={focusTrapRef}>Modal content</div>;
       solution: 'Ensure DOM structure matches visual layout and reading order'
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -168,7 +169,7 @@ return <div ref={focusTrapRef}>Modal content</div>;
 ```typescript
 export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check for keyboard accessibility
   const clickTargets = getClickTargets(component);
   clickTargets.forEach(target => {
@@ -185,8 +186,8 @@ export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
 <button onClick={handleClick}>Click me</button>
 
 // Or add keyboard support to div-based elements
-<div 
-  role="button" 
+<div
+  role="button"
   tabIndex={0}
   onKeyDown={(e) => e.key === 'Enter' && handleClick()}
   onClick={handleClick}
@@ -197,7 +198,7 @@ export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
       });
     }
   });
-  
+
   // Check for skip links
   if (hasMultipleInteractiveElements(component) && !hasSkipLinks(component)) {
     issues.push({
@@ -217,7 +218,7 @@ export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
       `
     });
   }
-  
+
   return issues;
 };
 ```bash
@@ -229,7 +230,7 @@ export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
 ```typescript
 export const analyzeSemanticHTML = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check for proper heading structure
   const headings = getHeadings(component);
   if (!hasProperHeadingHierarchy(headings)) {
@@ -252,7 +253,7 @@ export const analyzeSemanticHTML = (component: React.ComponentType) => {
       `
     });
   }
-  
+
   // Check for landmark elements
   if (!hasLandmarkElements(component)) {
     issues.push({
@@ -271,7 +272,7 @@ export const analyzeSemanticHTML = (component: React.ComponentType) => {
       `
     });
   }
-  
+
   // Check for proper list structures
   const lists = getListElements(component);
   lists.forEach(list => {
@@ -299,7 +300,7 @@ export const analyzeSemanticHTML = (component: React.ComponentType) => {
       });
     }
   });
-  
+
   return issues;
 };
 ```bash
@@ -309,7 +310,7 @@ export const analyzeSemanticHTML = (component: React.ComponentType) => {
 ```typescript
 export const analyzeARIAImplementation = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check for proper ARIA labels
   const unlabeledInteractiveElements = getUnlabeledInteractiveElements(component);
   unlabeledInteractiveElements.forEach(element => {
@@ -334,7 +335,7 @@ export const analyzeARIAImplementation = (component: React.ComponentType) => {
       `
     });
   });
-  
+
   // Check for ARIA state management
   const dynamicElements = getDynamicElements(component);
   dynamicElements.forEach(element => {
@@ -367,7 +368,7 @@ export const analyzeARIAImplementation = (component: React.ComponentType) => {
       });
     }
   });
-  
+
   return issues;
 };
 ```bash
@@ -379,12 +380,12 @@ export const analyzeARIAImplementation = (component: React.ComponentType) => {
 ```typescript
 export const analyzeTouchTargets = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   const touchTargets = getTouchTargets(component);
   touchTargets.forEach(target => {
     const size = getTouchTargetSize(target);
     const spacing = getTouchTargetSpacing(target);
-    
+
     if (size < 44) {
       issues.push({
         severity: 'high',
@@ -404,7 +405,7 @@ className="p-2">
         `
       });
     }
-    
+
     if (spacing < 8) {
       issues.push({
         severity: 'medium',
@@ -416,7 +417,7 @@ className="p-2">
       });
     }
   });
-  
+
   return issues;
 };
 ```bash
@@ -428,7 +429,7 @@ className="p-2">
 ```typescript
 export const analyzeUserWorkflows = (component: React.ComponentType) => {
   const issues: AccessibilityIssue[] = [];
-  
+
   // Check form completion workflow
   if (isFormComponent(component)) {
     if (!hasClearErrorMessages(component)) {
@@ -452,7 +453,7 @@ export const analyzeUserWorkflows = (component: React.ComponentType) => {
         `
       });
     }
-    
+
     if (!hasProgressIndicator(component)) {
       issues.push({
         severity: 'low',
@@ -470,7 +471,7 @@ export const analyzeUserWorkflows = (component: React.ComponentType) => {
       });
     }
   }
-  
+
   return issues;
 };
 ```bash
@@ -511,7 +512,7 @@ const improvedColors = {
   focus: 'ring-blue-500' // Ensure focus is also visible
 };
       `;
-    
+
     case '2.4.7 Focus Visible':
       return `
 // Add focus-visible styles
@@ -525,7 +526,7 @@ const focusStyles = `
   focus-visible:ring-offset-2
 `;
       `;
-    
+
     case '2.1.1 Keyboard':
       return `
 // Make element keyboard accessible
@@ -543,7 +544,7 @@ const focusStyles = `
   Interactive content
 </div>
       `;
-    
+
     default:
       return '// Review specific accessibility requirements';
   }
@@ -560,11 +561,11 @@ describe('${issue.wcagCriterion}', () => {
   it('should meet accessibility requirements', () => {
     // Test with screen reader
     cy.get('[role="button"]').should('have.attr', 'aria-label');
-    
+
     // Test keyboard navigation
     cy.get('body').tab();
     cy.focused().should('have.attr', 'data-focus-visible');
-    
+
     // Test color contrast
     cy.get('.text-element')
       .should('have.css', 'color')
@@ -576,3 +577,4 @@ describe('${issue.wcagCriterion}', () => {
 ```bash
 
 Generate comprehensive accessibility reviews that identify WCAG violations, provide actionable recommendations, and ensure interfaces are usable by everyone regardless of their abilities.
+````

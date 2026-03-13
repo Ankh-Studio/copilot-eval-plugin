@@ -1,6 +1,7 @@
 # Accessible UI Component Generator
 
-Create React components using Radix UI primitives with Tailwind CSS styling, ensuring full accessibility and modern design patterns.
+Create React components using Radix UI primitives with Tailwind CSS styling, ensuring full
+accessibility and modern design patterns.
 
 ## Component Requirements
 
@@ -16,7 +17,7 @@ When generating UI components, include:
 
 ## Component Template Structure
 
-```typescript
+````typescript
 import React from 'react';
 import * as RadixComponent from '@radix-ui/react-component-name';
 
@@ -37,13 +38,13 @@ export const ComponentName: React.FC<ComponentNameProps> = ({
   className
 }) => {
   const baseClasses = 'base-utility-classes';
-  
+
   const variantClasses = {
     primary: 'variant-specific-classes',
     secondary: 'variant-specific-classes',
     outline: 'variant-specific-classes'
   };
-  
+
   const sizeClasses = {
     sm: 'size-specific-classes',
     md: 'size-specific-classes',
@@ -133,7 +134,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ trigger, items, align = 'sta
         {trigger}
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content 
+        <DropdownMenu.Content
           className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-[200px] z-50 data-[state=open]:animate-in data-[state=closed]:animate-out"
           align={align}
           sideOffset={5}
@@ -143,8 +144,8 @@ export const Dropdown: React.FC<DropdownProps> = ({ trigger, items, align = 'sta
               key={index}
               className={`
                 px-3 py-2 rounded-md text-sm cursor-pointer transition-colors
-                ${item.destructive 
-                  ? 'text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20' 
+                ${item.destructive
+                  ? 'text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20'
                   : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }
                 ${item.disabled ? 'opacity-50 cursor-not-allowed' : ''}
@@ -191,7 +192,7 @@ export const FormField: React.FC<FormFieldProps> = ({
 }) => {
   return (
     <div className="space-y-2">
-      <Label.Root 
+      <Label.Root
         htmlFor={id}
         className={`
           block text-sm font-medium
@@ -232,8 +233,8 @@ export const ToggleSwitch: React.FC<{
         disabled={disabled}
         className={`
           h-5 w-9 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500
-          ${checked 
-            ? 'bg-blue-600' 
+          ${checked
+            ? 'bg-blue-600'
             : 'bg-gray-200 dark:bg-gray-700'
           }
           ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -302,3 +303,4 @@ const stateClasses = `
 - [ ] High contrast mode support
 
 Generate components that are accessible, reusable, and follow modern React patterns with Radix UI and Tailwind CSS.
+````

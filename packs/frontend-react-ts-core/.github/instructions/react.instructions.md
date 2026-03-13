@@ -6,7 +6,7 @@ When creating React components, follow these specific patterns for consistency a
 
 Always use functional components with proper TypeScript typing:
 
-```typescript
+````typescript
 import React from 'react';
 
 interface ButtonProps {
@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick
 }) => {
   return (
-    <button 
+    <button
       type="button"
       disabled={disabled}
       onClick={onClick}
@@ -44,7 +44,7 @@ Use hooks at the top level of components, never inside conditions or loops:
 export const UserProfile: React.FC<{ userId: string }> = ({ userId }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  
+
   useEffect(() => {
     fetchUser(userId).then(u => {
       setUser(u);
@@ -171,3 +171,4 @@ Write tests following these patterns:
 - Use React Testing Library for accessibility testing
 - Mock external dependencies properly
 - Test error states and loading states
+````

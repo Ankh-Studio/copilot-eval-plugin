@@ -1,16 +1,19 @@
 # UX Design Patterns for Accessible Interfaces
 
-Follow these UX patterns to create intuitive, accessible, and user-friendly interfaces that work for everyone.
+Follow these UX patterns to create intuitive, accessible, and user-friendly interfaces that work for
+everyone.
 
 ## Accessibility-First Design Principles
 
 ### Universal Design
+
 - Design for the widest possible audience from the start
 - Don't treat accessibility as an afterthought
 - Consider diverse user needs and abilities
 - Test with actual assistive technology users
 
 ### Progressive Enhancement
+
 - Ensure core functionality works without JavaScript
 - Layer enhancements on top of semantic HTML
 - Maintain functionality across different devices and capabilities
@@ -21,15 +24,16 @@ Follow these UX patterns to create intuitive, accessible, and user-friendly inte
 ### Navigation Patterns
 
 #### Accessible Navigation Menu
-```typescript
+
+````typescript
 // Semantic navigation with proper ARIA
 export const AccessibleNavigation = () => {
   return (
     <nav aria-label="Main navigation">
       <ul className="flex space-x-6">
         <li>
-          <a 
-            href="/home" 
+          <a
+            href="/home"
             aria-current="page"
             className="px-3 py-2 rounded-md text-sm font-medium bg-blue-100 text-blue-700"
           >
@@ -37,8 +41,8 @@ export const AccessibleNavigation = () => {
           </a>
         </li>
         <li>
-          <a 
-            href="/about" 
+          <a
+            href="/about"
             className="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100"
           >
             About
@@ -86,7 +90,7 @@ export const AccessibleForm = () => {
     <form aria-labelledby="form-title">
       <fieldset className="space-y-4">
         <legend className="text-lg font-medium">Personal Information</legend>
-        
+
         <div className="space-y-2">
           <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
             Full Name <span aria-label="required">*</span>
@@ -152,15 +156,15 @@ export const AccessibleCard = ({ title, description, link, imageAlt }) => {
   return (
     <article className="bg-white rounded-lg shadow-md overflow-hidden">
       {imageAlt && (
-        <img 
-          src="/image.jpg" 
+        <img
+          src="/image.jpg"
           alt={imageAlt}
           className="w-full h-48 object-cover"
         />
       )}
       <div className="p-6">
         <h2 className="text-xl font-semibold mb-2">
-          <a 
+          <a
             href={link}
             className="text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
           >
@@ -168,7 +172,7 @@ export const AccessibleCard = ({ title, description, link, imageAlt }) => {
           </a>
         </h2>
         <p className="text-gray-600 mb-4">{description}</p>
-        <a 
+        <a
           href={link}
           className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           aria-describedby={`${title}-read-more`}
@@ -272,9 +276,9 @@ export const LoadingButton = ({ loading, children, ...props }) => {
       aria-busy={loading}
     >
       {loading && (
-        <svg 
-          className="animate-spin -ml-1 mr-2 h-4 w-4" 
-          fill="none" 
+        <svg
+          className="animate-spin -ml-1 mr-2 h-4 w-4"
+          fill="none"
           viewBox="0 0 24 24"
           aria-hidden="true"
         >
@@ -299,7 +303,7 @@ export const LoadingButton = ({ loading, children, ...props }) => {
 ```typescript
 export const ProgressBar = ({ value, max = 100, label }) => {
   const percentage = (value / max) * 100;
-  
+
   return (
     <div className="w-full">
       <div className="flex justify-between mb-1">
@@ -307,7 +311,7 @@ export const ProgressBar = ({ value, max = 100, label }) => {
         <span className="text-sm text-gray-500">{Math.round(percentage)}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2" role="progressbar" aria-valuenow={value} aria-valuemin={0} aria-valuemax={max}>
-        <div 
+        <div
           className="bg-blue-600 h-2 rounded-full transition-all duration-300"
           style={{ width: `${percentage}%` }}
         />
@@ -323,7 +327,7 @@ export const ProgressBar = ({ value, max = 100, label }) => {
 ```typescript
 export const ErrorMessage = ({ message, onDismiss }) => {
   return (
-    <div 
+    <div
       className="bg-red-50 border border-red-200 rounded-md p-4"
       role="alert"
       aria-live="polite"
@@ -359,7 +363,7 @@ export const ErrorMessage = ({ message, onDismiss }) => {
 ```typescript
 export const SuccessMessage = ({ message }) => {
   return (
-    <div 
+    <div
       className="bg-green-50 border border-green-200 rounded-md p-4"
       role="status"
       aria-live="polite"
@@ -445,3 +449,4 @@ export const MobileNavigation = () => {
 - Don't rely on color alone to convey meaning
 
 Follow these patterns to create interfaces that are accessible, usable, and delightful for all users, regardless of their abilities or the devices they use.
+````

@@ -1,6 +1,7 @@
 # Starter Pack Evaluation Suite
 
-Evaluation tests for the starter pack system including pack recommendation quality, apply flow safety, and content effectiveness.
+Evaluation tests for the starter pack system including pack recommendation quality, apply flow
+safety, and content effectiveness.
 
 ## Evaluation Scope
 
@@ -31,9 +32,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 1: New React Project Detection
 
-**Query**: "recommend copilot pack for this new React project"
-**Expected**: frontend-react-ts-core or frontend-product-stack
-**Evaluation Criteria**:
+**Query**: "recommend copilot pack for this new React project" **Expected**: frontend-react-ts-core
+or frontend-product-stack **Evaluation Criteria**:
 
 - Detects package.json with react dependency
 - Identifies missing TypeScript configuration
@@ -42,9 +42,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 2: UI Framework Detection
 
-**Query**: "suggest starter pack for React app using Radix UI and Tailwind"
-**Expected**: frontend-ui-radix-tailwind or combination
-**Evaluation Criteria**:
+**Query**: "suggest starter pack for React app using Radix UI and Tailwind" **Expected**:
+frontend-ui-radix-tailwind or combination **Evaluation Criteria**:
 
 - Detects @radix-ui dependencies
 - Identifies Tailwind configuration
@@ -53,9 +52,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 3: Data-Heavy Application
 
-**Query**: "recommend pack for React app with API integration"
-**Expected**: frontend-data-tanstack-axios or combination
-**Evaluation Criteria**:
+**Query**: "recommend pack for React app with API integration" **Expected**:
+frontend-data-tanstack-axios or combination **Evaluation Criteria**:
 
 - Detects data fetching patterns
 - Identifies API service files
@@ -64,9 +62,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 4: Accessibility Requirements
 
-**Query**: "suggest pack for public-facing accessible React app"
-**Expected**: frontend-a11y-ux or frontend-product-stack
-**Evaluation Criteria**:
+**Query**: "suggest pack for public-facing accessible React app" **Expected**: frontend-a11y-ux or
+frontend-product-stack **Evaluation Criteria**:
 
 - Recognizes accessibility needs
 - Recommends A11y-focused pack
@@ -75,9 +72,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 5: Complete Stack Request
 
-**Query**: "recommend complete starter pack for new product team"
-**Expected**: frontend-product-stack
-**Evaluation Criteria**:
+**Query**: "recommend complete starter pack for new product team" **Expected**:
+frontend-product-stack **Evaluation Criteria**:
 
 - Identifies comprehensive needs
 - Recommends complete stack
@@ -88,9 +84,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 6: Fresh Workspace Application
 
-**Query**: "apply frontend-react-ts-core pack to this workspace"
-**Expected**: Successful application of 4 files
-**Evaluation Criteria**:
+**Query**: "apply frontend-react-ts-core pack to this workspace" **Expected**: Successful
+application of 4 files **Evaluation Criteria**:
 
 - Creates all target files
 - Maintains proper directory structure
@@ -99,9 +94,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 7: Conflict Handling
 
-**Query**: "apply frontend-ui-radix-tailwind after core pack"
-**Expected**: Successful merge with conflict detection
-**Evaluation Criteria**:
+**Query**: "apply frontend-ui-radix-tailwind after core pack" **Expected**: Successful merge with
+conflict detection **Evaluation Criteria**:
 
 - Detects existing files
 - Handles conflicts appropriately
@@ -110,8 +104,7 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 8: Dry Run Mode
 
-**Query**: "preview frontend-product-stack application"
-**Expected**: Preview without file changes
+**Query**: "preview frontend-product-stack application" **Expected**: Preview without file changes
 **Evaluation Criteria**:
 
 - Shows accurate file preview
@@ -121,9 +114,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 9: Overwrite Policy
 
-**Query**: "apply pack with overwrite=force"
-**Expected**: File replacement with backup
-**Evaluation Criteria**:
+**Query**: "apply pack with overwrite=force" **Expected**: File replacement with backup **Evaluation
+Criteria**:
 
 - Creates backup files
 - Overwrites existing content
@@ -132,8 +124,7 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 10: Idempotent Application
 
-**Query**: "re-apply same pack multiple times"
-**Expected**: No changes on subsequent applications
+**Query**: "re-apply same pack multiple times" **Expected**: No changes on subsequent applications
 **Evaluation Criteria**:
 
 - Skips identical files
@@ -145,8 +136,7 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 11: Instruction Clarity
 
-**Query**: "evaluate copilot-instructions.md clarity"
-**Expected**: Clear, actionable guidance
+**Query**: "evaluate copilot-instructions.md clarity" **Expected**: Clear, actionable guidance
 **Evaluation Criteria**:
 
 - Language simplicity (8th grade reading level)
@@ -156,8 +146,7 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 12: TypeScript Integration
 
-**Query**: "evaluate TypeScript instruction quality"
-**Expected**: Comprehensive TypeScript guidance
+**Query**: "evaluate TypeScript instruction quality" **Expected**: Comprehensive TypeScript guidance
 **Evaluation Criteria**:
 
 - Proper interface definitions
@@ -167,9 +156,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 13: Accessibility Compliance
 
-**Query**: "evaluate accessibility instruction completeness"
-**Expected**: WCAG 2.1 AA compliance coverage
-**Evaluation Criteria**:
+**Query**: "evaluate accessibility instruction completeness" **Expected**: WCAG 2.1 AA compliance
+coverage **Evaluation Criteria**:
 
 - Semantic HTML guidance
 - ARIA implementation
@@ -178,9 +166,7 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 14: Prompt Effectiveness
 
-**Query**: "evaluate react-component.prompt.md effectiveness"
-**Expected:**
-**Evaluation Criteria**:
+**Query**: "evaluate react-component.prompt.md effectiveness" **Expected:** **Evaluation Criteria**:
 
 - Clear component templates
 - TypeScript integration
@@ -189,9 +175,8 @@ Evaluation tests for the starter pack system including pack recommendation quali
 
 #### Test 15: Small Model Compatibility
 
-**Query**: "evaluate content for small model compatibility"
-**Expected:** Simplified patterns for smaller models
-**Evaluation Criteria**:
+**Query**: "evaluate content for small model compatibility" **Expected:** Simplified patterns for
+smaller models **Evaluation Criteria**:
 
 - Avoids complex patterns
 - Focuses on fundamentals

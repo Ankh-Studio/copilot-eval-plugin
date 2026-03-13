@@ -1,0 +1,50 @@
+{
+  "skill_name": "example-skill",
+  "description": "Template for AgentSkills.io evaluation configuration",
+  "version": "1.0",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Example prompt for testing the skill",
+      "expected_output": "Description of what the skill should produce",
+      "files": ["input-file.txt"],
+      "assertions": [
+        "The output file is valid JSON",
+        "The analysis includes at least 3 recommendations",
+        "Processing time is under 30 seconds"
+      ],
+      "metadata": {
+        "category": "functionality",
+        "priority": "high",
+        "tags": ["basic", "validation"]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Another test case for the skill",
+      "expected_output": "Expected result for this test case",
+      "files": ["test-input.md", "config.json"],
+      "assertions": [
+        "Output contains proper formatting",
+        "All required sections are present",
+        "Quality score is above 0.8"
+      ],
+      "metadata": {
+        "category": "quality",
+        "priority": "medium",
+        "tags": ["formatting", "quality"]
+      }
+    }
+  ],
+  "configuration": {
+    "timeout_seconds": 60,
+    "max_tokens": 4000,
+    "parallel_execution": false,
+    "baseline_comparison": true
+  },
+  "success_criteria": {
+    "minimum_pass_rate": 0.8,
+    "maximum_time_per_eval": 30,
+    "minimum_quality_score": 0.7
+  }
+}

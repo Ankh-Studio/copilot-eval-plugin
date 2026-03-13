@@ -6,7 +6,7 @@ Follow these TypeScript patterns when working with React components and applicat
 
 Use interfaces for object shapes that might be extended, types for unions and computed types:
 
-```typescript
+````typescript
 // ✅ Interface - can be extended
 interface User {
   id: string;
@@ -112,3 +112,4 @@ type CreateUserRequest = Omit<User, 'id' | 'createdAt'>;
 // Create a type with required properties
 type RequiredUser = Required<Partial<User>>;
 ```bash
+````

@@ -1,6 +1,7 @@
 # Data Fetching Hook Generator
 
-Create React hooks for data fetching using TanStack Query and Axios with comprehensive error handling, caching, and TypeScript support.
+Create React hooks for data fetching using TanStack Query and Axios with comprehensive error
+handling, caching, and TypeScript support.
 
 ## Data Fetching Requirements
 
@@ -17,7 +18,7 @@ When generating data fetching hooks, include:
 
 ## Hook Template Structure
 
-```typescript
+````typescript
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { axiosInstance } from '../api/axios';
 
@@ -60,7 +61,7 @@ export const useCreateData = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (data: CreateData) => 
+    mutationFn: (data: CreateData) =>
       axiosInstance.post<DataType>('/data', data).then(res => res.data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['dataList'] });
@@ -102,7 +103,7 @@ export const usePaginatedData = (page: number, pageSize: number) => {
 export const useInfiniteData = () => {
   return useInfiniteQuery({
     queryKey: ['infiniteData'],
-    queryFn: ({ pageParam = 1 }) => 
+    queryFn: ({ pageParam = 1 }) =>
       fetchItems(pageParam, 20),
     getNextPageParam: (lastPage, allPages) => {
       if (lastPage.hasMore) {
@@ -122,22 +123,22 @@ export const useUpdateData = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: ({ id, ...data }: Partial<DataType> & { id: string }) => 
+    mutationFn: ({ id, ...data }: Partial<DataType> & { id: string }) =>
       axiosInstance.patch<DataType>(`/data/${id}`, data),
     onMutate: async (updatedData) => {
       // Cancel any outgoing refetches
       await queryClient.cancelQueries({ queryKey: ['dataList'] });
-      
+
       // Snapshot the previous value
       const previousData = queryClient.getQueryData<DataType[]>(['dataList']);
-      
+
       // Optimistically update to the new value
       queryClient.setQueryData<DataType[]>(['dataList'], (old) =>
-        old?.map(item => 
+        old?.map(item =>
           item.id === updatedData.id ? { ...item, ...updatedData } : item
         )
       );
-      
+
       return { previousData };
     },
     onError: (err, updatedData, context) => {
@@ -161,7 +162,7 @@ const handleApiError = (error: unknown): string => {
   if (axios.isAxiosError(error)) {
     const status = error.response?.status;
     const message = error.response?.data?.message || error.message;
-    
+
     switch (status) {
       case 400:
         return 'Invalid data provided. Please check your input and try again.';
@@ -179,11 +180,11 @@ const handleApiError = (error: unknown): string => {
         return message || 'An unexpected error occurred.';
     }
   }
-  
+
   if (error instanceof Error) {
     return error.message;
   }
-  
+
   return 'An unexpected error occurred.';
 };
 ```bash
@@ -253,7 +254,7 @@ export const useDataManagement = () => {
   const invalidateRelatedQueries = (resourceType: string) => {
     // Invalidate all queries for this resource type
     queryClient.invalidateQueries({ queryKey: [resourceType] });
-    
+
     // Also invalidate dependent queries
     if (resourceType === 'users') {
       queryClient.invalidateQueries({ queryKey: ['posts'] }); // Posts depend on users
@@ -285,10 +286,10 @@ export const useRealtimeData = <T>(
 
   useEffect(() => {
     const ws = new WebSocket('ws://localhost:8080/realtime');
-    
+
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      
+
       // Update cache with real-time data
       queryClient.setQueryData(initialQueryKey, (old: T) => ({
         ...old,
@@ -358,3 +359,4 @@ export const useMockData = <T>(data: T, isLoading = false, error?: Error) => {
 ```bash
 
 Generate data fetching hooks that are robust, type-safe, and provide excellent user experience with proper loading states, error handling, and performance optimization.
+````

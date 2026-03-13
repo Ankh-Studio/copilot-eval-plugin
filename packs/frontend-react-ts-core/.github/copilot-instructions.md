@@ -1,12 +1,13 @@
 # React + TypeScript Development Guidelines
 
-This repository uses React 18+ with TypeScript 5+ for component development. Follow these patterns for consistent, type-safe code.
+This repository uses React 18+ with TypeScript 5+ for component development. Follow these patterns
+for consistent, type-safe code.
 
 ## Component Patterns
 
 Use functional components with hooks:
 
-```typescript
+````typescript
 interface Props {
   title: string;
   onAction?: (action: string) => void;
@@ -14,7 +15,7 @@ interface Props {
 
 export const Component: React.FC<Props> = ({ title, onAction }) => {
   const [state, setState] = useState<string>('');
-  
+
   return (
     <div>
       <h1>{title}</h1>
@@ -71,3 +72,4 @@ export class ErrorBoundary extends React.Component<
   // Implementation
 }
 ```bash
+````

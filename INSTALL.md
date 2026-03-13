@@ -2,7 +2,7 @@
 
 ## Install the Plugin
 
-```bash
+````bash
 # From GitHub repository
 copilot plugin install yourusername/copilot-eval-plugin
 
@@ -19,7 +19,7 @@ copilot plugin list
 # Check available skills
 copilot skills list
 
-# Check available agents  
+# Check available agents
 copilot agent list
 ```bash
 
@@ -30,7 +30,7 @@ copilot agent list
 copilot
 
 # Evaluate an artifact
-/evaluate-artifact .github/prompts/my-prompt.prompt.md
+/artifact .github/prompts/my-prompt.prompt.md
 
 # Use the evaluator agent
 /agent evaluator
@@ -38,9 +38,10 @@ copilot
 
 ## What's Included
 
-- **Evaluation Skill**: `/evaluate-artifact` - Universal artifact evaluation
+- **Evaluation Skill**: `/artifact` - Universal artifact evaluation
 - **Evaluator Agent**: `/agent evaluator` - Specialized evaluation assistant
 - **Automated Hooks**: Quality checks during generation/editing
 - **9 Rubrics**: Structured evaluation criteria for all artifact types
 
 The plugin automatically detects artifact types and applies the appropriate evaluation rubric.
+````
