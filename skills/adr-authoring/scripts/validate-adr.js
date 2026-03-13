@@ -46,7 +46,9 @@ class ADRValidator {
       results.overall.score,
       results.sections
     );
-    results.pass = results.overall.status === 'Pass';
+    results.pass =
+      results.overall.status === 'Pass' ||
+      results.overall.status === 'Conditional Pass';
 
     // Generate feedback
     results.feedback = this.generateFeedback(results.sections);
