@@ -1,6 +1,7 @@
 # Maintainers Guide
 
-This guide covers everything maintainers need to know about publishing and managing the Copilot Enterprise Evaluation Plugin.
+This guide covers everything maintainers need to know about publishing and managing the Copilot
+Enterprise Evaluation Plugin.
 
 ## 🏗️ Architecture Overview
 
@@ -8,8 +9,10 @@ This guide covers everything maintainers need to know about publishing and manag
 
 The GitHub Copilot CLI marketplace is **Git-based**, not API-based:
 
-- **Marketplace = Git Repository**: Your `.github/plugin/marketplace.json` file makes your repo a marketplace
-- **No Upload Required**: Users add your marketplace via `copilot plugin marketplace add Ankh-Studio/copilot-enterprise-eval-plugin`
+- **Marketplace = Git Repository**: Your `.github/plugin/marketplace.json` file makes your repo a
+  marketplace
+- **No Upload Required**: Users add your marketplace via
+  `copilot plugin marketplace add Ankh-Studio/copilot-enterprise-eval-plugin`
 - **Automatic Updates**: When you push to main, users get updates automatically
 - **Installation**: Users install via `copilot plugin install copilot-enterprise-eval`
 
@@ -47,11 +50,11 @@ The pipeline analyzes commit messages to determine version bumps:
 
 ### What Happens Automatically
 
-✅ **Version bumping**: Updates `package.json`, `plugin.json`, `marketplace.json`
-✅ **Git operations**: Commits changes and creates annotated tags
-✅ **GitHub releases**: Creates releases with auto-generated notes
-✅ **Package preparation**: Creates `copilot-enterprise-eval-plugin-vX.Y.Z.tar.gz`
-✅ **Documentation updates**: Updates version references in README.md
+✅ **Version bumping**: Updates `package.json`, `plugin.json`, `marketplace.json` ✅ **Git
+operations**: Commits changes and creates annotated tags ✅ **GitHub releases**: Creates releases
+with auto-generated notes ✅ **Package preparation**: Creates
+`copilot-enterprise-eval-plugin-vX.Y.Z.tar.gz` ✅ **Documentation updates**: Updates version
+references in README.md
 
 ## 🔧 Manual Publishing Guide
 
@@ -65,6 +68,7 @@ The pipeline analyzes commit messages to determine version bumps:
 ### Manual Version Bump
 
 1. **Update version files**:
+
 ```bash
 # Update package.json
 npm version 2.1.0 --no-git-tag-version
@@ -80,19 +84,23 @@ sed -i '' 's/v[0-9]\+\.[0-9]\+\.[0-9]\+/v2.1.0/g' README.md
 ```
 
 2. **Update CHANGELOG.md**:
+
 ```markdown
 ## [2.1.0] - 2025-03-13
 
 ### Added
+
 - New evaluation skill for performance testing
 - Enhanced batch processing capabilities
 
 ### Fixed
+
 - Fixed validation bug in rubric testing
 - Resolved memory leak in large evaluations
 ```
 
 3. **Commit and tag**:
+
 ```bash
 git add package.json plugin.json .github/plugin/marketplace.json README.md CHANGELOG.md
 git commit -m "chore: bump version to 2.1.0"
@@ -133,12 +141,14 @@ tar -czf copilot-enterprise-eval-plugin-v2.1.0.tar.gz -C marketplace-package .
 ### Pre-Release Validation
 
 Run the validation script:
+
 ```bash
 chmod +x scripts/validate-release.js
 node scripts/validate-release.js
 ```
 
 This checks:
+
 - ✅ Required files exist
 - ✅ Version consistency across files
 - ✅ Skills documentation present
@@ -147,22 +157,29 @@ This checks:
 ### Common Issues
 
 #### Version Mismatch
+
 ```bash
 Error: Version mismatch: package.json (2.1.0) != plugin.json (2.0.0)
 ```
+
 **Solution**: Update all version files to match before tagging.
 
 #### Missing Changelog Entry
+
 ```bash
 Error: CHANGELOG.md missing entry for version 2.1.0
 ```
+
 **Solution**: Add changelog entry for the new version.
 
 #### Git Tag Conflicts
+
 ```bash
 Error: tag 'v2.1.0' already exists
 ```
+
 **Solution**: Delete existing tag or use different version:
+
 ```bash
 git tag -d v2.1.0
 git push --delete origin v2.1.0
@@ -173,12 +190,14 @@ git push --delete origin v2.1.0
 If a release has issues:
 
 1. **Delete the tag**:
+
 ```bash
 git tag -d v2.1.0
 git push --delete origin v2.1.0
 ```
 
 2. **Create hotfix version**:
+
 ```bash
 npm version 2.1.1 --no-git-tag-version
 # Update other files...
@@ -196,6 +215,7 @@ git push --tags
 ### Adding the Marketplace
 
 Users add your marketplace once:
+
 ```bash
 copilot plugin marketplace add Ankh-Studio/copilot-enterprise-eval-plugin
 ```
@@ -230,14 +250,14 @@ copilot plugin remove copilot-enterprise-eval
 
 ### File Locations & Purposes
 
-| File | Purpose | Updated by Pipeline |
-|------|---------|---------------------|
-| `package.json` | Node.js metadata | ✅ |
-| `plugin.json` | Plugin manifest | ✅ |
-| `.github/plugin/marketplace.json` | Marketplace definition | ✅ |
-| `CHANGELOG.md` | Release notes | Manual |
-| `README.md` | Documentation | ✅ (version refs) |
-| `scripts/validate-release.js` | Validation script | N/A |
+| File                              | Purpose                | Updated by Pipeline |
+| --------------------------------- | ---------------------- | ------------------- |
+| `package.json`                    | Node.js metadata       | ✅                  |
+| `plugin.json`                     | Plugin manifest        | ✅                  |
+| `.github/plugin/marketplace.json` | Marketplace definition | ✅                  |
+| `CHANGELOG.md`                    | Release notes          | Manual              |
+| `README.md`                       | Documentation          | ✅ (version refs)   |
+| `scripts/validate-release.js`     | Validation script      | N/A                 |
 
 ### Command Reference
 
@@ -261,21 +281,25 @@ tar -czf plugin-v1.2.3.tar.gz -C marketplace-package .  # Create archive
 ### Workflow Examples
 
 #### Standard Feature Release
+
 1. Make changes with `feat:` commit messages
 2. Push to main
 3. Pipeline automatically bumps minor version and creates release
 
 #### Bug Fix Release
-1. Make changes with `fix:` commit messages  
+
+1. Make changes with `fix:` commit messages
 2. Push to main
 3. Pipeline automatically bumps patch version and creates release
 
 #### Breaking Change Release
+
 1. Make changes with `BREAKING CHANGE:` or `!` in commit
 2. Push to main
 3. Pipeline automatically bumps major version and creates release
 
 #### Manual Emergency Release
+
 1. Follow manual publishing steps above
 2. Bypass automated pipeline
 3. Communicate changes to team
@@ -283,11 +307,13 @@ tar -czf plugin-v1.2.3.tar.gz -C marketplace-package .  # Create archive
 ## 🆘 Getting Help
 
 ### Resources
+
 - [GitHub Copilot CLI Documentation](https://docs.github.com/en/copilot)
 - [Plugin Reference](https://docs.github.com/en/copilot/reference/cli-plugin-reference)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 
 ### Team Communication
+
 - Create issues for release problems
 - Use discussions for questions
 - Tag maintainers for urgent issues
