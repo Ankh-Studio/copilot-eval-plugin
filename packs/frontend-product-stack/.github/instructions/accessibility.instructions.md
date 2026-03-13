@@ -48,7 +48,7 @@ export const BadArticleLayout: React.FC<{ title: string; content: string }> = ({
     </div>
   );
 };
-```
+```bash
 
 ## ARIA Attributes
 
@@ -90,7 +90,7 @@ export const AccordionItem: React.FC<{
     </div>
   );
 };
-```
+```bash
 
 ## Keyboard Navigation
 
@@ -128,7 +128,7 @@ export const CustomButton: React.FC<{
     </div>
   );
 };
-```
+```bash
 
 ## Focus Management
 
@@ -210,7 +210,7 @@ export const Modal: React.FC<{
     </div>
   );
 };
-```
+```bash
 
 ## Form Accessibility
 
@@ -271,7 +271,7 @@ export const TextInput: React.FC<{
     />
   );
 };
-```
+```bash
 
 ## Color and Contrast
 
@@ -291,7 +291,7 @@ const badColors = {
   text: 'text-gray-400', // Light gray text
   primary: 'bg-blue-200 text-gray-300', // Light blue with light gray text
 };
-```
+```bash
 
 ## Screen Reader Announcements
 
@@ -329,4 +329,4 @@ export const AlertMessage: React.FC<{ message: string }> = ({ message }) => {
     </div>
   );
 };
-```
+```bash

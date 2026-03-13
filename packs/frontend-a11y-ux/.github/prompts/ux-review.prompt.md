@@ -39,7 +39,7 @@ interface AccessibilityIssue {
   solution: string;
   codeExample?: string;
 }
-```
+```bash
 
 ## WCAG Compliance Analysis
 
@@ -97,7 +97,7 @@ className="text-gray-600 bg-white"
   
   return issues;
 };
-```
+```bash
 
 ### Focus Management Review
 
@@ -161,7 +161,7 @@ return <div ref={focusTrapRef}>Modal content</div>;
   
   return issues;
 };
-```
+```bash
 
 ### Keyboard Navigation Analysis
 
@@ -220,7 +220,7 @@ export const analyzeKeyboardNavigation = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Screen Reader Support Analysis
 
@@ -302,7 +302,7 @@ export const analyzeSemanticHTML = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ### ARIA Implementation Review
 
@@ -370,7 +370,7 @@ export const analyzeARIAImplementation = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Touch Target Analysis
 
@@ -419,7 +419,7 @@ className="p-2">
   
   return issues;
 };
-```
+```bash
 
 ## Usability Testing Patterns
 
@@ -473,7 +473,7 @@ export const analyzeUserWorkflows = (component: React.ComponentType) => {
   
   return issues;
 };
-```
+```bash
 
 ## Accessibility Improvement Recommendations
 
@@ -495,7 +495,7 @@ export const prioritizeAccessibilityFixes = (issues: AccessibilityIssue[]): Acce
       testing: generateAccessibilityTestPlan(issue)
     }));
 };
-```
+```bash
 
 ### Implementation Templates
 
@@ -548,7 +548,7 @@ const focusStyles = `
       return '// Review specific accessibility requirements';
   }
 };
-```
+```bash
 
 ### Testing Templates
 
@@ -573,6 +573,6 @@ describe('${issue.wcagCriterion}', () => {
 });
   `;
 };
-```
+```bash
 
 Generate comprehensive accessibility reviews that identify WCAG violations, provide actionable recommendations, and ensure interfaces are usable by everyone regardless of their abilities.

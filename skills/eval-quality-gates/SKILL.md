@@ -3,6 +3,8 @@ name: eval-quality-gates
 description: Enforce quality standards with automated gating and policy compliance
 ---
 
+# Eval Quality Gates
+
 Implement automated quality gates that enforce standards and prevent low-quality artifacts from progressing.
 
 ## Process
@@ -16,16 +18,19 @@ Implement automated quality gates that enforce standards and prevent low-quality
 ## Gate Types
 
 ### Entry Gates
+
 - Prompt Quality: Minimum 3.0/4.0 for production use
 - Instruction Completeness: All mandatory sections, 2.5+ score
 - Skill Functionality: Core functionality must exceed 3.0/4.0
 
 ### Progression Gates
+
 - Template Reusability: Minimum 2.5/4.0 for cross-project use
 - Workflow Reliability: Error handling scored 3.0+/4.0
 - Agent Performance: Task specialization 3.0+/4.0
 
 ### Release Gates
+
 - Integration Compatibility: All criteria 3.0+/4.0
 - Context Accuracy: Data quality and relevance 3.5+/4.0
 - Validation Coverage: Comprehensive scenario handling 3.0+/4.0
@@ -33,22 +38,25 @@ Implement automated quality gates that enforce standards and prevent low-quality
 ## Usage
 
 ### Single Check
-```
+
+```bash
 /eval-quality-gates .github/prompts/api-design.prompt.md --gate production
 /eval-quality-gates .github/skills/deploy/SKILL.md --gate release
-```
+```bash
 
 ### Bulk Enforcement
-```
+
+```bash
 /eval-quality-gates .github/ --all-gates --strict
 /eval-quality-gates .github/prompts/ --gate entry --batch
-```
+```bash
 
 ### Policy Configuration
-```
+
+```bash
 /quality-gates --configure-policy organization-standards.json
 /quality-gates --set-threshold prompt-min-score:3.2
-```
+```bash
 
 ## Gate Actions
 

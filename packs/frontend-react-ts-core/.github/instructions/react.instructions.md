@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-```
+```bash
 
 ## Hook Usage
 
@@ -57,7 +57,7 @@ export const UserProfile: React.FC<{ userId: string }> = ({ userId }) => {
     const [data, setData] = useState(null); // Never do this
   }
 };
-```
+```bash
 
 ## Props Destructuring
 
@@ -74,7 +74,7 @@ export const Card: React.FC<CardProps> = (props) => {
   const { title, content, footer } = props;
   // Component logic
 };
-```
+```bash
 
 ## Component Naming
 
@@ -92,7 +92,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 // Complex state with useReducer
 const [state, dispatch] = useReducer(formReducer, initialState);
-```
+```bash
 
 ## Integration with Other Packs
 
@@ -155,7 +155,7 @@ const ErrorFallback: React.FC<{ error: Error }> = ({ error }) => (
 <ErrorBoundary FallbackComponent={ErrorFallback}>
   <YourComponent />
 </ErrorBoundary>
-```
+```bash
 
 ## Performance Optimization
 

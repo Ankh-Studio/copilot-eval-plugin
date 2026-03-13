@@ -1,7 +1,13 @@
----
+
+
+
 name: eval-improve
 description: Improve artifacts with targeted enhancement and optimization
+
 ---
+
+
+
 
 Improve any Copilot artifact by applying targeted enhancements based on evaluation results.
 
@@ -14,11 +20,11 @@ Improve any Copilot artifact by applying targeted enhancements based on evaluati
 
 ## Usage
 
-```
+```bash
 /eval-improve .github/prompts/code-review.prompt.md
 /eval-improve .github/skills/deploy/SKILL.md --focus="clarity,specificity"
 /eval-improve .github/workflows/ci-cd/WORKFLOW.md --focus="all"
-```
+```bash
 
 Focus on specific improvement areas or overall enhancement.
 
@@ -38,18 +44,18 @@ Focus on specific improvement areas or overall enhancement.
 
 ## Chaining Example
 
-```
-# 1. Evaluate current state
+```bash
+
 /evaluate-artifact .github/prompts/api-design.prompt.md
 
-# 2. Apply targeted improvements
+
 /improve-artifact .github/prompts/api-design.prompt.md --focus="clarity,specificity"
 
-# 3. Verify improvements
+
 /evaluate-artifact .github/prompts/api-design.prompt.md
 
-# 4. Compare results and iterate if needed
-```
+
+```bash
 
 ## Improvement Guidelines
 

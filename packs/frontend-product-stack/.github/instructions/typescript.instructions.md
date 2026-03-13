@@ -22,7 +22,7 @@ interface AdminUser extends User {
 type Theme = 'light' | 'dark';
 type UserStatus = 'active' | 'inactive' | 'pending';
 type UserWithStatus = User & { status: UserStatus };
-```
+```bash
 
 ## Component Props Typing
 
@@ -48,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   // Implementation
 };
-```
+```bash
 
 ## Generic Components
 
@@ -72,7 +72,7 @@ export function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
     </ul>
   );
 }
-```
+```bash
 
 ## Event Handler Typing
 
@@ -93,7 +93,7 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   // Handle submit
 };
-```
+```bash
 
 ## Utility Types
 
@@ -111,4 +111,4 @@ type CreateUserRequest = Omit<User, 'id' | 'createdAt'>;
 
 // Create a type with required properties
 type RequiredUser = Required<Partial<User>>;
-```
+```bash

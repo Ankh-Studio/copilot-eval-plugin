@@ -3,6 +3,8 @@ name: eval-adversarial
 description: Run comprehensive adversarial evaluation suite with attack patterns and stress testing
 ---
 
+# Eval Adversarial
+
 Execute comprehensive adversarial evaluation suite with attack patterns, edge cases, and stress testing to identify vulnerabilities before production deployment.
 
 ## Process
@@ -16,18 +18,21 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 ## Attack Patterns
 
 ### Scoring Manipulation
+
 - Score inflation through keyword stuffing
 - Boundary exploitation for maximum/minimum scores
 - Pattern matching to trigger specific scoring paths
 - Context manipulation to bias evaluation
 
 ### Edge Case Generation
+
 - Empty/minimal content testing
 - Maximum length/complexity artifacts
 - Ambiguous or contradictory instructions
 - Cross-domain boundary testing
 
 ### Adversarial Prompts
+
 - Jailbreak attempts and bypass techniques
 - Role-playing to influence evaluation
 - Prompt injection vulnerabilities
@@ -36,12 +41,14 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 ## Stress Testing
 
 ### Performance Stress
+
 - Concurrent evaluation limits
 - Memory usage thresholds
 - Processing time boundaries
 - Resource exhaustion scenarios
 
 ### Quality Stress
+
 - Extreme quality variations
 - Mixed signal artifacts
 - Contradictory requirements
@@ -50,22 +57,25 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 ## Usage
 
 ### Full Suite
-```
+
+```bash
 /eval-adversarial --full-suite --target rubrics/
 /eval-adversarial --comprehensive --report detailed
-```
+```bash
 
 ### Targeted Testing
-```
+
+```bash
 /eval-adversarial --attack-pattern scoring --rubric prompt.md
 /eval-adversarial --stress-test performance --skill eval-batch
-```
+```bash
 
 ### Quick Validation
-```
+
+```bash
 /eval-adversarial --smoke-test --critical-only
 /eval-adversarial --regression --baseline v1.0
-```
+```bash
 
 ## Output
 
@@ -78,12 +88,14 @@ Execute comprehensive adversarial evaluation suite with attack patterns, edge ca
 ## Release Gating
 
 ### Quality Gates
+
 - Zero critical vulnerabilities
 - <5% high-severity issues
 - Performance degradation <10%
 - Coverage >95% for attack patterns
 
 ### Thresholds
+
 - Minimum adversarial score: 3.5/4.0
 - Maximum false positive rate: 2%
 - Minimum stress test pass rate: 90%

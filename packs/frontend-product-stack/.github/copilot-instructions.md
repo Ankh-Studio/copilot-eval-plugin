@@ -35,7 +35,7 @@ export const Component: React.FC<ComponentProps> = ({ title, onAction, children 
     </div>
   );
 };
-```
+```bash
 
 ### State Management Strategy
 
@@ -57,7 +57,7 @@ const createUserMutation = useCreateUser();
 const handleCreateUser = async (userData) => {
   await createUserMutation.mutateAsync(userData);
 };
-```
+```bash
 
 ## Accessibility Requirements
 
@@ -88,11 +88,11 @@ const sizes = {
   md: 'px-4 py-2 text-base',
   lg: 'px-6 py-3 text-lg'
 };
-```
+```bash
 
 ## File Organization
 
-```
+```bash
 src/
 ├── components/          # Reusable UI components
 ├── hooks/              # Custom React hooks
@@ -100,7 +100,7 @@ src/
 ├── types/              # TypeScript type definitions
 ├── utils/              # Utility functions
 └── pages/              # Page-level components
-```
+```bash
 
 ## Error Handling
 

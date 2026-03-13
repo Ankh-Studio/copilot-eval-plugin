@@ -56,7 +56,7 @@ export const Component: React.FC<ComponentProps> = ({
     </button>
   );
 };
-```
+```bash
 
 ## Design System Patterns
 
@@ -79,7 +79,7 @@ const colors = {
     info: 'bg-blue-500 text-white'
   }
 };
-```
+```bash
 
 ### Spacing System
 
@@ -93,7 +93,7 @@ const spacing = {
   xl: 'p-8 m-8 gap-8',
   '2xl': 'p-12 m-12 gap-12'
 };
-```
+```bash
 
 ### Typography Scale
 
@@ -113,7 +113,7 @@ const typography = {
     xs: 'text-xs leading-tight'
   }
 };
-```
+```bash
 
 ## Component Patterns
 
@@ -152,7 +152,7 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-```
+```bash
 
 ### Card Component
 
@@ -176,7 +176,7 @@ export const Card: React.FC<CardProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ### Input Component
 
@@ -203,7 +203,7 @@ export const Input: React.FC<InputProps> = ({
     />
   );
 };
-```
+```bash
 
 ## Responsive Design Patterns
 
@@ -217,7 +217,7 @@ const responsive = {
   text: 'text-sm sm:text-base lg:text-lg',
   spacing: 'p-4 sm:p-6 lg:p-8'
 };
-```
+```bash
 
 ### Breakpoint Usage
 
@@ -238,7 +238,7 @@ export const ResponsiveComponent = () => {
     </div>
   );
 };
-```
+```bash
 
 ## Dark Mode Support
 
@@ -255,7 +255,7 @@ export const ThemedComponent = () => {
     </div>
   );
 };
-```
+```bash
 
 ## Animation Guidelines
 
@@ -269,7 +269,7 @@ const animationClasses = {
   scale: 'transform transition-transform hover:scale-105',
   spin: 'animate-spin'
 };
-```
+```bash
 
 ## Accessibility Considerations
 
@@ -281,7 +281,7 @@ const focusStyles = 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:r
 
 // High contrast mode support
 const highContrast = 'contrast-more:border-current';
-```
+```bash
 
 ### Motion Preferences
 
@@ -289,6 +289,6 @@ const highContrast = 'contrast-more:border-current';
 // Respect motion preferences
 const motionSafe = 'motion-safe:transition-transform motion-safe:hover:scale-105';
 const motionReduce = 'motion-reduce:transform-none';
-```
+```bash
 
 Generate styles that are maintainable, accessible, and follow modern design system principles using Tailwind CSS utilities.

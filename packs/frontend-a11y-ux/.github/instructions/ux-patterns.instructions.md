@@ -48,7 +48,7 @@ export const AccessibleNavigation = () => {
     </nav>
   );
 };
-```
+```bash
 
 #### Breadcrumb Navigation
 ```typescript
@@ -75,7 +75,7 @@ export const Breadcrumb = () => {
     </nav>
   );
 };
-```
+```bash
 
 ### Form Patterns
 
@@ -109,7 +109,7 @@ export const AccessibleForm = () => {
     </form>
   );
 };
-```
+```bash
 
 #### Radio Button Groups
 ```typescript
@@ -142,7 +142,7 @@ export const RadioGroup = () => {
     </fieldset>
   );
 };
-```
+```bash
 
 ### Content Patterns
 
@@ -182,7 +182,7 @@ export const AccessibleCard = ({ title, description, link, imageAlt }) => {
     </article>
   );
 };
-```
+```bash
 
 #### Data Tables
 ```typescript
@@ -219,7 +219,7 @@ export const AccessibleTable = () => {
     </table>
   );
 };
-```
+```bash
 
 ## Interaction Patterns
 
@@ -243,7 +243,7 @@ export const PrimaryButton = ({ children, onClick, disabled }) => {
     </button>
   );
 };
-```
+```bash
 
 #### Secondary Actions
 ```typescript
@@ -257,7 +257,7 @@ export const SecondaryButton = ({ children, onClick }) => {
     </button>
   );
 };
-```
+```bash
 
 ### Loading and Progress Patterns
 
@@ -293,7 +293,7 @@ export const LoadingButton = ({ loading, children, ...props }) => {
     </button>
   );
 };
-```
+```bash
 
 #### Progress Indicators
 ```typescript
@@ -315,7 +315,7 @@ export const ProgressBar = ({ value, max = 100, label }) => {
     </div>
   );
 };
-```
+```bash
 
 ## Error and Feedback Patterns
 
@@ -353,7 +353,7 @@ export const ErrorMessage = ({ message, onDismiss }) => {
     </div>
   );
 };
-```
+```bash
 
 ### Success Messages
 ```typescript
@@ -378,7 +378,7 @@ export const SuccessMessage = ({ message }) => {
     </div>
   );
 };
-```
+```bash
 
 ## Mobile-First Patterns
 
@@ -399,7 +399,7 @@ export const MobileButton = ({ children, ...props }) => {
     </button>
   );
 };
-```
+```bash
 
 ### Responsive Navigation
 ```typescript
@@ -426,7 +426,7 @@ export const MobileNavigation = () => {
     </nav>
   );
 };
-```
+```bash
 
 ## Content Guidelines
 

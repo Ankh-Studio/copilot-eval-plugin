@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-template
 description: Evaluate template artifacts against the template rubric
+
 ---
+
+
+
 
 Evaluate the provided template against the structured template rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided template against the structured template rubric criteria.
 ## Usage
 
 Provide the path to the template file you want evaluated:
+
 - `.github/templates/template-name.template.md`
 - Any custom template file path
 

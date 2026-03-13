@@ -83,7 +83,7 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-```
+```bash
 
 ## Typed API Functions
 
@@ -117,7 +117,7 @@ export const getUserById = async (id: string): Promise<User> => {
   const response = await axiosInstance.get<User>(`/users/${id}`);
   return response.data;
 };
-```
+```bash
 
 ### POST/PATCH Requests
 
@@ -148,7 +148,7 @@ export const updateUser = async (id: string, userData: UpdateUserRequest): Promi
 export const deleteUser = async (id: string): Promise<void> => {
   await axiosInstance.delete(`/users/${id}`);
 };
-```
+```bash
 
 ## Error Handling Patterns
 
@@ -184,7 +184,7 @@ export const handleApiError = (error: unknown): string => {
   
   return 'An unexpected error occurred';
 };
-```
+```bash
 
 ### React Hook with Error Handling
 
@@ -230,7 +230,7 @@ export const useApi = <T>(
 
   return { ...state, refetch: fetchData };
 };
-```
+```bash
 
 ## Request Cancellation
 
@@ -281,7 +281,7 @@ export const useCancelableRequest = <T>(
 
   return { executeRequest, cancelRequest };
 };
-```
+```bash
 
 ## File Upload
 
@@ -319,7 +319,7 @@ export const uploadFile = async (
 
   return response.data;
 };
-```
+```bash
 
 ## Request Retry Logic
 
@@ -356,4 +356,4 @@ export const retryRequest = async <T>(
   
   throw lastError;
 };
-```
+```bash

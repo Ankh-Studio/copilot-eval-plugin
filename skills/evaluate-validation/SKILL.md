@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-validation
 description: Evaluate validation rule artifacts against the validation rubric
+
 ---
+
+
+
 
 Evaluate the provided validation rule against the structured validation rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided validation rule against the structured validation rubric c
 ## Usage
 
 Provide the path to the validation file you want evaluated:
+
 - `.github/validation/validation-name.validation.md`
 - Any custom validation file path
 

@@ -7,11 +7,13 @@ This file contains tests to verify that plugin dependencies are properly isolate
 ### 1. External Service Dependencies
 
 **Skills with External Dependencies:**
+
 - `eval-quality-gates` (may use external compliance APIs)
 - `eval-performance` (may use external benchmarking services)
 - `eval-adversarial` (may use external threat intelligence)
 
 **Test Cases:**
+
 ```bash
 # Test: External service failure handling
 # Mock external service failures and verify graceful degradation
@@ -23,9 +25,10 @@ timeout 30s copilot eval eval-quality-gates --compliance --external-api
 # Test: Network isolation
 # Run with network disabled to verify offline functionality
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md --no-network
-```
+```bash
 
 **Expected Results:**
+
 - Skills function without external services when possible
 - Clear error messages when external services are required
 - Graceful degradation rather than complete failure
@@ -34,11 +37,13 @@ copilot eval evaluate-artifact .github/prompts/code-review.prompt.md --no-networ
 ### 2. File System Dependencies
 
 **Skills with File System Access:**
+
 - All skills (reading artifacts)
 - `eval-batch` (directory traversal)
 - `eval-tldr` (file output)
 
 **Test Cases:**
+
 ```bash
 # Test: Permission denied scenarios
 chmod 000 .github/prompts/restricted.prompt.md
@@ -55,9 +60,10 @@ copilot eval eval-batch ../../etc/ --restrict-to-project
 # Lock a file and attempt evaluation
 flock .github/prompts/locked.prompt.md -c "sleep 30" &
 copilot eval evaluate-artifact .github/prompts/locked.prompt.md
-```
+```bash
 
 **Expected Results:**
+
 - Clear error messages for permission issues
 - Safe handling of missing files
 - Directory traversal restrictions respected
@@ -66,11 +72,13 @@ copilot eval evaluate-artifact .github/prompts/locked.prompt.md
 ### 3. Memory and CPU Dependencies
 
 **Skills with Resource Requirements:**
+
 - `eval-batch` (parallel processing)
 - `eval-adversarial` (stress testing)
 - `eval-performance` (benchmarking)
 
 **Test Cases:**
+
 ```bash
 # Test: Memory limit enforcement
 ulimit -v 524288  # 512MB limit
@@ -83,9 +91,10 @@ cpulimit -l 50 -f copilot eval eval-adversarial --stress-test performance
 copilot eval eval-batch .github/prompts/ --parallel &
 copilot eval eval-performance --benchmark &
 # Monitor resource usage
-```
+```bash
 
 **Expected Results:**
+
 - Skills respect system resource limits
 - Graceful handling of resource constraints
 - No resource leaks or excessive consumption
@@ -94,11 +103,13 @@ copilot eval eval-performance --benchmark &
 ### 4. Configuration Dependencies
 
 **Skills with Configuration Requirements:**
+
 - All skills (global configuration)
 - `eval-quality-gates` (threshold settings)
 - `eval-performance` (benchmark settings)
 
 **Test Cases:**
+
 ```bash
 # Test: Missing configuration
 copilot config unset copilot-eval.threshold
@@ -112,9 +123,10 @@ copilot eval eval-quality-gates --pre-deploy .github/prompts/
 # Test that one skill's config doesn't affect others
 copilot config set eval-batch.parallel "false"
 copilot eval eval-performance --benchmark
-```
+```bash
 
 **Expected Results:**
+
 - Default values used when configuration is missing
 - Clear error messages for invalid configuration
 - Configuration isolation between skills
@@ -123,11 +135,13 @@ copilot eval eval-performance --benchmark
 ### 5. Database/Cache Dependencies
 
 **Skills with Persistence Requirements:**
+
 - `eval-performance` (caching results)
 - `eval-regression` (baseline storage)
 - `eval-quality-gates` (compliance tracking)
 
 **Test Cases:**
+
 ```bash
 # Test: Cache corruption handling
 # Corrupt cache and verify graceful handling
@@ -142,9 +156,10 @@ copilot eval eval-regression --baseline v1.0 --no-persistence
 # Verify that one skill's cache doesn't interfere with others
 copilot eval eval-performance --cache-key skill1
 copilot eval eval-regression --cache-key skill2
-```
+```bash
 
 **Expected Results:**
+
 - Skills function without cache/database when possible
 - Cache corruption doesn't break functionality
 - Database failures have appropriate fallbacks
@@ -153,11 +168,13 @@ copilot eval eval-regression --cache-key skill2
 ### 6. Plugin Interoperability Dependencies
 
 **Skills with Plugin Interactions:**
+
 - All skills (core plugin framework)
 - `eval-batch` (skill orchestration)
 - `eval-quality-gates` (skill coordination)
 
 **Test Cases:**
+
 ```bash
 # Test: Plugin loading failure
 # Remove core plugin files and test error handling
@@ -173,9 +190,10 @@ copilot eval eval-batch .github/prompts/ --dry-run
 # Test with different plugin versions
 copilot plugin install copilot-eval@v0.9.0
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
-```
+```bash
 
 **Expected Results:**
+
 - Clear error messages for missing dependencies
 - Proper skill loading order
 - Version compatibility checks
@@ -186,6 +204,7 @@ copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
 ### 1. Code Execution Isolation
 
 **Test Cases:**
+
 ```bash
 # Test: Arbitrary code execution prevention
 # Attempt to execute malicious code through skill parameters
@@ -198,9 +217,10 @@ copilot eval evaluate-artifact "file.txt; rm -rf /"
 # Test: Path traversal attacks
 # Test for directory traversal in file paths
 copilot eval evaluate-artifact "../../../etc/passwd"
-```
+```bash
 
 **Expected Results:**
+
 - No arbitrary code execution
 - Command injection attempts blocked
 - Path traversal attacks prevented
@@ -209,6 +229,7 @@ copilot eval evaluate-artifact "../../../etc/passwd"
 ### 2. Data Isolation
 
 **Test Cases:**
+
 ```bash
 # Test: User data isolation
 # Verify that user data doesn't leak between sessions
@@ -224,9 +245,10 @@ find /tmp -name "copilot-eval-*" -type f
 # Test with sensitive data in artifacts
 copilot eval evaluate-artifact api_key.txt
 # Verify no sensitive data in logs or output
-```
+```bash
 
 **Expected Results:**
+
 - No data leakage between users/sessions
 - Temporary files properly cleaned up
 - Sensitive data not exposed in logs
@@ -237,6 +259,7 @@ copilot eval evaluate-artifact api_key.txt
 ### 1. Operating System Isolation
 
 **Test Cases:**
+
 ```bash
 # Test: Cross-platform compatibility
 # Test on different operating systems
@@ -251,9 +274,10 @@ copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
 # Test that system PATH doesn't affect skill execution
 export PATH="/malicious/path:$PATH"
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
-```
+```bash
 
 **Expected Results:**
+
 - Consistent behavior across platforms
 - Environment variables don't affect security
 - System PATH manipulation ineffective
@@ -262,6 +286,7 @@ copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
 ### 2. Network Isolation
 
 **Test Cases:**
+
 ```bash
 # Test: Network dependency isolation
 # Test skills with and without network access
@@ -277,9 +302,10 @@ copilot eval eval-quality-gates --external-api
 # Test proxy settings don't cause security issues
 export http_proxy="http://malicious.proxy:8080"
 copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
-```
+```bash
 
 **Expected Results:**
+
 - Skills function without network when possible
 - DNS manipulation doesn't compromise security
 - Proxy settings don't expose data
@@ -290,6 +316,7 @@ copilot eval evaluate-artifact .github/prompts/code-review.prompt.md
 ### 1. Memory Leak Detection
 
 **Test Cases:**
+
 ```bash
 # Test: Memory leak detection
 # Run skills repeatedly and monitor memory usage
@@ -308,9 +335,10 @@ for i in {1..10}; do
   copilot eval eval-batch .github/prompts/ --parallel &
 done
 wait
-```
+```bash
 
 **Expected Results:**
+
 - No memory leaks in repeated execution
 - Proper handling of large files
 - Stable memory usage under concurrent load
@@ -319,6 +347,7 @@ wait
 ### 2. File Handle Leak Detection
 
 **Test Cases:**
+
 ```bash
 # Test: File handle leak detection
 # Monitor file handles during skill execution
@@ -331,9 +360,10 @@ lsof -p $$ | wc -l
 before_count=$(find /tmp -name "copilot-eval-*" | wc -l)
 copilot eval eval-batch .github/prompts/ --parallel
 after_count=$(find /tmp -name "copilot-eval-*" | wc -l)
-```
+```bash
 
 **Expected Results:**
+
 - No file handle leaks
 - All temporary files cleaned up
 - File handles properly closed
@@ -342,6 +372,7 @@ after_count=$(find /tmp -name "copilot-eval-*" | wc -l)
 ## Expected Isolation Test Outcomes
 
 ### Success Criteria
+
 - Skills operate independently without interference
 - Resource usage stays within acceptable limits
 - Security boundaries are maintained
@@ -349,6 +380,7 @@ after_count=$(find /tmp -name "copilot-eval-*" | wc -l)
 - No resource leaks or corruption
 
 ### Failure Indicators
+
 - Skills interfere with each other's operation
 - Resource exhaustion or leaks
 - Security boundary violations
@@ -356,6 +388,7 @@ after_count=$(find /tmp -name "copilot-eval-*" | wc -l)
 - Data leakage between components
 
 ### Test Execution Frequency
+
 - **Before each release**: Full isolation test suite
 - **Weekly**: Resource leak and security tests
 - **Daily**: Core dependency isolation tests

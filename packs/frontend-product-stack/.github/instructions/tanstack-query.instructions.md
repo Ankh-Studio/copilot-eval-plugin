@@ -30,7 +30,7 @@ export const useUser = (userId: string) => {
     cacheTime: 10 * 60 * 1000, // 10 minutes
   });
 };
-```
+```bash
 
 ### Query with Dependencies
 
@@ -43,7 +43,7 @@ export const useUserPosts = (userId: string) => {
     select: (posts) => posts.filter(post => post.published), // Transform data
   });
 };
-```
+```bash
 
 ### Pagination Query
 
@@ -62,7 +62,7 @@ export const usePosts = (page: number, pageSize: number) => {
     keepPreviousData: true, // Keep previous data while fetching new data
   });
 };
-```
+```bash
 
 ## Mutation Patterns
 
@@ -90,7 +90,7 @@ export const useCreatePost = () => {
     },
   });
 };
-```
+```bash
 
 ### Optimistic Updates
 
@@ -127,7 +127,7 @@ export const useUpdatePost = () => {
     },
   });
 };
-```
+```bash
 
 ## Query Configuration
 
@@ -152,7 +152,7 @@ export const queryClient = new QueryClient({
     },
   },
 });
-```
+```bash
 
 ### Error Handling
 
@@ -174,7 +174,7 @@ export const useUserWithErrorHandling = (userId: string) => {
     },
   });
 };
-```
+```bash
 
 ## Query Keys Strategy
 
@@ -190,7 +190,7 @@ Use consistent query key patterns:
 // Bad query keys
 ['getUser'] // Too generic
 ['user-data'] // Not specific enough
-```
+```bash
 
 ## Data Transformation
 
@@ -208,7 +208,7 @@ export const useUsersList = () => {
     }),
   });
 };
-```
+```bash
 
 ## Infinite Queries
 
@@ -227,4 +227,4 @@ export const useInfinitePosts = () => {
     },
   });
 };
-```
+```bash

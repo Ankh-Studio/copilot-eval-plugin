@@ -57,7 +57,7 @@ export const ComponentName: React.FC<ComponentNameProps> = ({
     </RadixComponent.Root>
   );
 };
-```
+```bash
 
 ## Common Radix UI Patterns
 
@@ -105,7 +105,7 @@ export const Modal: React.FC<ModalProps> = ({
     </Dialog.Root>
   );
 };
-```
+```bash
 
 ### Dropdown Menu Component
 
@@ -164,7 +164,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ trigger, items, align = 'sta
     </DropdownMenu.Root>
   );
 };
-```
+```bash
 
 ### Form Field Component
 
@@ -249,7 +249,7 @@ export const ToggleSwitch: React.FC<{
     </div>
   );
 };
-```
+```bash
 
 ## Styling Guidelines
 
@@ -272,7 +272,7 @@ const sizeClasses = {
   md: 'px-4 py-2 text-base rounded-md',
   lg: 'px-6 py-3 text-lg rounded-lg'
 };
-```
+```bash
 
 ### State-Based Styling
 
@@ -288,7 +288,7 @@ const stateClasses = `
   focus-visible:ring-2
   focus-visible:ring-offset-2
 `;
-```
+```bash
 
 ## Accessibility Checklist
 

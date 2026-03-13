@@ -1,7 +1,13 @@
----
+
+
+
 name: evaluate-instruction
 description: Evaluate instruction artifacts against the instruction rubric
+
 ---
+
+
+
 
 Evaluate the provided instruction against the structured instruction rubric criteria.
 
@@ -32,6 +38,7 @@ Evaluate the provided instruction against the structured instruction rubric crit
 ## Usage
 
 Provide the path to the instruction file you want evaluated:
+
 - `.github/instructions/instruction-name.md`
 - Any custom instruction file path
 

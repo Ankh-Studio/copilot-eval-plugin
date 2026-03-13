@@ -3,6 +3,8 @@ name: evaluate-artifact
 description: Evaluate any Copilot artifact against its rubric
 ---
 
+# Evaluate Artifact
+
 Evaluate any Copilot artifact against its structured rubric with verification.
 
 ## Process
@@ -17,6 +19,7 @@ Evaluate any Copilot artifact against its structured rubric with verification.
 ## Usage
 
 Specify artifact path:
+
 - `.github/prompts/name.prompt.md`
 - `.github/skills/name/SKILL.md`
 - `.github/workflows/name/WORKFLOW.md`
@@ -24,8 +27,8 @@ Specify artifact path:
 
 ## Example
 
-```
+```bash
 /evaluate-artifact .github/prompts/code-review.prompt.md
-```
+```bash
 
 Auto-detects artifact type, loads rubric, provides actionable feedback.

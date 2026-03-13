@@ -8,7 +8,7 @@ copilot plugin install yourusername/copilot-eval-plugin
 
 # Or from local directory
 copilot plugin install ./copilot-eval-plugin
-```
+```bash
 
 ## Verify Installation
 
@@ -21,7 +21,7 @@ copilot skills list
 
 # Check available agents  
 copilot agent list
-```
+```bash
 
 ## Start Using
 
@@ -34,7 +34,7 @@ copilot
 
 # Use the evaluator agent
 /agent evaluator
-```
+```bash
 
 ## What's Included
 

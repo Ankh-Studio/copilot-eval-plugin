@@ -1,7 +1,7 @@
 {
   "name": "copilot-eval",
   "description": "Evaluate Copilot artifacts against structured rubrics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Matthew Van Dusen",
     "email": "matt@ankhstudio.com"

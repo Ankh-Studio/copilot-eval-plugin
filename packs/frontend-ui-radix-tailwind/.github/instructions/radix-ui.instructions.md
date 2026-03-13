@@ -39,7 +39,7 @@ export const Modal: React.FC<ModalProps> = ({
     </Dialog.Root>
   );
 };
-```
+```bash
 
 ### Dropdown Menu Pattern
 
@@ -80,7 +80,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ trigger, items }) => {
     </DropdownMenu.Root>
   );
 };
-```
+```bash
 
 ### Form Control Pattern
 
@@ -111,7 +111,7 @@ export const FormField: React.FC<FormFieldProps> = ({
     </div>
   );
 };
-```
+```bash
 
 ## Radix UI Best Practices
 
@@ -150,4 +150,4 @@ Use Tailwind classes for styling, but reference Radix data attributes for state:
 [data-disabled] {
   /* Disabled state styles */
 }
-```
+```bash
