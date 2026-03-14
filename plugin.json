@@ -1,7 +1,7 @@
 {
   "name": "enterprise-ai-adoption-audit",
   "description": "Enterprise AI adoption audit and strategy toolkit for comprehensive AI maturity assessment and Copilot integration analysis",
-  "version": "2.0.0",
+  "version": "v2.0.2",
   "author": {
     "name": "Matthew Van Dusen",
     "email": "matt@ankhstudio.com"
