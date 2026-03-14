@@ -1,0 +1,3091 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-14T01:39:51.703Z",
+    "version": "1.0.0",
+    "executionPath": "foundation",
+    "repository": ".",
+    "maturityLevel": "AI-Novice",
+    "overallScore": null
+  },
+  "executiveSummary": {
+    "maturityLevel": "AI-Novice",
+    "overallScore": null,
+    "keyFindings": [
+      "AI maturity level: AI-Novice",
+      "Overall readiness score: NaN/100",
+      "Copilot integration requires enhancement"
+    ],
+    "primaryRecommendations": [
+      "Implement Basic Copilot Configuration",
+      "Advance Copilot Integration"
+    ],
+    "estimatedEffort": "Low (3-6 months, $50K-100K)",
+    "expectedROI": "Developing (50-100% ROI)",
+    "nextSteps": [
+      "Review and approve AI adoption strategy",
+      "Allocate budget and resources",
+      "Establish implementation team",
+      "Begin Phase 1 execution"
+    ]
+  },
+  "maturityAssessment": {
+    "timestamp": "2026-03-14T01:39:51.699Z",
+    "maturity": {
+      "level": "AI-Novice",
+      "overallScore": null,
+      "readiness": {
+        "forBasicAI": true,
+        "forAdvancedAI": false,
+        "forAIGovernance": false,
+        "forAIScaling": false,
+        "forAILeadership": false,
+        "overall": 0.2
+      }
+    },
+    "componentScores": {
+      "technology": {
+        "score": 63,
+        "factors": {
+          "languageCompatibility": 100,
+          "libraryIntegration": 68,
+          "serviceIntegration": 0,
+          "frameworkSupport": 44.44444444444444,
+          "aiGeneratedCode": 90
+        },
+        "details": {
+          "languages": ["JavaScript"],
+          "frameworks": [
+            "React",
+            "Vue",
+            "Angular",
+            "TensorFlow",
+            "PyTorch",
+            "scikit-learn",
+            "FastAPI",
+            "Flask",
+            "Django"
+          ],
+          "aiLibraries": [
+            "OpenAI",
+            "Anthropic",
+            "LangChain",
+            "Azure AI",
+            "Google AI",
+            "AWS AI",
+            "Jupyter",
+            "Hugging Face",
+            "Pandas",
+            "NumPy",
+            "Matplotlib"
+          ],
+          "aiServices": [],
+          "aiGeneratedPatterns": [
+            "ROADMAP.md",
+            "docs/ai-adoption-audit/ai-adoption-audit-2026-03-14.json",
+            "skills/enterprise-ai-adoption-audit/SKILL.md",
+            "skills/enterprise-ai-adoption-audit/assets/ai-adoption-template.md",
+            "skills/enterprise-ai-adoption-audit/assets/copilot-integration-checklist.md",
+            "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+            "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+            "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+            "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js"
+          ]
+        }
+      },
+      "copilot": {
+        "score": 19,
+        "factors": {
+          "configuration": 0,
+          "customization": 55,
+          "integration": 0,
+          "adoption": 13,
+          "usagePatterns": 30
+        },
+        "details": {
+          "configurations": 1,
+          "customPrompts": 1,
+          "skills": 3,
+          "integrations": 0,
+          "maturity": "AI-Novice"
+        }
+      },
+      "governance": {
+        "score": null,
+        "factors": {
+          "policyFramework": 0,
+          "codeReview": 49.2,
+          "securityCompliance": null,
+          "qualityAssurance": 25.6
+        },
+        "details": {
+          "governanceFiles": 0,
+          "policies": 0,
+          "enforcement": "None"
+        }
+      },
+      "organization": {
+        "score": 47,
+        "factors": {
+          "teamCapabilities": 45.2,
+          "training": 55,
+          "knowledgeSharing": 60,
+          "collaboration": 23.9
+        },
+        "details": {
+          "teamSize": "Very Small (1-2)",
+          "skillLevel": "Beginner",
+          "collaborationTools": []
+        }
+      },
+      "infrastructure": {
+        "score": 30,
+        "factors": {
+          "cloudInfrastructure": 0,
+          "devEnvironment": 0,
+          "cicdIntegration": 74,
+          "monitoring": 59.2
+        },
+        "details": {
+          "infrastructure": [],
+          "workflows": 2,
+          "automation": "Low"
+        }
+      },
+      "overall": null,
+      "level": "AI-Novice",
+      "readiness": {
+        "forBasicAI": true,
+        "forAdvancedAI": false,
+        "forAIGovernance": false,
+        "forAIScaling": false,
+        "forAILeadership": false,
+        "overall": 0.2
+      }
+    },
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "copilot",
+        "title": "Advance Copilot Integration",
+        "description": "Deepen Copilot adoption and customization",
+        "actions": [
+          "Develop custom prompts and skills",
+          "Integrate Copilot with development workflows",
+          "Establish team-wide adoption practices"
+        ],
+        "impact": "high",
+        "effort": "medium",
+        "timeline": "2-4 months"
+      },
+      {
+        "priority": "medium",
+        "category": "organization",
+        "title": "Build Organizational AI Capabilities",
+        "description": "Develop team skills and collaboration practices",
+        "actions": [
+          "Implement AI training programs",
+          "Establish knowledge sharing practices",
+          "Create AI collaboration frameworks"
+        ],
+        "impact": "medium",
+        "effort": "medium",
+        "timeline": "3-5 months"
+      },
+      {
+        "priority": "low",
+        "category": "infrastructure",
+        "title": "Optimize Infrastructure for AI",
+        "description": "Enhance infrastructure to support AI workloads",
+        "actions": [
+          "Implement cloud AI services",
+          "Optimize CI/CD for AI pipelines",
+          "Add monitoring and observability"
+        ],
+        "impact": "medium",
+        "effort": "high",
+        "timeline": "6-9 months"
+      }
+    ],
+    "roadmap": {
+      "currentLevel": "AI-Novice",
+      "nextLevel": "AI-Beginner",
+      "phases": [
+        {
+          "phase": "Foundation Building",
+          "duration": "3-6 months",
+          "objectives": [
+            "Establish basic AI technology stack",
+            "Implement initial Copilot configuration",
+            "Create basic AI guidelines"
+          ],
+          "keyMilestones": [
+            "AI technology score > 50",
+            "Copilot configuration complete",
+            "Basic governance framework"
+          ]
+        },
+        {
+          "phase": "Capability Development",
+          "duration": "6-9 months",
+          "objectives": [
+            "Develop custom AI solutions",
+            "Expand Copilot adoption",
+            "Implement comprehensive governance"
+          ],
+          "keyMilestones": [
+            "AI technology score > 70",
+            "Copilot score > 60",
+            "Governance score > 60"
+          ]
+        }
+      ]
+    },
+    "benchmarking": {
+      "current": {
+        "technology": {
+          "score": 63,
+          "factors": {
+            "languageCompatibility": 100,
+            "libraryIntegration": 68,
+            "serviceIntegration": 0,
+            "frameworkSupport": 44.44444444444444,
+            "aiGeneratedCode": 90
+          },
+          "details": {
+            "languages": ["JavaScript"],
+            "frameworks": [
+              "React",
+              "Vue",
+              "Angular",
+              "TensorFlow",
+              "PyTorch",
+              "scikit-learn",
+              "FastAPI",
+              "Flask",
+              "Django"
+            ],
+            "aiLibraries": [
+              "OpenAI",
+              "Anthropic",
+              "LangChain",
+              "Azure AI",
+              "Google AI",
+              "AWS AI",
+              "Jupyter",
+              "Hugging Face",
+              "Pandas",
+              "NumPy",
+              "Matplotlib"
+            ],
+            "aiServices": [],
+            "aiGeneratedPatterns": [
+              "ROADMAP.md",
+              "docs/ai-adoption-audit/ai-adoption-audit-2026-03-14.json",
+              "skills/enterprise-ai-adoption-audit/SKILL.md",
+              "skills/enterprise-ai-adoption-audit/assets/ai-adoption-template.md",
+              "skills/enterprise-ai-adoption-audit/assets/copilot-integration-checklist.md",
+              "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+              "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+              "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+              "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js"
+            ]
+          }
+        },
+        "copilot": {
+          "score": 19,
+          "factors": {
+            "configuration": 0,
+            "customization": 55,
+            "integration": 0,
+            "adoption": 13,
+            "usagePatterns": 30
+          },
+          "details": {
+            "configurations": 1,
+            "customPrompts": 1,
+            "skills": 3,
+            "integrations": 0,
+            "maturity": "AI-Novice"
+          }
+        },
+        "governance": {
+          "score": null,
+          "factors": {
+            "policyFramework": 0,
+            "codeReview": 49.2,
+            "securityCompliance": null,
+            "qualityAssurance": 25.6
+          },
+          "details": {
+            "governanceFiles": 0,
+            "policies": 0,
+            "enforcement": "None"
+          }
+        },
+        "organization": {
+          "score": 47,
+          "factors": {
+            "teamCapabilities": 45.2,
+            "training": 55,
+            "knowledgeSharing": 60,
+            "collaboration": 23.9
+          },
+          "details": {
+            "teamSize": "Very Small (1-2)",
+            "skillLevel": "Beginner",
+            "collaborationTools": []
+          }
+        },
+        "infrastructure": {
+          "score": 30,
+          "factors": {
+            "cloudInfrastructure": 0,
+            "devEnvironment": 0,
+            "cicdIntegration": 74,
+            "monitoring": 59.2
+          },
+          "details": {
+            "infrastructure": [],
+            "workflows": 2,
+            "automation": "Low"
+          }
+        },
+        "overall": null,
+        "level": "AI-Novice",
+        "readiness": {
+          "forBasicAI": true,
+          "forAdvancedAI": false,
+          "forAIGovernance": false,
+          "forAIScaling": false,
+          "forAILeadership": false,
+          "overall": 0.2
+        }
+      },
+      "comparisons": {
+        "industry": {
+          "technology": {
+            "current": 63,
+            "benchmark": 65,
+            "gap": -2,
+            "percentile": "Top 50%"
+          },
+          "copilot": {
+            "current": 19,
+            "benchmark": 55,
+            "gap": -36,
+            "percentile": "Bottom 25%"
+          },
+          "governance": {
+            "current": 0,
+            "benchmark": 45,
+            "gap": -45,
+            "percentile": "Bottom 25%"
+          },
+          "organization": {
+            "current": 47,
+            "benchmark": 50,
+            "gap": -3,
+            "percentile": "Top 50%"
+          },
+          "infrastructure": {
+            "current": 30,
+            "benchmark": 60,
+            "gap": -30,
+            "percentile": "Bottom 25%"
+          },
+          "overall": {
+            "current": 0,
+            "benchmark": 55,
+            "gap": -55,
+            "percentile": "Bottom 25%"
+          }
+        },
+        "competitive": {
+          "technology": {
+            "current": 63,
+            "benchmark": 75,
+            "gap": -12,
+            "percentile": "Bottom 50%"
+          },
+          "copilot": {
+            "current": 19,
+            "benchmark": 70,
+            "gap": -51,
+            "percentile": "Bottom 25%"
+          },
+          "governance": {
+            "current": 0,
+            "benchmark": 60,
+            "gap": -60,
+            "percentile": "Bottom 25%"
+          },
+          "organization": {
+            "current": 47,
+            "benchmark": 65,
+            "gap": -18,
+            "percentile": "Bottom 25%"
+          },
+          "infrastructure": {
+            "current": 30,
+            "benchmark": 70,
+            "gap": -40,
+            "percentile": "Bottom 25%"
+          },
+          "overall": {
+            "current": 0,
+            "benchmark": 68,
+            "gap": -68,
+            "percentile": "Bottom 25%"
+          }
+        },
+        "historical": {
+          "technology": {
+            "current": 63,
+            "benchmark": 40,
+            "gap": 23,
+            "percentile": "Top 10%"
+          },
+          "copilot": {
+            "current": 19,
+            "benchmark": 30,
+            "gap": -11,
+            "percentile": "Bottom 50%"
+          },
+          "governance": {
+            "current": 0,
+            "benchmark": 25,
+            "gap": -25,
+            "percentile": "Bottom 25%"
+          },
+          "organization": {
+            "current": 47,
+            "benchmark": 35,
+            "gap": 12,
+            "percentile": "Top 25%"
+          },
+          "infrastructure": {
+            "current": 30,
+            "benchmark": 45,
+            "gap": -15,
+            "percentile": "Bottom 50%"
+          },
+          "overall": {
+            "current": 0,
+            "benchmark": 35,
+            "gap": -35,
+            "percentile": "Bottom 25%"
+          }
+        }
+      },
+      "gaps": [
+        {
+          "component": "overall",
+          "gap": 55,
+          "priority": "high",
+          "impact": "medium",
+          "effort": "medium"
+        },
+        {
+          "component": "governance",
+          "gap": 45,
+          "priority": "high",
+          "impact": "medium",
+          "effort": "medium"
+        },
+        {
+          "component": "copilot",
+          "gap": 36,
+          "priority": "high",
+          "impact": "high",
+          "effort": "medium"
+        },
+        {
+          "component": "infrastructure",
+          "gap": 30,
+          "priority": "high",
+          "impact": "medium",
+          "effort": "high"
+        }
+      ],
+      "opportunities": []
+    },
+    "detailedAnalysis": {
+      "technology": {
+        "timestamp": "2026-03-14T01:39:51.624Z",
+        "summary": {
+          "totalLanguages": 1,
+          "totalFrameworks": 9,
+          "totalAILibraries": 11,
+          "totalAIServices": 0,
+          "totalAIConfigs": 0,
+          "totalAIGeneratedFiles": 9,
+          "totalInfraComponents": 0,
+          "totalDependencies": 1
+        },
+        "details": {
+          "languages": ["JavaScript"],
+          "frameworks": [
+            "React",
+            "Vue",
+            "Angular",
+            "TensorFlow",
+            "PyTorch",
+            "scikit-learn",
+            "FastAPI",
+            "Flask",
+            "Django"
+          ],
+          "aiLibraries": [
+            "OpenAI",
+            "Anthropic",
+            "LangChain",
+            "Azure AI",
+            "Google AI",
+            "AWS AI",
+            "Jupyter",
+            "Hugging Face",
+            "Pandas",
+            "NumPy",
+            "Matplotlib"
+          ],
+          "aiServices": [],
+          "aiConfigurations": [],
+          "aiGeneratedPatterns": [
+            "ROADMAP.md",
+            "docs/ai-adoption-audit/ai-adoption-audit-2026-03-14.json",
+            "skills/enterprise-ai-adoption-audit/SKILL.md",
+            "skills/enterprise-ai-adoption-audit/assets/ai-adoption-template.md",
+            "skills/enterprise-ai-adoption-audit/assets/copilot-integration-checklist.md",
+            "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+            "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+            "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+            "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js"
+          ],
+          "infrastructure": [],
+          "dependencies": {
+            "prettier": "^3.8.1"
+          }
+        },
+        "scores": {
+          "technologyStack": 83,
+          "aiLibraryIntegration": 68,
+          "aiServiceIntegration": 0,
+          "infrastructureReadiness": 0,
+          "overall": 45.3
+        },
+        "recommendations": [
+          {
+            "priority": "medium",
+            "category": "services",
+            "title": "Implement AI Service Integration",
+            "description": "Configure and integrate cloud AI services",
+            "actions": [
+              "Set up OpenAI or Azure AI service accounts",
+              "Create AI service configuration files",
+              "Implement API key management"
+            ]
+          },
+          {
+            "priority": "low",
+            "category": "infrastructure",
+            "title": "Optimize Infrastructure for AI Workloads",
+            "description": "Enhance infrastructure to support AI development",
+            "actions": [
+              "Add Docker containerization for AI models",
+              "Consider GPU-enabled environments",
+              "Implement CI/CD for AI pipelines"
+            ]
+          }
+        ]
+      },
+      "copilot": {
+        "timestamp": "2026-03-14T01:39:51.697Z",
+        "summary": {
+          "configurations": 1,
+          "customPrompts": 1,
+          "skills": 3,
+          "integrations": 0,
+          "codeFiles": 20,
+          "governanceFiles": 0,
+          "workflowFiles": 2
+        },
+        "details": {
+          "configurations": {
+            ".vscode/settings.json": {
+              "type": "vscode",
+              "content": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.formatOnSave": true,
+                "editor.formatOnPaste": true,
+                "editor.codeActionsOnSave": {
+                  "source.fixAll": "explicit"
+                },
+                "[javascript]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[json]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[markdown]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[yaml]": {
+                  "editor.defaultFormatter": "esbenp.prettier-vscode"
+                }
+              },
+              "completeness": 0,
+              "bestPractices": []
+            }
+          },
+          "customPrompts": {
+            "skills/adr-authoring/assets/create-adr.prompt.md": {
+              "filePath": "skills/adr-authoring/assets/create-adr.prompt.md",
+              "type": "general",
+              "complexity": "high",
+              "quality": 100,
+              "category": "documentation",
+              "reuse": "static"
+            }
+          },
+          "skills": {
+            "rubrics/evaluation-framework/agentskills-eval.js": {
+              "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+              "name": "skillName,",
+              "description": "Assertions that always pass in both configurations",
+              "capabilities": [
+                "generation",
+                "analysis",
+                "optimization",
+                "testing"
+              ],
+              "integration": 0,
+              "maturity": 75
+            },
+            "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+              "name": "unnamed",
+              "description": "Adopt AI-compatible languages and frameworks",
+              "capabilities": ["generation", "analysis"],
+              "integration": 3,
+              "maturity": 75
+            },
+            "skills/repo-assessment/references/skill-evaluation.md": {
+              "filePath": "skills/repo-assessment/references/skill-evaluation.md",
+              "name": "unnamed",
+              "description": "no description",
+              "capabilities": [
+                "generation",
+                "analysis",
+                "optimization",
+                "testing"
+              ],
+              "integration": 1,
+              "maturity": 50
+            }
+          },
+          "integrations": {
+            "package.json": {
+              "filePath": "package.json",
+              "integrations": [],
+              "copilotSpecific": [],
+              "aiRelated": []
+            }
+          },
+          "usagePatterns": {
+            "commits": {
+              "totalCommits": 0,
+              "aiRelatedCommits": 0,
+              "patterns": [
+                "feat: add AI-generated",
+                "fix: resolve Copilot suggestion",
+                "refactor: improve AI-assisted code",
+                "docs: update AI guidelines"
+              ]
+            },
+            "comments": {
+              "totalComments": 905,
+              "aiComments": 79,
+              "aiCommentRatio": 0.08729281767955802
+            },
+            "files": {
+              "totalFiles": 120,
+              "aiRelatedFiles": 6,
+              "aiFileRatio": 0.05
+            }
+          },
+          "codeQuality": {
+            "rubrics/evaluation-framework/adversarial-validation.js": {
+              "filePath": "rubrics/evaluation-framework/adversarial-validation.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 17
+              },
+              "patterns": {
+                "errorHandling": 2,
+                "async": 0,
+                "comments": 51,
+                "tests": 77
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 18,
+                "inlineComments": 31,
+                "documentationRatio": 0.21170879239576584
+              }
+            },
+            "rubrics/evaluation-framework/agentskills-eval.js": {
+              "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 8
+              },
+              "patterns": {
+                "errorHandling": 6,
+                "async": 7,
+                "comments": 55,
+                "tests": 18
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 26,
+                "inlineComments": 29,
+                "documentationRatio": 0.23498248312398531
+              }
+            },
+            "rubrics/evaluation-framework/scripts/run-full-validation.js": {
+              "filePath": "rubrics/evaluation-framework/scripts/run-full-validation.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 16
+              },
+              "patterns": {
+                "errorHandling": 6,
+                "async": 4,
+                "comments": 69,
+                "tests": 26
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 20,
+                "inlineComments": 38,
+                "documentationRatio": 0.3172692959903725
+              }
+            },
+            "rubrics/evaluation-framework/validate-rubrics.js": {
+              "filePath": "rubrics/evaluation-framework/validate-rubrics.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 18
+              },
+              "patterns": {
+                "errorHandling": 2,
+                "async": 0,
+                "comments": 51,
+                "tests": 6
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 17,
+                "inlineComments": 29,
+                "documentationRatio": 0.3184052052329203
+              }
+            },
+            "scripts/apply-pack.js": {
+              "filePath": "scripts/apply-pack.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 1,
+                "classes": 1,
+                "imports": 11
+              },
+              "patterns": {
+                "errorHandling": 12,
+                "async": 18,
+                "comments": 14,
+                "tests": 3
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 1,
+                "inlineComments": 13,
+                "documentationRatio": 0.12659372456822496
+              }
+            },
+            "scripts/validate-release.js": {
+              "filePath": "scripts/validate-release.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 7,
+                "classes": 0,
+                "imports": 5
+              },
+              "patterns": {
+                "errorHandling": 14,
+                "async": 0,
+                "comments": 4,
+                "tests": 2
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 0,
+                "inlineComments": 3,
+                "documentationRatio": 0.0822143052891203
+              }
+            },
+            "skills/adr-authoring/scripts/analyze-repo.js": {
+              "filePath": "skills/adr-authoring/scripts/analyze-repo.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 4
+              },
+              "patterns": {
+                "errorHandling": 9,
+                "async": 11,
+                "comments": 24,
+                "tests": 5
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 11,
+                "inlineComments": 13,
+                "documentationRatio": 0.21522733387140167
+              }
+            },
+            "skills/adr-authoring/scripts/automated-scoring.js": {
+              "filePath": "skills/adr-authoring/scripts/automated-scoring.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 9
+              },
+              "patterns": {
+                "errorHandling": 3,
+                "async": 3,
+                "comments": 73,
+                "tests": 23
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 22,
+                "inlineComments": 40,
+                "documentationRatio": 0.3049530273965865
+              }
+            },
+            "skills/adr-authoring/scripts/lifecycle-manager.js": {
+              "filePath": "skills/adr-authoring/scripts/lifecycle-manager.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 22
+              },
+              "patterns": {
+                "errorHandling": 17,
+                "async": 14,
+                "comments": 62,
+                "tests": 3
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 30,
+                "inlineComments": 32,
+                "documentationRatio": 0.28870779976717115
+              }
+            },
+            "skills/adr-authoring/scripts/performance-optimizer.js": {
+              "filePath": "skills/adr-authoring/scripts/performance-optimizer.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 11
+              },
+              "patterns": {
+                "errorHandling": 43,
+                "async": 10,
+                "comments": 49,
+                "tests": 7
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 26,
+                "inlineComments": 23,
+                "documentationRatio": 0.27418723070896983
+              }
+            },
+            "skills/adr-authoring/scripts/validate-adr.js": {
+              "filePath": "skills/adr-authoring/scripts/validate-adr.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 16
+              },
+              "patterns": {
+                "errorHandling": 7,
+                "async": 1,
+                "comments": 113,
+                "tests": 17
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 20,
+                "inlineComments": 67,
+                "documentationRatio": 0.41357672561323444
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 14
+              },
+              "patterns": {
+                "errorHandling": 22,
+                "async": 1,
+                "comments": 70,
+                "tests": 5
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 9,
+                "inlineComments": 61,
+                "documentationRatio": 0.13482280431432972
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 12
+              },
+              "patterns": {
+                "errorHandling": 10,
+                "async": 76,
+                "comments": 40,
+                "tests": 7
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 10,
+                "inlineComments": 30,
+                "documentationRatio": 0.0990049997524875
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 17
+              },
+              "patterns": {
+                "errorHandling": 9,
+                "async": 7,
+                "comments": 24,
+                "tests": 23
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 3,
+                "inlineComments": 21,
+                "documentationRatio": 0.060432089439492374
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 39
+              },
+              "patterns": {
+                "errorHandling": 5,
+                "async": 23,
+                "comments": 30,
+                "tests": 10
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 6,
+                "inlineComments": 23,
+                "documentationRatio": 0.1754279837880346
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 29
+              },
+              "patterns": {
+                "errorHandling": 9,
+                "async": 67,
+                "comments": 58,
+                "tests": 42
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 11,
+                "inlineComments": 40,
+                "documentationRatio": 0.15348039363206836
+              }
+            },
+            "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js": {
+              "filePath": "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 5
+              },
+              "patterns": {
+                "errorHandling": 11,
+                "async": 3,
+                "comments": 75,
+                "tests": 1
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 4,
+                "inlineComments": 71,
+                "documentationRatio": 0.24208385784835867
+              }
+            },
+            "skills/improve/scripts/run-improvement-tests.js": {
+              "filePath": "skills/improve/scripts/run-improvement-tests.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 0,
+                "classes": 1,
+                "imports": 3
+              },
+              "patterns": {
+                "errorHandling": 10,
+                "async": 7,
+                "comments": 87,
+                "tests": 102
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 17,
+                "inlineComments": 51,
+                "documentationRatio": 0.3185011709601874
+              }
+            },
+            "skills/repo-assessment/scripts/adversarial-validation.js": {
+              "filePath": "skills/repo-assessment/scripts/adversarial-validation.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 6,
+                "classes": 0,
+                "imports": 4
+              },
+              "patterns": {
+                "errorHandling": 0,
+                "async": 2,
+                "comments": 26,
+                "tests": 14
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 7,
+                "inlineComments": 19,
+                "documentationRatio": 0.17261983800292124
+              }
+            },
+            "skills/repo-assessment/scripts/validate-repo-assessment.js": {
+              "filePath": "skills/repo-assessment/scripts/validate-repo-assessment.js",
+              "language": "JavaScript",
+              "structure": {
+                "functions": 2,
+                "classes": 0,
+                "imports": 3
+              },
+              "patterns": {
+                "errorHandling": 0,
+                "async": 0,
+                "comments": 11,
+                "tests": 12
+              },
+              "consistency": {
+                "consistentIndentation": true,
+                "consistentSpacing": true,
+                "score": 100
+              },
+              "documentation": {
+                "docBlocks": 3,
+                "inlineComments": 8,
+                "documentationRatio": 0.24395653138168105
+              }
+            }
+          },
+          "teamCollaboration": {
+            ".vscode/settings.json": {
+              "filePath": ".vscode/settings.json",
+              "type": "shared-config",
+              "aiRelated": false,
+              "completeness": 0
+            },
+            "README.md": {
+              "filePath": "README.md",
+              "type": "documentation",
+              "aiContent": {
+                "mentions": 3,
+                "aiContentRatio": 0.05176876617773943
+              },
+              "quality": 100
+            }
+          },
+          "governance": {},
+          "workflows": {
+            ".github/workflows/main.yml": {
+              "filePath": ".github/workflows/main.yml",
+              "type": "github-actions",
+              "aiIntegration": true,
+              "copilotSteps": [],
+              "automation": 2
+            },
+            ".github/workflows/pr.yml": {
+              "filePath": ".github/workflows/pr.yml",
+              "type": "github-actions",
+              "aiIntegration": true,
+              "copilotSteps": [],
+              "automation": 0
+            }
+          }
+        },
+        "scores": {
+          "configuration": 0,
+          "customization": 55,
+          "integration": 0,
+          "adoption": 13,
+          "quality": 64,
+          "governance": 0,
+          "overall": 22.549999999999997
+        },
+        "recommendations": [
+          {
+            "priority": "high",
+            "category": "configuration",
+            "title": "Enhance Copilot Configuration",
+            "description": "Improve Copilot setup and configuration completeness",
+            "actions": [
+              "Create comprehensive .copilot configuration",
+              "Add workspace-level settings",
+              "Document configuration purpose and usage"
+            ]
+          },
+          {
+            "priority": "medium",
+            "category": "integration",
+            "title": "Expand Copilot Integrations",
+            "description": "Integrate Copilot with development tools and workflows",
+            "actions": [
+              "Install and configure Copilot extensions",
+              "Integrate with CI/CD pipelines",
+              "Connect to AI services and APIs"
+            ]
+          },
+          {
+            "priority": "high",
+            "category": "adoption",
+            "title": "Increase Team Adoption",
+            "description": "Improve Copilot usage across the development team",
+            "actions": [
+              "Conduct Copilot training sessions",
+              "Share best practices and success stories",
+              "Establish usage guidelines and policies"
+            ]
+          },
+          {
+            "priority": "low",
+            "category": "governance",
+            "title": "Establish AI Governance Framework",
+            "description": "Create policies and guidelines for AI tool usage",
+            "actions": [
+              "Develop AI usage policies",
+              "Create code review guidelines for AI-generated code",
+              "Establish compliance and security measures"
+            ]
+          }
+        ],
+        "maturity": "AI-Novice"
+      }
+    }
+  },
+  "detailedAnalysis": {
+    "technology": {
+      "timestamp": "2026-03-14T01:39:51.433Z",
+      "summary": {
+        "totalLanguages": 1,
+        "totalFrameworks": 9,
+        "totalAILibraries": 11,
+        "totalAIServices": 0,
+        "totalAIConfigs": 0,
+        "totalAIGeneratedFiles": 9,
+        "totalInfraComponents": 0,
+        "totalDependencies": 1
+      },
+      "details": {
+        "languages": ["JavaScript"],
+        "frameworks": [
+          "React",
+          "Vue",
+          "Angular",
+          "TensorFlow",
+          "PyTorch",
+          "scikit-learn",
+          "FastAPI",
+          "Flask",
+          "Django"
+        ],
+        "aiLibraries": [
+          "OpenAI",
+          "Anthropic",
+          "LangChain",
+          "Azure AI",
+          "Google AI",
+          "AWS AI",
+          "Jupyter",
+          "Hugging Face",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "aiServices": [],
+        "aiConfigurations": [],
+        "aiGeneratedPatterns": [
+          "ROADMAP.md",
+          "docs/ai-adoption-audit/ai-adoption-audit-2026-03-14.json",
+          "skills/enterprise-ai-adoption-audit/SKILL.md",
+          "skills/enterprise-ai-adoption-audit/assets/ai-adoption-template.md",
+          "skills/enterprise-ai-adoption-audit/assets/copilot-integration-checklist.md",
+          "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+          "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+          "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+          "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js"
+        ],
+        "infrastructure": [],
+        "dependencies": {
+          "prettier": "^3.8.1"
+        }
+      },
+      "scores": {
+        "technologyStack": 83,
+        "aiLibraryIntegration": 68,
+        "aiServiceIntegration": 0,
+        "infrastructureReadiness": 0,
+        "overall": 45.3
+      },
+      "recommendations": [
+        {
+          "priority": "medium",
+          "category": "services",
+          "title": "Implement AI Service Integration",
+          "description": "Configure and integrate cloud AI services",
+          "actions": [
+            "Set up OpenAI or Azure AI service accounts",
+            "Create AI service configuration files",
+            "Implement API key management"
+          ]
+        },
+        {
+          "priority": "low",
+          "category": "infrastructure",
+          "title": "Optimize Infrastructure for AI Workloads",
+          "description": "Enhance infrastructure to support AI development",
+          "actions": [
+            "Add Docker containerization for AI models",
+            "Consider GPU-enabled environments",
+            "Implement CI/CD for AI pipelines"
+          ]
+        }
+      ]
+    },
+    "copilot": {
+      "timestamp": "2026-03-14T01:39:51.532Z",
+      "summary": {
+        "configurations": 1,
+        "customPrompts": 1,
+        "skills": 3,
+        "integrations": 0,
+        "codeFiles": 20,
+        "governanceFiles": 0,
+        "workflowFiles": 2
+      },
+      "details": {
+        "configurations": {
+          ".vscode/settings.json": {
+            "type": "vscode",
+            "content": {
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": true,
+              "editor.formatOnPaste": true,
+              "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit"
+              },
+              "[javascript]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[json]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[markdown]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[yaml]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              }
+            },
+            "completeness": 0,
+            "bestPractices": []
+          }
+        },
+        "customPrompts": {
+          "skills/adr-authoring/assets/create-adr.prompt.md": {
+            "filePath": "skills/adr-authoring/assets/create-adr.prompt.md",
+            "type": "general",
+            "complexity": "high",
+            "quality": 100,
+            "category": "documentation",
+            "reuse": "static"
+          }
+        },
+        "skills": {
+          "rubrics/evaluation-framework/agentskills-eval.js": {
+            "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+            "name": "skillName,",
+            "description": "Assertions that always pass in both configurations",
+            "capabilities": [
+              "generation",
+              "analysis",
+              "optimization",
+              "testing"
+            ],
+            "integration": 0,
+            "maturity": 75
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+            "name": "unnamed",
+            "description": "Adopt AI-compatible languages and frameworks",
+            "capabilities": ["generation", "analysis"],
+            "integration": 3,
+            "maturity": 75
+          },
+          "skills/repo-assessment/references/skill-evaluation.md": {
+            "filePath": "skills/repo-assessment/references/skill-evaluation.md",
+            "name": "unnamed",
+            "description": "no description",
+            "capabilities": [
+              "generation",
+              "analysis",
+              "optimization",
+              "testing"
+            ],
+            "integration": 1,
+            "maturity": 50
+          }
+        },
+        "integrations": {
+          "package.json": {
+            "filePath": "package.json",
+            "integrations": [],
+            "copilotSpecific": [],
+            "aiRelated": []
+          }
+        },
+        "usagePatterns": {
+          "commits": {
+            "totalCommits": 0,
+            "aiRelatedCommits": 0,
+            "patterns": [
+              "feat: add AI-generated",
+              "fix: resolve Copilot suggestion",
+              "refactor: improve AI-assisted code",
+              "docs: update AI guidelines"
+            ]
+          },
+          "comments": {
+            "totalComments": 905,
+            "aiComments": 79,
+            "aiCommentRatio": 0.08729281767955802
+          },
+          "files": {
+            "totalFiles": 120,
+            "aiRelatedFiles": 6,
+            "aiFileRatio": 0.05
+          }
+        },
+        "codeQuality": {
+          "rubrics/evaluation-framework/adversarial-validation.js": {
+            "filePath": "rubrics/evaluation-framework/adversarial-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 17
+            },
+            "patterns": {
+              "errorHandling": 2,
+              "async": 0,
+              "comments": 51,
+              "tests": 77
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 18,
+              "inlineComments": 31,
+              "documentationRatio": 0.21170879239576584
+            }
+          },
+          "rubrics/evaluation-framework/agentskills-eval.js": {
+            "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 8
+            },
+            "patterns": {
+              "errorHandling": 6,
+              "async": 7,
+              "comments": 55,
+              "tests": 18
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 26,
+              "inlineComments": 29,
+              "documentationRatio": 0.23498248312398531
+            }
+          },
+          "rubrics/evaluation-framework/scripts/run-full-validation.js": {
+            "filePath": "rubrics/evaluation-framework/scripts/run-full-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 16
+            },
+            "patterns": {
+              "errorHandling": 6,
+              "async": 4,
+              "comments": 69,
+              "tests": 26
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 20,
+              "inlineComments": 38,
+              "documentationRatio": 0.3172692959903725
+            }
+          },
+          "rubrics/evaluation-framework/validate-rubrics.js": {
+            "filePath": "rubrics/evaluation-framework/validate-rubrics.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 18
+            },
+            "patterns": {
+              "errorHandling": 2,
+              "async": 0,
+              "comments": 51,
+              "tests": 6
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 17,
+              "inlineComments": 29,
+              "documentationRatio": 0.3184052052329203
+            }
+          },
+          "scripts/apply-pack.js": {
+            "filePath": "scripts/apply-pack.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 1,
+              "classes": 1,
+              "imports": 11
+            },
+            "patterns": {
+              "errorHandling": 12,
+              "async": 18,
+              "comments": 14,
+              "tests": 3
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 1,
+              "inlineComments": 13,
+              "documentationRatio": 0.12659372456822496
+            }
+          },
+          "scripts/validate-release.js": {
+            "filePath": "scripts/validate-release.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 7,
+              "classes": 0,
+              "imports": 5
+            },
+            "patterns": {
+              "errorHandling": 14,
+              "async": 0,
+              "comments": 4,
+              "tests": 2
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 0,
+              "inlineComments": 3,
+              "documentationRatio": 0.0822143052891203
+            }
+          },
+          "skills/adr-authoring/scripts/analyze-repo.js": {
+            "filePath": "skills/adr-authoring/scripts/analyze-repo.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 4
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 11,
+              "comments": 24,
+              "tests": 5
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 11,
+              "inlineComments": 13,
+              "documentationRatio": 0.21522733387140167
+            }
+          },
+          "skills/adr-authoring/scripts/automated-scoring.js": {
+            "filePath": "skills/adr-authoring/scripts/automated-scoring.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 9
+            },
+            "patterns": {
+              "errorHandling": 3,
+              "async": 3,
+              "comments": 73,
+              "tests": 23
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 22,
+              "inlineComments": 40,
+              "documentationRatio": 0.3049530273965865
+            }
+          },
+          "skills/adr-authoring/scripts/lifecycle-manager.js": {
+            "filePath": "skills/adr-authoring/scripts/lifecycle-manager.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 22
+            },
+            "patterns": {
+              "errorHandling": 17,
+              "async": 14,
+              "comments": 62,
+              "tests": 3
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 30,
+              "inlineComments": 32,
+              "documentationRatio": 0.28870779976717115
+            }
+          },
+          "skills/adr-authoring/scripts/performance-optimizer.js": {
+            "filePath": "skills/adr-authoring/scripts/performance-optimizer.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 11
+            },
+            "patterns": {
+              "errorHandling": 43,
+              "async": 10,
+              "comments": 49,
+              "tests": 7
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 26,
+              "inlineComments": 23,
+              "documentationRatio": 0.27418723070896983
+            }
+          },
+          "skills/adr-authoring/scripts/validate-adr.js": {
+            "filePath": "skills/adr-authoring/scripts/validate-adr.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 16
+            },
+            "patterns": {
+              "errorHandling": 7,
+              "async": 1,
+              "comments": 113,
+              "tests": 17
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 20,
+              "inlineComments": 67,
+              "documentationRatio": 0.41357672561323444
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 14
+            },
+            "patterns": {
+              "errorHandling": 22,
+              "async": 1,
+              "comments": 70,
+              "tests": 5
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 9,
+              "inlineComments": 61,
+              "documentationRatio": 0.13482280431432972
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 12
+            },
+            "patterns": {
+              "errorHandling": 10,
+              "async": 76,
+              "comments": 40,
+              "tests": 7
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 10,
+              "inlineComments": 30,
+              "documentationRatio": 0.0990049997524875
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 17
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 7,
+              "comments": 24,
+              "tests": 23
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 3,
+              "inlineComments": 21,
+              "documentationRatio": 0.060432089439492374
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 39
+            },
+            "patterns": {
+              "errorHandling": 5,
+              "async": 23,
+              "comments": 30,
+              "tests": 10
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 6,
+              "inlineComments": 23,
+              "documentationRatio": 0.1754279837880346
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 29
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 67,
+              "comments": 58,
+              "tests": 42
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 11,
+              "inlineComments": 40,
+              "documentationRatio": 0.15348039363206836
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 5
+            },
+            "patterns": {
+              "errorHandling": 11,
+              "async": 3,
+              "comments": 75,
+              "tests": 1
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 4,
+              "inlineComments": 71,
+              "documentationRatio": 0.24208385784835867
+            }
+          },
+          "skills/improve/scripts/run-improvement-tests.js": {
+            "filePath": "skills/improve/scripts/run-improvement-tests.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 3
+            },
+            "patterns": {
+              "errorHandling": 10,
+              "async": 7,
+              "comments": 87,
+              "tests": 102
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 17,
+              "inlineComments": 51,
+              "documentationRatio": 0.3185011709601874
+            }
+          },
+          "skills/repo-assessment/scripts/adversarial-validation.js": {
+            "filePath": "skills/repo-assessment/scripts/adversarial-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 6,
+              "classes": 0,
+              "imports": 4
+            },
+            "patterns": {
+              "errorHandling": 0,
+              "async": 2,
+              "comments": 26,
+              "tests": 14
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 7,
+              "inlineComments": 19,
+              "documentationRatio": 0.17261983800292124
+            }
+          },
+          "skills/repo-assessment/scripts/validate-repo-assessment.js": {
+            "filePath": "skills/repo-assessment/scripts/validate-repo-assessment.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 2,
+              "classes": 0,
+              "imports": 3
+            },
+            "patterns": {
+              "errorHandling": 0,
+              "async": 0,
+              "comments": 11,
+              "tests": 12
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 3,
+              "inlineComments": 8,
+              "documentationRatio": 0.24395653138168105
+            }
+          }
+        },
+        "teamCollaboration": {
+          ".vscode/settings.json": {
+            "filePath": ".vscode/settings.json",
+            "type": "shared-config",
+            "aiRelated": false,
+            "completeness": 0
+          },
+          "README.md": {
+            "filePath": "README.md",
+            "type": "documentation",
+            "aiContent": {
+              "mentions": 3,
+              "aiContentRatio": 0.05176876617773943
+            },
+            "quality": 100
+          }
+        },
+        "governance": {},
+        "workflows": {
+          ".github/workflows/main.yml": {
+            "filePath": ".github/workflows/main.yml",
+            "type": "github-actions",
+            "aiIntegration": true,
+            "copilotSteps": [],
+            "automation": 2
+          },
+          ".github/workflows/pr.yml": {
+            "filePath": ".github/workflows/pr.yml",
+            "type": "github-actions",
+            "aiIntegration": true,
+            "copilotSteps": [],
+            "automation": 0
+          }
+        }
+      },
+      "scores": {
+        "configuration": 0,
+        "customization": 55,
+        "integration": 0,
+        "adoption": 13,
+        "quality": 64,
+        "governance": 0,
+        "overall": 22.549999999999997
+      },
+      "recommendations": [
+        {
+          "priority": "high",
+          "category": "configuration",
+          "title": "Enhance Copilot Configuration",
+          "description": "Improve Copilot setup and configuration completeness",
+          "actions": [
+            "Create comprehensive .copilot configuration",
+            "Add workspace-level settings",
+            "Document configuration purpose and usage"
+          ]
+        },
+        {
+          "priority": "medium",
+          "category": "integration",
+          "title": "Expand Copilot Integrations",
+          "description": "Integrate Copilot with development tools and workflows",
+          "actions": [
+            "Install and configure Copilot extensions",
+            "Integrate with CI/CD pipelines",
+            "Connect to AI services and APIs"
+          ]
+        },
+        {
+          "priority": "high",
+          "category": "adoption",
+          "title": "Increase Team Adoption",
+          "description": "Improve Copilot usage across the development team",
+          "actions": [
+            "Conduct Copilot training sessions",
+            "Share best practices and success stories",
+            "Establish usage guidelines and policies"
+          ]
+        },
+        {
+          "priority": "low",
+          "category": "governance",
+          "title": "Establish AI Governance Framework",
+          "description": "Create policies and guidelines for AI tool usage",
+          "actions": [
+            "Develop AI usage policies",
+            "Create code review guidelines for AI-generated code",
+            "Establish compliance and security measures"
+          ]
+        }
+      ],
+      "maturity": "AI-Novice"
+    },
+    "pathSpecific": {
+      "readiness": {
+        "technology": {
+          "score": 83,
+          "languages": 1,
+          "aiLibraries": 11,
+          "readiness": "adequate"
+        },
+        "copilot": {
+          "score": 0,
+          "configured": true,
+          "customized": true,
+          "readiness": "minimal"
+        },
+        "governance": {
+          "hasPolicies": false,
+          "policyCount": 0,
+          "readiness": "none"
+        },
+        "team": {
+          "score": 13,
+          "readiness": "unaware"
+        }
+      },
+      "configurationGaps": {
+        "missing": ["AI governance policies"],
+        "incomplete": [
+          {
+            "path": ".vscode/settings.json",
+            "completeness": 0
+          }
+        ],
+        "bestPractices": [
+          {
+            "path": ".vscode/settings.json",
+            "practices": []
+          }
+        ]
+      },
+      "teamPreparation": {
+        "skills": {
+          "current": "Beginner",
+          "score": 47,
+          "gaps": ["Basic AI training needed", "Copilot familiarity required"]
+        },
+        "training": {
+          "required": [
+            "Basic AI concepts",
+            "Copilot fundamentals",
+            "AI tool usage"
+          ],
+          "priority": "low",
+          "estimatedHours": "20-40 hours"
+        },
+        "workflow": {
+          "hasWorkflows": true,
+          "workflowCount": 2,
+          "automation": "low",
+          "readiness": "integrating"
+        },
+        "culture": {
+          "openness": "low",
+          "collaboration": "developing",
+          "readiness": "developing"
+        }
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "copilot",
+      "title": "Implement Basic Copilot Configuration",
+      "description": "Set up foundational Copilot integration",
+      "actions": [
+        "Configure Copilot settings",
+        "Create basic custom prompts",
+        "Establish usage guidelines"
+      ]
+    },
+    {
+      "priority": "high",
+      "category": "copilot",
+      "title": "Advance Copilot Integration",
+      "description": "Deepen Copilot adoption and customization",
+      "actions": [
+        "Develop custom prompts and skills",
+        "Integrate Copilot with development workflows",
+        "Establish team-wide adoption practices"
+      ],
+      "impact": "high",
+      "effort": "medium",
+      "timeline": "2-4 months"
+    },
+    {
+      "priority": "medium",
+      "category": "governance",
+      "title": "Establish Basic AI Governance",
+      "description": "Create foundational AI policies and guidelines",
+      "actions": [
+        "Develop AI usage policy",
+        "Create code review guidelines",
+        "Establish security measures"
+      ]
+    },
+    {
+      "priority": "medium",
+      "category": "organization",
+      "title": "Build Organizational AI Capabilities",
+      "description": "Develop team skills and collaboration practices",
+      "actions": [
+        "Implement AI training programs",
+        "Establish knowledge sharing practices",
+        "Create AI collaboration frameworks"
+      ],
+      "impact": "medium",
+      "effort": "medium",
+      "timeline": "3-5 months"
+    },
+    {
+      "priority": "low",
+      "category": "infrastructure",
+      "title": "Optimize Infrastructure for AI",
+      "description": "Enhance infrastructure to support AI workloads",
+      "actions": [
+        "Implement cloud AI services",
+        "Optimize CI/CD for AI pipelines",
+        "Add monitoring and observability"
+      ],
+      "impact": "medium",
+      "effort": "high",
+      "timeline": "6-9 months"
+    }
+  ],
+  "roadmap": {
+    "currentLevel": "AI-Novice",
+    "nextLevel": "AI-Beginner",
+    "phases": [
+      {
+        "phase": "Foundation Building",
+        "duration": "3-6 months",
+        "objectives": [
+          "Establish basic AI technology stack",
+          "Implement initial Copilot configuration",
+          "Create basic AI guidelines"
+        ],
+        "keyMilestones": [
+          "AI technology score > 50",
+          "Copilot configuration complete",
+          "Basic governance framework"
+        ]
+      },
+      {
+        "phase": "Capability Development",
+        "duration": "6-9 months",
+        "objectives": [
+          "Develop custom AI solutions",
+          "Expand Copilot adoption",
+          "Implement comprehensive governance"
+        ],
+        "keyMilestones": [
+          "AI technology score > 70",
+          "Copilot score > 60",
+          "Governance score > 60"
+        ]
+      }
+    ]
+  },
+  "benchmarking": null,
+  "appendices": {
+    "technicalDetails": {
+      "timestamp": "2026-03-14T01:39:51.433Z",
+      "summary": {
+        "totalLanguages": 1,
+        "totalFrameworks": 9,
+        "totalAILibraries": 11,
+        "totalAIServices": 0,
+        "totalAIConfigs": 0,
+        "totalAIGeneratedFiles": 9,
+        "totalInfraComponents": 0,
+        "totalDependencies": 1
+      },
+      "details": {
+        "languages": ["JavaScript"],
+        "frameworks": [
+          "React",
+          "Vue",
+          "Angular",
+          "TensorFlow",
+          "PyTorch",
+          "scikit-learn",
+          "FastAPI",
+          "Flask",
+          "Django"
+        ],
+        "aiLibraries": [
+          "OpenAI",
+          "Anthropic",
+          "LangChain",
+          "Azure AI",
+          "Google AI",
+          "AWS AI",
+          "Jupyter",
+          "Hugging Face",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "aiServices": [],
+        "aiConfigurations": [],
+        "aiGeneratedPatterns": [
+          "ROADMAP.md",
+          "docs/ai-adoption-audit/ai-adoption-audit-2026-03-14.json",
+          "skills/enterprise-ai-adoption-audit/SKILL.md",
+          "skills/enterprise-ai-adoption-audit/assets/ai-adoption-template.md",
+          "skills/enterprise-ai-adoption-audit/assets/copilot-integration-checklist.md",
+          "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+          "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+          "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+          "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js"
+        ],
+        "infrastructure": [],
+        "dependencies": {
+          "prettier": "^3.8.1"
+        }
+      },
+      "scores": {
+        "technologyStack": 83,
+        "aiLibraryIntegration": 68,
+        "aiServiceIntegration": 0,
+        "infrastructureReadiness": 0,
+        "overall": 45.3
+      },
+      "recommendations": [
+        {
+          "priority": "medium",
+          "category": "services",
+          "title": "Implement AI Service Integration",
+          "description": "Configure and integrate cloud AI services",
+          "actions": [
+            "Set up OpenAI or Azure AI service accounts",
+            "Create AI service configuration files",
+            "Implement API key management"
+          ]
+        },
+        {
+          "priority": "low",
+          "category": "infrastructure",
+          "title": "Optimize Infrastructure for AI Workloads",
+          "description": "Enhance infrastructure to support AI development",
+          "actions": [
+            "Add Docker containerization for AI models",
+            "Consider GPU-enabled environments",
+            "Implement CI/CD for AI pipelines"
+          ]
+        }
+      ]
+    },
+    "copilotAnalysis": {
+      "timestamp": "2026-03-14T01:39:51.532Z",
+      "summary": {
+        "configurations": 1,
+        "customPrompts": 1,
+        "skills": 3,
+        "integrations": 0,
+        "codeFiles": 20,
+        "governanceFiles": 0,
+        "workflowFiles": 2
+      },
+      "details": {
+        "configurations": {
+          ".vscode/settings.json": {
+            "type": "vscode",
+            "content": {
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": true,
+              "editor.formatOnPaste": true,
+              "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit"
+              },
+              "[javascript]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[json]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[markdown]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              },
+              "[yaml]": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+              }
+            },
+            "completeness": 0,
+            "bestPractices": []
+          }
+        },
+        "customPrompts": {
+          "skills/adr-authoring/assets/create-adr.prompt.md": {
+            "filePath": "skills/adr-authoring/assets/create-adr.prompt.md",
+            "type": "general",
+            "complexity": "high",
+            "quality": 100,
+            "category": "documentation",
+            "reuse": "static"
+          }
+        },
+        "skills": {
+          "rubrics/evaluation-framework/agentskills-eval.js": {
+            "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+            "name": "skillName,",
+            "description": "Assertions that always pass in both configurations",
+            "capabilities": [
+              "generation",
+              "analysis",
+              "optimization",
+              "testing"
+            ],
+            "integration": 0,
+            "maturity": 75
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+            "name": "unnamed",
+            "description": "Adopt AI-compatible languages and frameworks",
+            "capabilities": ["generation", "analysis"],
+            "integration": 3,
+            "maturity": 75
+          },
+          "skills/repo-assessment/references/skill-evaluation.md": {
+            "filePath": "skills/repo-assessment/references/skill-evaluation.md",
+            "name": "unnamed",
+            "description": "no description",
+            "capabilities": [
+              "generation",
+              "analysis",
+              "optimization",
+              "testing"
+            ],
+            "integration": 1,
+            "maturity": 50
+          }
+        },
+        "integrations": {
+          "package.json": {
+            "filePath": "package.json",
+            "integrations": [],
+            "copilotSpecific": [],
+            "aiRelated": []
+          }
+        },
+        "usagePatterns": {
+          "commits": {
+            "totalCommits": 0,
+            "aiRelatedCommits": 0,
+            "patterns": [
+              "feat: add AI-generated",
+              "fix: resolve Copilot suggestion",
+              "refactor: improve AI-assisted code",
+              "docs: update AI guidelines"
+            ]
+          },
+          "comments": {
+            "totalComments": 905,
+            "aiComments": 79,
+            "aiCommentRatio": 0.08729281767955802
+          },
+          "files": {
+            "totalFiles": 120,
+            "aiRelatedFiles": 6,
+            "aiFileRatio": 0.05
+          }
+        },
+        "codeQuality": {
+          "rubrics/evaluation-framework/adversarial-validation.js": {
+            "filePath": "rubrics/evaluation-framework/adversarial-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 17
+            },
+            "patterns": {
+              "errorHandling": 2,
+              "async": 0,
+              "comments": 51,
+              "tests": 77
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 18,
+              "inlineComments": 31,
+              "documentationRatio": 0.21170879239576584
+            }
+          },
+          "rubrics/evaluation-framework/agentskills-eval.js": {
+            "filePath": "rubrics/evaluation-framework/agentskills-eval.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 8
+            },
+            "patterns": {
+              "errorHandling": 6,
+              "async": 7,
+              "comments": 55,
+              "tests": 18
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 26,
+              "inlineComments": 29,
+              "documentationRatio": 0.23498248312398531
+            }
+          },
+          "rubrics/evaluation-framework/scripts/run-full-validation.js": {
+            "filePath": "rubrics/evaluation-framework/scripts/run-full-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 16
+            },
+            "patterns": {
+              "errorHandling": 6,
+              "async": 4,
+              "comments": 69,
+              "tests": 26
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 20,
+              "inlineComments": 38,
+              "documentationRatio": 0.3172692959903725
+            }
+          },
+          "rubrics/evaluation-framework/validate-rubrics.js": {
+            "filePath": "rubrics/evaluation-framework/validate-rubrics.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 18
+            },
+            "patterns": {
+              "errorHandling": 2,
+              "async": 0,
+              "comments": 51,
+              "tests": 6
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 17,
+              "inlineComments": 29,
+              "documentationRatio": 0.3184052052329203
+            }
+          },
+          "scripts/apply-pack.js": {
+            "filePath": "scripts/apply-pack.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 1,
+              "classes": 1,
+              "imports": 11
+            },
+            "patterns": {
+              "errorHandling": 12,
+              "async": 18,
+              "comments": 14,
+              "tests": 3
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 1,
+              "inlineComments": 13,
+              "documentationRatio": 0.12659372456822496
+            }
+          },
+          "scripts/validate-release.js": {
+            "filePath": "scripts/validate-release.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 7,
+              "classes": 0,
+              "imports": 5
+            },
+            "patterns": {
+              "errorHandling": 14,
+              "async": 0,
+              "comments": 4,
+              "tests": 2
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 0,
+              "inlineComments": 3,
+              "documentationRatio": 0.0822143052891203
+            }
+          },
+          "skills/adr-authoring/scripts/analyze-repo.js": {
+            "filePath": "skills/adr-authoring/scripts/analyze-repo.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 4
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 11,
+              "comments": 24,
+              "tests": 5
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 11,
+              "inlineComments": 13,
+              "documentationRatio": 0.21522733387140167
+            }
+          },
+          "skills/adr-authoring/scripts/automated-scoring.js": {
+            "filePath": "skills/adr-authoring/scripts/automated-scoring.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 9
+            },
+            "patterns": {
+              "errorHandling": 3,
+              "async": 3,
+              "comments": 73,
+              "tests": 23
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 22,
+              "inlineComments": 40,
+              "documentationRatio": 0.3049530273965865
+            }
+          },
+          "skills/adr-authoring/scripts/lifecycle-manager.js": {
+            "filePath": "skills/adr-authoring/scripts/lifecycle-manager.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 22
+            },
+            "patterns": {
+              "errorHandling": 17,
+              "async": 14,
+              "comments": 62,
+              "tests": 3
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 30,
+              "inlineComments": 32,
+              "documentationRatio": 0.28870779976717115
+            }
+          },
+          "skills/adr-authoring/scripts/performance-optimizer.js": {
+            "filePath": "skills/adr-authoring/scripts/performance-optimizer.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 11
+            },
+            "patterns": {
+              "errorHandling": 43,
+              "async": 10,
+              "comments": 49,
+              "tests": 7
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 26,
+              "inlineComments": 23,
+              "documentationRatio": 0.27418723070896983
+            }
+          },
+          "skills/adr-authoring/scripts/validate-adr.js": {
+            "filePath": "skills/adr-authoring/scripts/validate-adr.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 16
+            },
+            "patterns": {
+              "errorHandling": 7,
+              "async": 1,
+              "comments": 113,
+              "tests": 17
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 20,
+              "inlineComments": 67,
+              "documentationRatio": 0.41357672561323444
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/result-aggregator.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 14
+            },
+            "patterns": {
+              "errorHandling": 22,
+              "async": 1,
+              "comments": 70,
+              "tests": 5
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 9,
+              "inlineComments": 61,
+              "documentationRatio": 0.13482280431432972
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/orchestration/skill-router.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 12
+            },
+            "patterns": {
+              "errorHandling": 10,
+              "async": 76,
+              "comments": 40,
+              "tests": 7
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 10,
+              "inlineComments": 30,
+              "documentationRatio": 0.0990049997524875
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/adr-generator.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 17
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 7,
+              "comments": 24,
+              "tests": 23
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 3,
+              "inlineComments": 21,
+              "documentationRatio": 0.060432089439492374
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/ai-detector.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 39
+            },
+            "patterns": {
+              "errorHandling": 5,
+              "async": 23,
+              "comments": 30,
+              "tests": 10
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 6,
+              "inlineComments": 23,
+              "documentationRatio": 0.1754279837880346
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/copilot-analyzer.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 29
+            },
+            "patterns": {
+              "errorHandling": 9,
+              "async": 67,
+              "comments": 58,
+              "tests": 42
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 11,
+              "inlineComments": 40,
+              "documentationRatio": 0.15348039363206836
+            }
+          },
+          "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js": {
+            "filePath": "skills/enterprise-ai-adoption-audit/scripts/maturity-scoring.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 5
+            },
+            "patterns": {
+              "errorHandling": 11,
+              "async": 3,
+              "comments": 75,
+              "tests": 1
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 4,
+              "inlineComments": 71,
+              "documentationRatio": 0.24208385784835867
+            }
+          },
+          "skills/improve/scripts/run-improvement-tests.js": {
+            "filePath": "skills/improve/scripts/run-improvement-tests.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 0,
+              "classes": 1,
+              "imports": 3
+            },
+            "patterns": {
+              "errorHandling": 10,
+              "async": 7,
+              "comments": 87,
+              "tests": 102
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 17,
+              "inlineComments": 51,
+              "documentationRatio": 0.3185011709601874
+            }
+          },
+          "skills/repo-assessment/scripts/adversarial-validation.js": {
+            "filePath": "skills/repo-assessment/scripts/adversarial-validation.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 6,
+              "classes": 0,
+              "imports": 4
+            },
+            "patterns": {
+              "errorHandling": 0,
+              "async": 2,
+              "comments": 26,
+              "tests": 14
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 7,
+              "inlineComments": 19,
+              "documentationRatio": 0.17261983800292124
+            }
+          },
+          "skills/repo-assessment/scripts/validate-repo-assessment.js": {
+            "filePath": "skills/repo-assessment/scripts/validate-repo-assessment.js",
+            "language": "JavaScript",
+            "structure": {
+              "functions": 2,
+              "classes": 0,
+              "imports": 3
+            },
+            "patterns": {
+              "errorHandling": 0,
+              "async": 0,
+              "comments": 11,
+              "tests": 12
+            },
+            "consistency": {
+              "consistentIndentation": true,
+              "consistentSpacing": true,
+              "score": 100
+            },
+            "documentation": {
+              "docBlocks": 3,
+              "inlineComments": 8,
+              "documentationRatio": 0.24395653138168105
+            }
+          }
+        },
+        "teamCollaboration": {
+          ".vscode/settings.json": {
+            "filePath": ".vscode/settings.json",
+            "type": "shared-config",
+            "aiRelated": false,
+            "completeness": 0
+          },
+          "README.md": {
+            "filePath": "README.md",
+            "type": "documentation",
+            "aiContent": {
+              "mentions": 3,
+              "aiContentRatio": 0.05176876617773943
+            },
+            "quality": 100
+          }
+        },
+        "governance": {},
+        "workflows": {
+          ".github/workflows/main.yml": {
+            "filePath": ".github/workflows/main.yml",
+            "type": "github-actions",
+            "aiIntegration": true,
+            "copilotSteps": [],
+            "automation": 2
+          },
+          ".github/workflows/pr.yml": {
+            "filePath": ".github/workflows/pr.yml",
+            "type": "github-actions",
+            "aiIntegration": true,
+            "copilotSteps": [],
+            "automation": 0
+          }
+        }
+      },
+      "scores": {
+        "configuration": 0,
+        "customization": 55,
+        "integration": 0,
+        "adoption": 13,
+        "quality": 64,
+        "governance": 0,
+        "overall": 22.549999999999997
+      },
+      "recommendations": [
+        {
+          "priority": "high",
+          "category": "configuration",
+          "title": "Enhance Copilot Configuration",
+          "description": "Improve Copilot setup and configuration completeness",
+          "actions": [
+            "Create comprehensive .copilot configuration",
+            "Add workspace-level settings",
+            "Document configuration purpose and usage"
+          ]
+        },
+        {
+          "priority": "medium",
+          "category": "integration",
+          "title": "Expand Copilot Integrations",
+          "description": "Integrate Copilot with development tools and workflows",
+          "actions": [
+            "Install and configure Copilot extensions",
+            "Integrate with CI/CD pipelines",
+            "Connect to AI services and APIs"
+          ]
+        },
+        {
+          "priority": "high",
+          "category": "adoption",
+          "title": "Increase Team Adoption",
+          "description": "Improve Copilot usage across the development team",
+          "actions": [
+            "Conduct Copilot training sessions",
+            "Share best practices and success stories",
+            "Establish usage guidelines and policies"
+          ]
+        },
+        {
+          "priority": "low",
+          "category": "governance",
+          "title": "Establish AI Governance Framework",
+          "description": "Create policies and guidelines for AI tool usage",
+          "actions": [
+            "Develop AI usage policies",
+            "Create code review guidelines for AI-generated code",
+            "Establish compliance and security measures"
+          ]
+        }
+      ],
+      "maturity": "AI-Novice"
+    },
+    "scoringMethodology": {
+      "technology": "AI-friendly languages, frameworks, and libraries (30%)",
+      "copilot": "Configuration, customization, and integration (25%)",
+      "governance": "Policies, guidelines, and enforcement (20%)",
+      "organization": "Team capabilities and collaboration (15%)",
+      "infrastructure": "Cloud, CI/CD, and monitoring (15%)"
+    },
+    "dataSources": {
+      "repository": "File system analysis and dependency scanning",
+      "configuration": "Copilot and development tool settings",
+      "documentation": "README, policies, and guidelines",
+      "workflows": "CI/CD pipelines and automation scripts"
+    }
+  }
+}
