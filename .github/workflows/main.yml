@@ -92,7 +92,7 @@ jobs:
       - name: Update plugin.json version
         run: |
           NEW_VERSION="${{ steps.version.outputs.version }}"
-          sed -i '' 's/"version": "[^"]*"/"version": "'$NEW_VERSION'"/' plugin.json
+          sed -i 's/"version": "[^"]*"/"version": "'$NEW_VERSION'"/' plugin.json
 
       - name: Commit version changes
         run: |
