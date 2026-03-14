@@ -1,6 +1,6 @@
 {
   "name": "@ankh-studio/copilot-repo-assessment",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Repository assessment and pack recommendation toolkit for React development teams",
   "main": "plugin.json",
   "files": [

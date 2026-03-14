@@ -1,7 +1,7 @@
 {
   "name": "ai-enablement-intelligence",
   "description": "AI enablement and repository intelligence toolkit that helps teams accelerate their product goals through constraint-aware AI adoption and research-backed implementation guidance",
-  "version": "2.1.0",
+  "version": "v2.0.3",
   "author": {
     "name": "Matthew Van Dusen",
     "email": "matt@ankhstudio.com"
